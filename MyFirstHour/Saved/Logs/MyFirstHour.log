@@ -2130,3 +2130,326 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2025.09.02-12.28.54:963][851]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
 [2025.09.02-12.28.54:963][851]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
 [2025.09.02-12.28.54:964][851]AssetCheck: /Game/Maps/MyLevel Validating asset
+[2025.09.02-12.30.18:444][212]LogD3D12RHI: Waited for PSO creation for 100.000000ms
+[2025.09.02-12.30.43:212][555]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2025.09.02-12.30.43:214][555]LogStreaming: Display: FlushAsyncLoading(471): 1 QueuedPackages, 0 AsyncPackages
+[2025.09.02-12.30.43:219][555]LogChaosDD: Creating Chaos Debug Draw Scene for world Map_Playground
+[2025.09.02-12.30.43:222][555]LogAssetEditorSubsystem: Opening Asset editor for World /Game/EOL_Content/Maps/Map_Playground.Map_Playground
+[2025.09.02-12.30.43:222][555]Cmd: MAP LOAD FILE="../../../../../../Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/MyFirstHour/Content/EOL_Content/Maps/Map_Playground.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=4
+[2025.09.02-12.30.43:239][555]LogWorld: UWorld::CleanupWorld for MyLevel, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-12.30.43:239][555]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-12.30.43:254][555]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.09.02-12.30.43:255][555]LogUObjectHash: Compacting FUObjectHashTables data took   0.51ms
+[2025.09.02-12.30.43:272][555]LogWorld: UWorld::CleanupWorld for Map_Playground, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-12.30.43:272][555]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-12.30.43:289][555]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2025.09.02-12.30.43:350][555]LogUObjectHash: Compacting FUObjectHashTables data took   0.48ms
+[2025.09.02-12.30.43:356][555]LogAudio: Display: Audio Device (ID: 1) registered with world 'Map_Playground'.
+[2025.09.02-12.30.43:356][555]LogChaosDD: Creating Chaos Debug Draw Scene for world Map_Playground
+[2025.09.02-12.30.43:410][555]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2025.09.02-12.30.43:426][555]LogUObjectHash: Compacting FUObjectHashTables data took   0.43ms
+[2025.09.02-12.30.43:430][555]Cmd: MAP CHECKDEP NOCLEARLOG
+[2025.09.02-12.30.43:430][555]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.063ms to complete.
+[2025.09.02-12.30.57:616][698]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.09.02-12.30.57:621][698]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.09.02-12.30.57:622][698]LogPlayLevel: Creating play world package: /Game/EOL_Content/Maps/UEDPIE_0_Map_Playground
+[2025.09.02-12.30.57:627][698]LogPlayLevel: PIE: StaticDuplicateObject took: (0.005332s)
+[2025.09.02-12.30.57:627][698]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/EOL_Content/Maps/Map_Playground.Map_Playground to /Game/EOL_Content/Maps/UEDPIE_0_Map_Playground.Map_Playground (0.005383s)
+[2025.09.02-12.30.57:642][698]LogUObjectHash: Compacting FUObjectHashTables data took   0.43ms
+[2025.09.02-12.30.57:645][698]LogChaosDD: Creating Chaos Debug Draw Scene for world Map_Playground
+[2025.09.02-12.30.57:646][698]LogPlayLevel: PIE: World Init took: (0.001502s)
+[2025.09.02-12.30.57:647][698]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2025.09.02-12.30.57:647][698]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.09.02-12.30.57:647][698]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.09.02-12.30.57:647][698]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.09.02-12.30.57:647][698]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.09.02-12.30.57:647][698]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.09.02-12.30.57:647][698]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.09.02-12.30.57:647][698]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.09.02-12.30.57:647][698]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.09.02-12.30.57:647][698]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.09.02-12.30.57:647][698]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.09.02-12.30.57:647][698]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.09.02-12.30.57:649][698]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.09.02-12.30.57:664][698]LogAudioMixer: Display: Using Audio Hardware Device Speakers (USB Audio Device)
+[2025.09.02-12.30.57:665][698]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.09.02-12.30.57:665][698]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.09.02-12.30.57:665][698]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.09.02-12.30.57:665][698]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=6
+[2025.09.02-12.30.57:665][698]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=6
+[2025.09.02-12.30.57:668][698]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=6
+[2025.09.02-12.30.57:668][698]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=6
+[2025.09.02-12.30.57:668][698]LogInit: FAudioDevice initialized with ID 6.
+[2025.09.02-12.30.57:668][698]LogAudio: Display: Audio Device (ID: 6) registered with world 'Map_Playground'.
+[2025.09.02-12.30.57:668][698]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 6
+[2025.09.02-12.30.57:736][698]LogLoad: Game class is 'GM_EOL_Content_C'
+[2025.09.02-12.30.57:739][698]LogWorld: Bringing World /Game/EOL_Content/Maps/UEDPIE_0_Map_Playground.Map_Playground up for play (max tick rate 0) at 2025.09.02-08.30.57
+[2025.09.02-12.30.57:739][698]LogWorld: Bringing up level for play took: 0.003005
+[2025.09.02-12.30.57:742][698]LogOnline: OSS: Created online subsystem instance for: :Context_7
+[2025.09.02-12.30.57:745][698]PIE: Server logged in
+[2025.09.02-12.30.57:747][698]PIE: Play in editor total start time 0.126 seconds.
+[2025.09.02-12.30.58:208][700]LogPSOHitching: Encountered 550 PSO creation hitches so far (150 graphics, 400 compute). 0 of them were precached.
+[2025.09.02-12.31.10:913][816]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.09.02-12.31.10:913][816]LogWorld: BeginTearingDown for /Game/EOL_Content/Maps/UEDPIE_0_Map_Playground
+[2025.09.02-12.31.10:913][816]LogWorld: UWorld::CleanupWorld for Map_Playground, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-12.31.10:914][816]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-12.31.11:026][816]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.09.02-12.31.11:028][816]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-12.31.11:045][816]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.09.02-12.31.11:046][816]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 6
+[2025.09.02-12.31.11:046][816]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6, StreamState=4
+[2025.09.02-12.31.11:048][816]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6, StreamState=2
+[2025.09.02-12.31.11:054][816]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2025.09.02-12.31.11:211][817]LogPlayLevel: Display: Destroying online subsystem :Context_7
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: ================================================
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Total job queries 496, among them cache hits 46 (9.27%), DDC hits 342 (68.95%), Duplicates 70 (14.11%)
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Tracking 380 distinct input hashes that result in 268 distinct outputs (70.53%)
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: RAM used: 3.59 MiB of 1.60 GiB budget. Usage: 0.22%
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Shaders Compiled: 38
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Jobs assigned 38, completed 38 (100%)
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Average time worker was idle: 380.25 s
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Time job spent in pending queue: average 0.46 s, longest 2.49 s
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Job execution time: average 1.76 s, max 5.33 s
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Job life time (pending + execution): average 2.22 s, max 5.35
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Shader code size: total 379.645 KiB, numShaders 40, average 9.49 KiB, min 2.691 KiB, max 28.773 KiB
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 10.40 s
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.02%
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Jobs were issued in 38 batches (only local compilation was used), average 1.00 jobs/batch
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Average processing rate: 3.65 jobs/sec
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Total thread time: 34.744 s
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Total thread preprocess time: 6.755 s
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Percentage time preprocessing: 19.44%
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Effective parallelization: 3.34 (times faster than compiling all shaders on one thread). Compare with number of workers: 8 - 0.417706
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy (compiled    5 times, average 2.66 sec, max 3.16 sec, min 2.25 sec)
+[2025.09.02-12.31.17:769][880]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled   10 times, average 0.83 sec, max 1.20 sec, min 0.38 sec)
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display:                                                  FVelocityPS (compiled    2 times, average 0.82 sec, max 0.96 sec, min 0.69 sec)
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display:                                                 FLumenCardPS (compiled    4 times, average 0.60 sec, max 0.68 sec, min 0.51 sec)
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    7 times, average 0.55 sec, max 0.89 sec, min 0.27 sec)
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy - 38.27% of total time (compiled    5 times, average 2.66 sec, max 3.16 sec, min 2.25 sec)
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 23.86% of total time (compiled   10 times, average 0.83 sec, max 1.20 sec, min 0.38 sec)
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 11.10% of total time (compiled    7 times, average 0.55 sec, max 0.89 sec, min 0.27 sec)
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display:                                                 FLumenCardPS - 6.90% of total time (compiled    4 times, average 0.60 sec, max 0.68 sec, min 0.51 sec)
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display:                                                  FHitProxyPS - 6.00% of total time (compiled    4 times, average 0.52 sec, max 0.67 sec, min 0.38 sec)
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display: === Material stats ===
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display: Materials Translated:    149
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display: Material Total Translate Time: 0.11 s
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display: Material Translation Only: 0.05 s (45%)
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display: Material Cache Hits: 21 (14%)
+[2025.09.02-12.31.17:770][880]LogShaderCompilers: Display: ================================================
+[2025.09.02-12.31.40:896][298]LogSlate: External Image Picker: DecompressImage failed
+[2025.09.02-12.32.26:698][511]LogSlate: Window 'Project Settings' being destroyed
+[2025.09.02-12.32.26:703][511]LogSlate: Window 'Project Settings' being destroyed
+[2025.09.02-12.32.49:996][970]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1357.841187
+[2025.09.02-12.32.50:155][975]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.02-12.32.50:155][975]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1357.946777, Update Interval: 346.083557
+[2025.09.02-12.34.21:205][554]LogSlate: Window 'Color Picker' being destroyed
+[2025.09.02-12.34.28:336][685]Cmd: TRANSACTION UNDO
+[2025.09.02-12.34.28:336][685]LogEditorTransaction: Undo Edit Light Color
+[2025.09.02-12.35.07:967][300]LogSlate: Window 'Color Picker' being destroyed
+[2025.09.02-12.35.33:210][680]Cmd: TRANSACTION UNDO
+[2025.09.02-12.35.33:210][680]LogEditorTransaction: Undo Edit Light Color
+[2025.09.02-12.36.06:375][257]LogSlate: External Image Picker: DecompressImage failed
+[2025.09.02-12.36.07:511][273]LogD3D12RHI: Waited for PSO creation for 100.000000ms
+[2025.09.02-12.36.18:187][446]LogSlate: Window 'Project Settings' being destroyed
+[2025.09.02-12.36.18:358][446]LogSlate: Window 'Project Settings' being destroyed
+[2025.09.02-12.37.02:898][146]LogActorFactory: Actor Factory attempting to spawn Class /Script/Engine.PostProcessVolume
+[2025.09.02-12.37.02:898][146]LogActorFactory: Actor Factory attempting to spawn Class /Script/Engine.PostProcessVolume
+[2025.09.02-12.37.02:898][146]LogActorFactory: Actor Factory spawned Class /Script/Engine.PostProcessVolume as actor: PostProcessVolume /Game/EOL_Content/Maps/Map_Playground.Map_Playground:PersistentLevel.PostProcessVolume_0
+[2025.09.02-12.37.02:899][146]LogActorFactory: Actor Factory spawned Class /Script/Engine.PostProcessVolume as actor: PostProcessVolume /Game/EOL_Content/Maps/Map_Playground.Map_Playground:PersistentLevel.PostProcessVolume_0
+[2025.09.02-12.37.04:938][183]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2025.09.02-12.37.04:940][183]LogEditorActor: Deleted 0 Actors (0.024 secs)
+[2025.09.02-12.37.04:947][183]LogActorFactory: Actor Factory attempting to spawn Class /Script/Engine.PostProcessVolume
+[2025.09.02-12.37.04:947][183]LogActorFactory: Actor Factory attempting to spawn Class /Script/Engine.PostProcessVolume
+[2025.09.02-12.37.04:948][183]LogActorFactory: Actor Factory spawned Class /Script/Engine.PostProcessVolume as actor: PostProcessVolume /Game/EOL_Content/Maps/Map_Playground.Map_Playground:PersistentLevel.PostProcessVolume_1
+[2025.09.02-12.37.04:949][183]LogActorFactory: Actor Factory spawned Class /Script/Engine.PostProcessVolume as actor: PostProcessVolume /Game/EOL_Content/Maps/Map_Playground.Map_Playground:PersistentLevel.PostProcessVolume_1
+[2025.09.02-12.37.05:011][183]LogStreaming: Display: FlushAsyncLoading(473): 1 QueuedPackages, 0 AsyncPackages
+[2025.09.02-12.37.06:747][215]LogPSOHitching: Encountered 600 PSO creation hitches so far (169 graphics, 431 compute). 0 of them were precached.
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: ================================================
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Total job queries 506, among them cache hits 50 (9.88%), DDC hits 347 (68.58%), Duplicates 70 (13.83%)
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Tracking 386 distinct input hashes that result in 273 distinct outputs (70.73%)
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: RAM used: 3.61 MiB of 1.60 GiB budget. Usage: 0.22%
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Shaders Compiled: 39
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Jobs assigned 39, completed 39 (100%)
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Average time worker was idle: 374.90 s
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Time job spent in pending queue: average 0.45 s, longest 2.49 s
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Job execution time: average 1.73 s, max 5.33 s
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Job life time (pending + execution): average 2.18 s, max 5.35
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Shader code size: total 387.289 KiB, numShaders 41, average 9.445 KiB, min 2.691 KiB, max 28.773 KiB
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 11.05 s
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.02%
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Jobs were issued in 39 batches (only local compilation was used), average 1.00 jobs/batch
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Average processing rate: 3.53 jobs/sec
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Total thread time: 34.959 s
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Total thread preprocess time: 6.878 s
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Percentage time preprocessing: 19.67%
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Effective parallelization: 3.16 (times faster than compiling all shaders on one thread). Compare with number of workers: 8 - 0.395329
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy (compiled    5 times, average 2.66 sec, max 3.16 sec, min 2.25 sec)
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled   10 times, average 0.83 sec, max 1.20 sec, min 0.38 sec)
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display:                                                  FVelocityPS (compiled    2 times, average 0.82 sec, max 0.96 sec, min 0.69 sec)
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display:                                                 FLumenCardPS (compiled    4 times, average 0.60 sec, max 0.68 sec, min 0.51 sec)
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    7 times, average 0.55 sec, max 0.89 sec, min 0.27 sec)
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy - 38.04% of total time (compiled    5 times, average 2.66 sec, max 3.16 sec, min 2.25 sec)
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 23.71% of total time (compiled   10 times, average 0.83 sec, max 1.20 sec, min 0.38 sec)
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 11.04% of total time (compiled    7 times, average 0.55 sec, max 0.89 sec, min 0.27 sec)
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display:                                                 FLumenCardPS - 6.85% of total time (compiled    4 times, average 0.60 sec, max 0.68 sec, min 0.51 sec)
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display:                                                  FHitProxyPS - 5.96% of total time (compiled    4 times, average 0.52 sec, max 0.67 sec, min 0.38 sec)
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: === Material stats ===
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Materials Translated:    150
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Material Total Translate Time: 0.11 s
+[2025.09.02-12.37.17:864][365]LogShaderCompilers: Display: Material Translation Only: 0.05 s (45%)
+[2025.09.02-12.37.17:865][365]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2025.09.02-12.37.17:865][365]LogShaderCompilers: Display: Material Cache Hits: 21 (14%)
+[2025.09.02-12.37.17:865][365]LogShaderCompilers: Display: ================================================
+[2025.09.02-12.38.58:293][463]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1726.139526
+[2025.09.02-12.38.58:581][467]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.02-12.38.58:581][467]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1726.356079, Update Interval: 359.139374
+[2025.09.02-12.39.17:721][726]LogD3D12RHI: Waited for PSO creation for 100.000000ms
+[2025.09.02-12.39.34:392][821]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/EOL_Content/Meshes/Buildings/SM_Modular_Window.SM_Modular_Window
+[2025.09.02-12.39.34:392][821]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/EOL_Content/Meshes/Buildings/SM_Modular_Window.SM_Modular_Window
+[2025.09.02-12.39.34:393][821]LogActorFactory: Actor Factory spawned StaticMesh /Game/EOL_Content/Meshes/Buildings/SM_Modular_Window.SM_Modular_Window as actor: StaticMeshActor /Game/EOL_Content/Maps/Map_Playground.Map_Playground:PersistentLevel.StaticMeshActor_0
+[2025.09.02-12.39.39:264][850]LogUObjectHash: Compacting FUObjectHashTables data took   0.58ms
+[2025.09.02-12.39.39:271][850]LogEditorActor: Deleted 0 Actors (0.024 secs)
+[2025.09.02-12.39.39:279][850]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/EOL_Content/Meshes/Buildings/SM_Modular_Window.SM_Modular_Window
+[2025.09.02-12.39.39:279][850]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/EOL_Content/Meshes/Buildings/SM_Modular_Window.SM_Modular_Window
+[2025.09.02-12.39.39:281][850]LogActorFactory: Actor Factory spawned StaticMesh /Game/EOL_Content/Meshes/Buildings/SM_Modular_Window.SM_Modular_Window as actor: StaticMeshActor /Game/EOL_Content/Maps/Map_Playground.Map_Playground:PersistentLevel.StaticMeshActor_3
+[2025.09.02-12.39.46:933][900]Cmd: TRANSACTION UNDO
+[2025.09.02-12.39.46:933][900]LogEditorTransaction: Undo Rotate Elements
+[2025.09.02-12.39.48:539][921]Cmd: TRANSACTION UNDO
+[2025.09.02-12.39.48:539][921]LogEditorTransaction: Undo Place Objects
+[2025.09.02-12.40.00:106][989]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/EOL_Content/Meshes/Buildings/SM_Modular_Window.SM_Modular_Window
+[2025.09.02-12.40.00:106][989]LogActorFactory: Actor Factory spawned StaticMesh /Game/EOL_Content/Meshes/Buildings/SM_Modular_Window.SM_Modular_Window as actor: StaticMeshActor /Game/EOL_Content/Maps/Map_Playground.Map_Playground:PersistentLevel.StaticMeshActor_15
+[2025.09.02-12.41.17:271][855]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.09.02-12.41.17:276][855]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.09.02-12.41.17:277][855]LogPlayLevel: Creating play world package: /Game/EOL_Content/Maps/UEDPIE_0_Map_Playground
+[2025.09.02-12.41.17:283][855]LogPlayLevel: PIE: StaticDuplicateObject took: (0.005406s)
+[2025.09.02-12.41.17:283][855]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/EOL_Content/Maps/Map_Playground.Map_Playground to /Game/EOL_Content/Maps/UEDPIE_0_Map_Playground.Map_Playground (0.005451s)
+[2025.09.02-12.41.17:341][855]LogUObjectHash: Compacting FUObjectHashTables data took   0.55ms
+[2025.09.02-12.41.17:346][855]LogChaosDD: Creating Chaos Debug Draw Scene for world Map_Playground
+[2025.09.02-12.41.17:347][855]LogPlayLevel: PIE: World Init took: (0.001994s)
+[2025.09.02-12.41.17:348][855]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2025.09.02-12.41.17:348][855]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.09.02-12.41.17:348][855]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.09.02-12.41.17:348][855]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.09.02-12.41.17:348][855]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.09.02-12.41.17:349][855]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.09.02-12.41.17:349][855]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.09.02-12.41.17:349][855]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.09.02-12.41.17:349][855]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.09.02-12.41.17:349][855]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.09.02-12.41.17:349][855]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.09.02-12.41.17:349][855]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.09.02-12.41.17:351][855]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.09.02-12.41.17:370][855]LogAudioMixer: Display: Using Audio Hardware Device Speakers (USB Audio Device)
+[2025.09.02-12.41.17:370][855]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.09.02-12.41.17:370][855]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.09.02-12.41.17:370][855]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.09.02-12.41.17:371][855]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=7
+[2025.09.02-12.41.17:371][855]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=7
+[2025.09.02-12.41.17:374][855]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=7
+[2025.09.02-12.41.17:374][855]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=7
+[2025.09.02-12.41.17:374][855]LogInit: FAudioDevice initialized with ID 7.
+[2025.09.02-12.41.17:374][855]LogAudio: Display: Audio Device (ID: 7) registered with world 'Map_Playground'.
+[2025.09.02-12.41.17:374][855]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 7
+[2025.09.02-12.41.17:406][855]LogLoad: Game class is 'GM_EOL_Content_C'
+[2025.09.02-12.41.17:408][855]LogWorld: Bringing World /Game/EOL_Content/Maps/UEDPIE_0_Map_Playground.Map_Playground up for play (max tick rate 0) at 2025.09.02-08.41.17
+[2025.09.02-12.41.17:409][855]LogWorld: Bringing up level for play took: 0.002624
+[2025.09.02-12.41.17:411][855]LogOnline: OSS: Created online subsystem instance for: :Context_8
+[2025.09.02-12.41.17:415][855]PIE: Server logged in
+[2025.09.02-12.41.17:417][855]PIE: Play in editor total start time 0.141 seconds.
+[2025.09.02-12.41.17:950][858]LogPSOHitching: Encountered 650 PSO creation hitches so far (180 graphics, 470 compute). 0 of them were precached.
+[2025.09.02-12.41.48:783][150]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.09.02-12.41.48:783][150]LogWorld: BeginTearingDown for /Game/EOL_Content/Maps/UEDPIE_0_Map_Playground
+[2025.09.02-12.41.48:783][150]LogWorld: UWorld::CleanupWorld for Map_Playground, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-12.41.48:784][150]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-12.41.49:103][150]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.09.02-12.41.49:106][150]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-12.41.49:122][150]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.09.02-12.41.49:122][150]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 7
+[2025.09.02-12.41.49:122][150]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7, StreamState=4
+[2025.09.02-12.41.49:124][150]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7, StreamState=2
+[2025.09.02-12.41.49:130][150]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2025.09.02-12.41.49:430][151]LogPlayLevel: Display: Destroying online subsystem :Context_8
+[2025.09.02-12.42.05:513][260]LogUObjectHash: Compacting FUObjectHashTables data took   0.52ms
+[2025.09.02-12.42.05:517][260]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.09.02-12.42.05:579][260]LogUObjectHash: Compacting FUObjectHashTables data took   0.26ms
+[2025.09.02-12.42.05:601][260]LogSavePackage: Moving output files for package: /Game/EOL_Content/Maps/Map_Playground
+[2025.09.02-12.42.05:601][260]LogSavePackage: Moving '../../../../../../Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/MyFirstHour/Saved/Map_Playground3F857E524D09D0EAAAF382B74F1C13EC.tmp' to '../../../../../../Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/MyFirstHour/Content/EOL_Content/Maps/Map_Playground.umap'
+[2025.09.02-12.42.05:610][260]LogFileHelpers: Saving map 'Map_Playground' took 0.063
+[2025.09.02-12.42.05:621][260]LogFileHelpers: InternalPromptForCheckoutAndSave took 103.238 ms (total: 1.15 sec)
+[2025.09.02-12.42.05:680][260]LogContentValidation: Display: Starting to validate 1 assets
+[2025.09.02-12.42.05:681][260]LogContentValidation: Enabled validators:
+[2025.09.02-12.42.05:681][260]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.09.02-12.42.05:681][260]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.09.02-12.42.05:681][260]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.09.02-12.42.05:681][260]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.09.02-12.42.05:681][260]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.09.02-12.42.05:681][260]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.09.02-12.42.05:681][260]AssetCheck: /Game/EOL_Content/Maps/Map_Playground Validating asset
+[2025.09.02-12.42.05:697][260]LogSourceControl: Display: Uncontrolled Changelist persistency file saved ../../../../../../Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/MyFirstHour/Saved/SourceControl/UncontrolledChangelists.json
+[2025.09.02-12.42.18:385][314]LogUObjectHash: Compacting FUObjectHashTables data took   0.53ms
+[2025.09.02-12.42.18:420][314]LogStall: Shutdown...
+[2025.09.02-12.42.18:420][314]LogStall: Shutdown complete.
+[2025.09.02-12.42.18:448][314]LogSlate: Window 'MyFirstHour - Unreal Editor' being destroyed
+[2025.09.02-12.42.18:689][315]Cmd: QUIT_EDITOR
+[2025.09.02-12.42.18:689][315]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2025.09.02-12.42.18:692][315]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2025.09.02-12.42.18:693][315]LogStaticMesh: Abandoning remaining async distance field tasks for shutdown
+[2025.09.02-12.42.18:693][315]LogStaticMesh: Abandoning remaining async card representation tasks for shutdown
+[2025.09.02-12.42.18:694][315]LogWorld: UWorld::CleanupWorld for Map_Playground, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-12.42.18:694][315]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-12.42.18:703][315]LogTedsSettings: UTedsSettingsEditorSubsystem::Deinitialize
+[2025.09.02-12.42.18:703][315]LogStylusInput: Shutting down StylusInput subsystem.
+[2025.09.02-12.42.18:703][315]LogLevelSequenceEditor: LevelSequenceEditor subsystem deinitialized.
+[2025.09.02-12.42.18:704][315]LogWorld: UWorld::CleanupWorld for World_0, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-12.42.18:704][315]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-12.42.18:704][315]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-12.42.18:705][315]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-12.42.18:705][315]LogRuntimeTelemetry: Recording EnginePreExit events
+[2025.09.02-12.42.18:705][315]LogStudioTelemetry: Ended StudioTelemetry Session
+[2025.09.02-12.42.18:706][315]LogAnalytics: Display: [UEEditor.Rocket.Release] AnalyticsET::EndSession
+[2025.09.02-12.42.18:732][315]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2025.09.02-12.42.18:732][315]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2025.09.02-12.42.18:732][315]LogAudio: Display: Audio Device unregistered from world 'Map_Playground'.
+[2025.09.02-12.42.18:732][315]LogAudio: Display: Shutting down audio device while 1 references to it are still alive. For more information, compile with INSTRUMENT_AUDIODEVICE_HANDLES.
+[2025.09.02-12.42.18:732][315]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1, StreamState=4
+[2025.09.02-12.42.18:733][315]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1, StreamState=2
+[2025.09.02-12.42.18:738][315]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID -1
+[2025.09.02-12.42.18:738][315]LogAudio: Display: Audio Device Manager Shutdown
+[2025.09.02-12.42.18:740][315]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2025.09.02-12.42.18:740][315]LogExit: Preparing to exit.
+[2025.09.02-12.42.18:764][315]LogUObjectHash: Compacting FUObjectHashTables data took   0.42ms
+[2025.09.02-12.42.19:688][315]LogEditorDataStorage: Deinitializing
+[2025.09.02-12.42.19:772][315]LogDemo: Cleaned up 0 splitscreen connections, owner deletion: enabled
+[2025.09.02-12.42.19:782][315]LogExit: Editor shut down
+[2025.09.02-12.42.19:785][315]LogExit: Transaction tracking system shut down
+[2025.09.02-12.42.19:850][315]LogExit: Object subsystem successfully closed.
+[2025.09.02-12.42.19:907][315]LogShaderCompilers: Display: Shaders left to compile 0
+[2025.09.02-12.42.20:003][315]LogMemoryProfiler: Shutdown
+[2025.09.02-12.42.20:003][315]LogNetworkingProfiler: Shutdown
+[2025.09.02-12.42.20:003][315]LoadingProfiler: Shutdown
+[2025.09.02-12.42.20:003][315]LogTimingProfiler: Shutdown
+[2025.09.02-12.42.20:003][315]LogChaosVDEditor: [FChaosVDExtensionsManager::UnRegisterExtension] UnRegistering CVD Extension [FChaosVDGenericDebugDrawExtension] ...
+[2025.09.02-12.42.20:003][315]LogChaosVDEditor: [FChaosVDExtensionsManager::UnRegisterExtension] UnRegistering CVD Extension [FChaosVDAccelerationStructuresExtension] ...
+[2025.09.02-12.42.20:263][315]LogChaosDD: Chaos Debug Draw Shutdown
+[2025.09.02-12.42.20:273][315]RenderDocPlugin: plugin has been unloaded.
+[2025.09.02-12.42.20:278][315]LogHttp: Warning: [FHttpManager::Shutdown] Unbinding delegates for 1 outstanding Http Requests:
+[2025.09.02-12.42.20:278][315]LogHttp: Warning: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B9051E6CB-49B7-B5D1-4EBA-2D8D21093238%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.6.1-44394996%2B%2B%2BUE5%2BRelease-5.6&UserID=370cf9224b2a2fd3075103b2dfe71dde%7C2b197401c47d4dbf830ec3be8c3aa216%7Ca526d726-1711-4ec9-ad8b-d3deb25fa3f8&AppEnvironment=datacollector-binary&UploadType=eteventstream] refs=[2] status=Processing
+[2025.09.02-12.42.21:340][315]LogEOSShared: FEOSSDKManager::Shutdown EOS_Shutdown Result=[EOS_Success]
+[2025.09.02-12.42.21:340][315]LogNFORDenoise: NFORDenoise function shutting down
+[2025.09.02-12.42.21:343][315]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetActorFactory id: 0
+[2025.09.02-12.42.21:343][315]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetSubObjectFactory id: 1
+[2025.09.02-12.42.21:343][315]LogPakFile: Destroying PakPlatformFile
+[2025.09.02-12.42.21:621][315]LogD3D12RHI: ~FD3D12DynamicRHI
+[2025.09.02-12.42.21:646][315]LogExit: Exiting.
+[2025.09.02-12.42.21:655][315]Log file closed, 09/02/25 08:42:21
