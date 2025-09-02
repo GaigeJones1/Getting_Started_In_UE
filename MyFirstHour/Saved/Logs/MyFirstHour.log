@@ -2235,3 +2235,469 @@ Sampler Limit: 32
 [2025.09.02-21.19.02:885][826]AssetCheck: /Game/EOL_Content/Meshes/Materials/MI_GlowBlue Validating asset
 [2025.09.02-21.19.02:885][826]AssetCheck: /Game/EOL_Content/Meshes/Materials/MI_GlowRed Validating asset
 [2025.09.02-21.19.02:908][826]LogSourceControl: Display: Uncontrolled Changelist persistency file saved C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Saved/SourceControl/UncontrolledChangelists.json
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: ================================================
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Total job queries 18,479, among them cache hits 4,682 (25.34%), DDC hits 12,716 (68.81%), Duplicates 765 (4.14%)
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Tracking 13,032 distinct input hashes that result in 11,914 distinct outputs (91.42%)
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: RAM used: 159.03 MiB of 819.20 MiB budget. Usage: 19.41%
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Shaders Compiled: 316
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Jobs assigned 316, completed 316 (100%)
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Average time worker was idle: 27.32 s
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Time job spent in pending queue: average 6.58 s, longest 53.98 s
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Job execution time: average 18.97 s, max 67.51 s
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Job life time (pending + execution): average 25.56 s, max 68.07
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Shader code size: total 7.165 MiB, numShaders 318, average 23.072 KiB, min 2.777 KiB, max 55.505 KiB
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 186.01 s
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.09%
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Jobs were issued in 191 batches (only local compilation was used), average 1.65 jobs/batch
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Average processing rate: 1.70 jobs/sec
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Total thread time: 1,321.501 s
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Total thread preprocess time: 238.091 s
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Percentage time preprocessing: 18.02%
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Effective parallelization: 7.10 (times faster than compiling all shaders on one thread). Compare with number of workers: 8 - 0.888073
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display:                   TMaterialCHSFNoLightMapPolicyFAnyHitShader (compiled   10 times, average 16.26 sec, max 42.89 sec, min 4.98 sec)
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display:                                        FRayTracingLightingMS (compiled    1 times, average 15.67 sec, max 15.67 sec, min 15.67 sec)
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display:                          FPathTracingVolumetricCloudMaterial (compiled    1 times, average 15.60 sec, max 15.60 sec, min 15.60 sec)
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS (compiled   10 times, average 15.23 sec, max 53.10 sec, min 2.43 sec)
+[2025.09.02-21.20.28:751][811]LogShaderCompilers: Display:                      FPathTracingBuildCloudAccelerationMapCS (compiled    1 times, average 7.55 sec, max 7.55 sec, min 7.55 sec)
+[2025.09.02-21.20.28:752][811]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.09.02-21.20.28:752][811]LogShaderCompilers: Display:                        FLumenReflectionHardwareRayTracingRGS - 27.91% of total time (compiled   80 times, average 4.61 sec, max 10.62 sec, min 2.74 sec)
+[2025.09.02-21.20.28:752][811]LogShaderCompilers: Display:                   TMaterialCHSFNoLightMapPolicyFAnyHitShader - 12.30% of total time (compiled   10 times, average 16.26 sec, max 42.89 sec, min 4.98 sec)
+[2025.09.02-21.20.28:752][811]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS - 11.53% of total time (compiled   10 times, average 15.23 sec, max 53.10 sec, min 2.43 sec)
+[2025.09.02-21.20.28:752][811]LogShaderCompilers: Display:                        FRayTracingDynamicGeometryConverterCS - 9.65% of total time (compiled   35 times, average 3.64 sec, max 26.72 sec, min 0.41 sec)
+[2025.09.02-21.20.28:752][811]LogShaderCompilers: Display:                                TMaterialCHSFNoLightMapPolicy - 8.45% of total time (compiled   38 times, average 2.94 sec, max 8.33 sec, min 1.25 sec)
+[2025.09.02-21.20.28:752][811]LogShaderCompilers: Display: === Material stats ===
+[2025.09.02-21.20.28:752][811]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.09.02-21.20.28:752][811]LogShaderCompilers: Display: Materials Translated:    158
+[2025.09.02-21.20.28:752][811]LogShaderCompilers: Display: Material Total Translate Time: 0.19 s
+[2025.09.02-21.20.28:752][811]LogShaderCompilers: Display: Material Translation Only: 0.09 s (48%)
+[2025.09.02-21.20.28:752][811]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (0%)
+[2025.09.02-21.20.28:752][811]LogShaderCompilers: Display: Material Cache Hits: 0 (0%)
+[2025.09.02-21.20.28:752][811]LogShaderCompilers: Display: ================================================
+[2025.09.02-21.20.54:979][308]LogSlate: Window 'SDK Not Setup' being destroyed
+[2025.09.02-21.22.53:488][381]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1065.391724
+[2025.09.02-21.22.54:488][384]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.02-21.22.54:488][384]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1066.059326, Update Interval: 344.078491
+[2025.09.02-21.28.18:949][604]LogTurnkeySupport: Running Turnkey SDK detection: ' -ScriptsForProject="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" Turnkey -utf8output -WaitForUATMutex -command=VerifySdk -ReportFilename="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Intermediate/TurnkeyReport_2.log" -log="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Intermediate/TurnkeyLog_2.log" -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject"  -platform=all'
+[2025.09.02-21.28.18:952][604]LogMonitoredProcess: Running Serialized UAT: [ cmd.exe /c ""E:/Unreal_Engine/UE_5.6/Engine/Build/BatchFiles/RunUAT.bat"  -ScriptsForProject="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" Turnkey -utf8output -WaitForUATMutex -command=VerifySdk -ReportFilename="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Intermediate/TurnkeyReport_2.log" -log="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Intermediate/TurnkeyLog_2.log" -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject"  -platform=all" -nocompile -nocompileuat ]
+[2025.09.02-21.28.19:799][677]LogTurnkeySupport: Running Turnkey device detection: ' -ScriptsForProject="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" Turnkey -utf8output -WaitForUATMutex -command=VerifySdk -ReportFilename="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Intermediate/TurnkeyReport_3.log" -log="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Intermediate/TurnkeyLog_3.log" -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject"  -Device=Win64@GAIGE-COMPUTER'
+[2025.09.02-21.28.27:182][132]LogTurnkeySupport: Completed SDK detection: ExitCode = 0
+[2025.09.02-21.28.27:183][132]LogMonitoredProcess: Running Serialized UAT: [ cmd.exe /c ""E:/Unreal_Engine/UE_5.6/Engine/Build/BatchFiles/RunUAT.bat"  -ScriptsForProject="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" Turnkey -utf8output -WaitForUATMutex -command=VerifySdk -ReportFilename="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Intermediate/TurnkeyReport_3.log" -log="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Intermediate/TurnkeyLog_3.log" -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject"  -Device=Win64@GAIGE-COMPUTER" -nocompile -nocompileuat ]
+[2025.09.02-21.28.27:190][132]LogTurnkeySupport: Turnkey Platform: Win64: (Status=Valid, MinAllowed_Sdk=10.0.19041.0, MaxAllowed_Sdk=10.9.99999.0, Current_Sdk=10.0.26100.0, Allowed_AutoSdk=10.0.22621.0, Current_AutoSdk=, Flags="InstalledSdk_ValidVersionExists")
+[2025.09.02-21.28.28:819][222]LogTurnkeySupport: Completed device detection: Code = 0
+[2025.09.02-21.28.28:822][222]LogTurnkeySupport: Turnkey Device: Win64@Gaige-computer: (Name=Gaige-computer, Type=Computer, Status=Valid, MinAllowed=10.0.19041.0, MaxAllowed=, Current=10.0.22631.0, Flags="Device_InstallSoftwareValid")
+[2025.09.02-21.28.29:503][255]LogUObjectHash: Compacting FUObjectHashTables data took   1.66ms
+[2025.09.02-21.29.40:104][255]LogTurnkeySupport: Project requires temp target (GameplayStateTree plugin is enabled)
+[2025.09.02-21.29.40:105][255]LogLauncherProfile: Unable to use promoted target - C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Binaries/Win64/UnrealGame.target does not exist.
+[2025.09.02-21.29.40:216][255]LogMonitoredProcess: Running Serialized UAT: [ cmd.exe /c ""E:/Unreal_Engine/UE_5.6/Engine/Build/BatchFiles/RunUAT.bat"  -ScriptsForProject="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" Turnkey -command=VerifySdk -platform=Win64 -UpdateIfNeeded -EditorIO -EditorIOPort=56693  -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" BuildCookRun -nop4 -utf8output -nocompileeditor -skipbuildeditor -cook  -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject"  -unrealexe="E:\Unreal_Engine\UE_5.6\Engine\Binaries\Win64\UnrealEditor-Cmd.exe" -platform=Win64 -installed -stage -archive -package -build -pak -iostore -compressed -prereqs -archivedirectory="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/Packaging/firstHour" -clientconfig=Development" -nocompile -nocompileuat ]
+[2025.09.02-21.29.40:225][255]LogStreaming: Display: FlushAsyncLoading(601): 1 QueuedPackages, 0 AsyncPackages
+[2025.09.02-21.29.40:241][255]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_LCK1_0.000000_CSZE_65536_LCF_false_ZCS_256_MCSO_0_END wave CompileSuccess...
+[2025.09.02-21.29.40:247][255]LogAudioDerivedData: Display: CompileSuccess compressed to 14.13% (from 93KB to 13KB) with BINKA at Quality 80 with Quality Modifier 1.00
+[2025.09.02-21.29.40:248][255]LogAudio: Display: Chunk stats for (SoundWave /Engine/EditorSounds/Notifications/CompileSuccess.CompileSuccess: Duration=0.50 secs, Channels=2), Settings(FirstChunkSize=4294967295 frames, InlineFirst=false, MaxChunkSize=262144), Chunks=2, Chunk0=28 bytes, Chunk1=13553 bytes, ChunkN=0)
+[2025.09.02-21.29.40:258][255]UATHelper: Packaging (Windows): Running AutomationTool...
+[2025.09.02-21.29.40:405][255]UATHelper: Packaging (Windows): Using bundled DotNet SDK version: 8.0.300 win-x64
+[2025.09.02-21.29.40:553][263]UATHelper: Packaging (Windows): Starting AutomationTool...
+[2025.09.02-21.29.40:574][264]UATHelper: Packaging (Windows): Parsing command line: -ScriptsForProject="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" Turnkey -command=VerifySdk -platform=Win64 -UpdateIfNeeded -EditorIO -EditorIOPort=56693 -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" BuildCookRun -nop4 -utf8output -nocompileeditor -skipbuildeditor -cook -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" -unrealexe=E:\Unreal_Engine\UE_5.6\Engine\Binaries\Win64\UnrealEditor-Cmd.exe -platform=Win64 -installed -stage -archive -package -build -pak -iostore -compressed -prereqs -archivedirectory="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/Packaging/firstHour" -clientconfig=Development -nocompile -nocompileuat
+[2025.09.02-21.29.40:678][271]UATHelper: Packaging (Windows): Initializing script modules...
+[2025.09.02-21.29.41:044][298]UATHelper: Packaging (Windows): Total script module initialization time: 0.37 s.
+[2025.09.02-21.29.41:138][305]UATHelper: Packaging (Windows): Using E:\Unreal_Engine\UE_5.6\Engine\Binaries\ThirdParty\DotNet\8.0.300\win-x64\dotnet.exe
+[2025.09.02-21.29.41:452][328]UATHelper: Packaging (Windows): Executing commands...
+[2025.09.02-21.29.41:547][335]UATHelper: Packaging (Windows): Installed Sdk validity:
+[2025.09.02-21.29.41:547][335]UATHelper: Packaging (Windows): Win64: (Status=Valid, MinAllowed_Sdk=10.0.19041.0, MaxAllowed_Sdk=10.9.99999.0, Current_Sdk=10.0.26100.0, Allowed_AutoSdk=10.0.22621.0, Current_AutoSdk=, Flags="InstalledSdk_ValidVersionExists")
+[2025.09.02-21.29.41:558][336]UATHelper: Packaging (Windows): Scanning for envvar changes...
+[2025.09.02-21.29.41:558][336]UATHelper: Packaging (Windows): ... done! 
+[2025.09.02-21.29.41:558][336]UATHelper: Packaging (Windows): Cleaning Temp Paths...
+[2025.09.02-21.29.41:558][336]UATHelper: Packaging (Windows): BUILD SUCCESSFUL
+[2025.09.02-21.29.41:558][336]UATHelper: Packaging (Windows): Setting up ProjectParams for C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour\MyFirstHour.uproject
+[2025.09.02-21.29.43:251][383]UATHelper: Packaging (Windows): MyFirstHour.uproject is has no code, but is being treated as a code-based project for platforms Android, IOS, Linux, Mac, TVOS, Win64 because: GameplayStateTree plugin is enabled. Creating temporary .Target.cs files.
+[2025.09.02-21.29.44:973][388]UATHelper: Packaging (Windows): ********** BUILD COMMAND STARTED **********
+[2025.09.02-21.29.44:994][388]UATHelper: Packaging (Windows): Running: E:\Unreal_Engine\UE_5.6\Engine\Binaries\ThirdParty\DotNet\8.0.300\win-x64\dotnet.exe "E:\Unreal_Engine\UE_5.6\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" MyFirstHour Win64 Development -Project="C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour\MyFirstHour.uproject" -Manifest="C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour\Intermediate\Build\Manifest.xml"  -remoteini="C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour"  -skipdeploy  -log="C:\Users\Yeyian PC\AppData\Roaming\Unreal Engine\AutomationTool\Logs\E+Unreal_Engine+UE_5.6\UBA-MyFirstHour-Win64-Development.txt"
+[2025.09.02-21.29.46:855][394]UATHelper: Packaging (Windows): Log file: C:\Users\Yeyian PC\AppData\Roaming\Unreal Engine\AutomationTool\Logs\E+Unreal_Engine+UE_5.6\UBA-MyFirstHour-Win64-Development.txt
+[2025.09.02-21.29.47:540][396]UATHelper: Packaging (Windows): Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE).
+[2025.09.02-21.29.47:551][396]UATHelper: Packaging (Windows): Creating makefile for MyFirstHour (no existing makefile)
+[2025.09.02-21.29.50:098][403]UATHelper: Packaging (Windows): No valid Visual C++ toolchain was found (minimum version 14.38.33130, preferred version 14.38.33130). Please download and install Visual Studio 2022 17.8 or later and verify that the "MSVC v143 - VS 2022 C++ x64/x86 build tools (v14.38-17.8)" component is selected in the Visual Studio 2022 installation options.
+[2025.09.02-21.29.50:108][403]UATHelper: Packaging (Windows): Visual Studio 2022 x64 must be installed in order to build this target.
+[2025.09.02-21.29.50:108][403]UATHelper: Packaging (Windows): Result: Failed (OtherCompilationError)
+[2025.09.02-21.29.50:108][403]UATHelper: Packaging (Windows): Total execution time: 4.39 seconds
+[2025.09.02-21.29.50:139][403]UATHelper: Packaging (Windows): Took 5.16s to run dotnet.exe, ExitCode=6
+[2025.09.02-21.29.50:150][403]UATHelper: Packaging (Windows): UnrealBuildTool failed. See log for more details. (C:\Users\Yeyian PC\AppData\Roaming\Unreal Engine\AutomationTool\Logs\E+Unreal_Engine+UE_5.6\UBA-MyFirstHour-Win64-Development.txt)
+[2025.09.02-21.29.50:150][403]UATHelper: Packaging (Windows): AutomationTool executed for 0h 0m 9s
+[2025.09.02-21.29.50:150][403]UATHelper: Packaging (Windows): AutomationTool exiting with ExitCode=6 (6)
+[2025.09.02-21.29.50:214][404]UATHelper: Packaging (Windows): BUILD FAILED
+[2025.09.02-21.29.50:479][404]LogStreaming: Display: FlushAsyncLoading(602): 1 QueuedPackages, 0 AsyncPackages
+[2025.09.02-21.29.50:484][404]LogAudioDerivedData: Display: Building compressed audio format BINKA hash BINKA_SCVER_5028_R4DV_false_SR0_48000.000000_SR1_32000.000000_SR2_24000.000000_SR3_12000.000000_SR4_8000.000000_QMOD_1.000000_CQLT_-1_ASTH_0.000000_INLC_false_LCK1_0.000000_CSZE_65536_LCF_false_ZCS_256_MCSO_0_END wave CompileFailed...
+[2025.09.02-21.29.50:485][404]PackagingResults: Error: Unknown Error
+[2025.09.02-21.29.50:488][404]LogAudioDerivedData: Display: CompileFailed compressed to 14.18% (from 87KB to 12KB) with BINKA at Quality 80 with Quality Modifier 1.00
+[2025.09.02-21.29.50:489][404]LogAudio: Display: Chunk stats for (SoundWave /Engine/EditorSounds/Notifications/CompileFailed.CompileFailed: Duration=0.47 secs, Channels=2), Settings(FirstChunkSize=4294967295 frames, InlineFirst=false, MaxChunkSize=262144), Chunks=2, Chunk0=28 bytes, Chunk1=12695 bytes, ChunkN=0)
+[2025.09.02-21.29.53:819][414]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1485.723389
+[2025.09.02-21.29.54:819][417]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.02-21.29.54:819][417]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1486.389648, Update Interval: 340.147095
+[2025.09.02-21.30.15:088][ 50]LogPSOHitching: Encountered 500 PSO creation hitches so far (167 graphics, 333 compute). 0 of them were precached.
+[2025.09.02-21.30.15:319][ 52]LogD3D12RHI: Waited for PSO creation for 100.000000ms
+[2025.09.02-21.30.15:419][ 52]LogD3D12RHI: Waited for PSO creation for 200.000000ms
+[2025.09.02-21.30.37:928][434]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2025.09.02-21.30.51:545][434]LogTurnkeySupport: Project requires temp target (GameplayStateTree plugin is enabled)
+[2025.09.02-21.30.51:545][434]LogLauncherProfile: Unable to use promoted target - C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Binaries/Win64/UnrealGame.target does not exist.
+[2025.09.02-21.30.51:548][434]LogMonitoredProcess: Running Serialized UAT: [ cmd.exe /c ""E:/Unreal_Engine/UE_5.6/Engine/Build/BatchFiles/RunUAT.bat"  -ScriptsForProject="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" Turnkey -command=VerifySdk -platform=Win64 -UpdateIfNeeded -EditorIO -EditorIOPort=56693  -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" BuildCookRun -nop4 -utf8output -nocompileeditor -skipbuildeditor -cook  -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject"  -unrealexe="E:\Unreal_Engine\UE_5.6\Engine\Binaries\Win64\UnrealEditor-Cmd.exe" -platform=Win64 -installed -stage -archive -package -build -pak -iostore -compressed -prereqs -archivedirectory="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/Packaging/firstHour" -clientconfig=Development" -nocompile -nocompileuat ]
+[2025.09.02-21.30.51:615][435]UATHelper: Packaging (Windows): Running AutomationTool...
+[2025.09.02-21.30.51:825][451]UATHelper: Packaging (Windows): Using bundled DotNet SDK version: 8.0.300 win-x64
+[2025.09.02-21.30.52:005][464]UATHelper: Packaging (Windows): Starting AutomationTool...
+[2025.09.02-21.30.52:037][466]UATHelper: Packaging (Windows): Parsing command line: -ScriptsForProject="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" Turnkey -command=VerifySdk -platform=Win64 -UpdateIfNeeded -EditorIO -EditorIOPort=56693 -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" BuildCookRun -nop4 -utf8output -nocompileeditor -skipbuildeditor -cook -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" -unrealexe=E:\Unreal_Engine\UE_5.6\Engine\Binaries\Win64\UnrealEditor-Cmd.exe -platform=Win64 -installed -stage -archive -package -build -pak -iostore -compressed -prereqs -archivedirectory="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/Packaging/firstHour" -clientconfig=Development -nocompile -nocompileuat
+[2025.09.02-21.30.52:151][474]UATHelper: Packaging (Windows): Initializing script modules...
+[2025.09.02-21.30.52:560][504]UATHelper: Packaging (Windows): Total script module initialization time: 0.41 s.
+[2025.09.02-21.30.52:635][509]UATHelper: Packaging (Windows): Using E:\Unreal_Engine\UE_5.6\Engine\Binaries\ThirdParty\DotNet\8.0.300\win-x64\dotnet.exe
+[2025.09.02-21.30.52:971][535]UATHelper: Packaging (Windows): Executing commands...
+[2025.09.02-21.30.53:066][542]UATHelper: Packaging (Windows): Installed Sdk validity:
+[2025.09.02-21.30.53:066][542]UATHelper: Packaging (Windows): Win64: (Status=Valid, MinAllowed_Sdk=10.0.19041.0, MaxAllowed_Sdk=10.9.99999.0, Current_Sdk=10.0.26100.0, Allowed_AutoSdk=10.0.22621.0, Current_AutoSdk=, Flags="InstalledSdk_ValidVersionExists")
+[2025.09.02-21.30.53:066][542]UATHelper: Packaging (Windows): Scanning for envvar changes...
+[2025.09.02-21.30.53:066][542]UATHelper: Packaging (Windows): ... done! 
+[2025.09.02-21.30.53:066][542]UATHelper: Packaging (Windows): Cleaning Temp Paths...
+[2025.09.02-21.30.53:066][542]UATHelper: Packaging (Windows): BUILD SUCCESSFUL
+[2025.09.02-21.30.53:077][543]UATHelper: Packaging (Windows): Setting up ProjectParams for C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour\MyFirstHour.uproject
+[2025.09.02-21.30.54:815][671]UATHelper: Packaging (Windows): ********** BUILD COMMAND STARTED **********
+[2025.09.02-21.30.54:837][673]UATHelper: Packaging (Windows): Running: E:\Unreal_Engine\UE_5.6\Engine\Binaries\ThirdParty\DotNet\8.0.300\win-x64\dotnet.exe "E:\Unreal_Engine\UE_5.6\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" MyFirstHour Win64 Development -Project="C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour\MyFirstHour.uproject" -Manifest="C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour\Intermediate\Build\Manifest.xml"  -remoteini="C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour"  -skipdeploy  -log="C:\Users\Yeyian PC\AppData\Roaming\Unreal Engine\AutomationTool\Logs\E+Unreal_Engine+UE_5.6\UBA-MyFirstHour-Win64-Development.txt"
+[2025.09.02-21.30.55:265][703]UATHelper: Packaging (Windows): Log file: C:\Users\Yeyian PC\AppData\Roaming\Unreal Engine\AutomationTool\Logs\E+Unreal_Engine+UE_5.6\UBA-MyFirstHour-Win64-Development.txt
+[2025.09.02-21.30.56:255][768]UATHelper: Packaging (Windows): Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE).
+[2025.09.02-21.30.56:276][769]UATHelper: Packaging (Windows): Creating makefile for MyFirstHour (no existing makefile)
+[2025.09.02-21.30.56:552][786]UATHelper: Packaging (Windows): No valid Visual C++ toolchain was found (minimum version 14.38.33130, preferred version 14.38.33130). Please download and install Visual Studio 2022 17.8 or later and verify that the "MSVC v143 - VS 2022 C++ x64/x86 build tools (v14.38-17.8)" component is selected in the Visual Studio 2022 installation options.
+[2025.09.02-21.30.56:573][787]UATHelper: Packaging (Windows): Visual Studio 2022 x64 must be installed in order to build this target.
+[2025.09.02-21.30.56:584][787]UATHelper: Packaging (Windows): Result: Failed (OtherCompilationError)
+[2025.09.02-21.30.56:584][787]UATHelper: Packaging (Windows): Total execution time: 1.65 seconds
+[2025.09.02-21.30.56:594][788]UATHelper: Packaging (Windows): Took 1.77s to run dotnet.exe, ExitCode=6
+[2025.09.02-21.30.56:605][788]UATHelper: Packaging (Windows): UnrealBuildTool failed. See log for more details. (C:\Users\Yeyian PC\AppData\Roaming\Unreal Engine\AutomationTool\Logs\E+Unreal_Engine+UE_5.6\UBA-MyFirstHour-Win64-Development.txt)
+[2025.09.02-21.30.56:605][788]UATHelper: Packaging (Windows): AutomationTool executed for 0h 0m 4s
+[2025.09.02-21.30.56:605][788]UATHelper: Packaging (Windows): AutomationTool exiting with ExitCode=6 (6)
+[2025.09.02-21.30.56:680][794]UATHelper: Packaging (Windows): BUILD FAILED
+[2025.09.02-21.30.56:684][794]PackagingResults: Error: Unknown Error
+[2025.09.02-21.32.34:391][918]LogSlate: External Image Picker: DecompressImage failed
+[2025.09.02-21.32.34:883][921]LogD3D12RHI: Waited for PSO creation for 100.000000ms
+[2025.09.02-21.32.34:984][921]LogD3D12RHI: Waited for PSO creation for 200.000000ms
+[2025.09.02-21.32.35:404][930]LogPSOHitching: Encountered 550 PSO creation hitches so far (193 graphics, 357 compute). 0 of them were precached.
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: ================================================
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Total job queries 18,496, among them cache hits 4,682 (25.31%), DDC hits 12,731 (68.83%), Duplicates 765 (4.14%)
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Tracking 13,049 distinct input hashes that result in 11,926 distinct outputs (91.39%)
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: RAM used: 159.12 MiB of 819.20 MiB budget. Usage: 19.42%
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Shaders Compiled: 318
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Jobs assigned 318, completed 318 (100%)
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Average time worker was idle: 36.42 s
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Time job spent in pending queue: average 6.54 s, longest 53.98 s
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Job execution time: average 18.86 s, max 67.51 s
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Job life time (pending + execution): average 25.41 s, max 68.07
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Shader code size: total 7.179 MiB, numShaders 320, average 22.972 KiB, min 2.777 KiB, max 55.505 KiB
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 187.63 s
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.09%
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Jobs were issued in 193 batches (only local compilation was used), average 1.65 jobs/batch
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Average processing rate: 1.69 jobs/sec
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Total thread time: 1,323.256 s
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Total thread preprocess time: 238.448 s
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Percentage time preprocessing: 18.02%
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Effective parallelization: 7.05 (times faster than compiling all shaders on one thread). Compare with number of workers: 8 - 0.881563
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display:                   TMaterialCHSFNoLightMapPolicyFAnyHitShader (compiled   10 times, average 16.26 sec, max 42.89 sec, min 4.98 sec)
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display:                                        FRayTracingLightingMS (compiled    1 times, average 15.67 sec, max 15.67 sec, min 15.67 sec)
+[2025.09.02-21.32.40:259][200]LogShaderCompilers: Display:                          FPathTracingVolumetricCloudMaterial (compiled    1 times, average 15.60 sec, max 15.60 sec, min 15.60 sec)
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS (compiled   10 times, average 15.23 sec, max 53.10 sec, min 2.43 sec)
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display:                      FPathTracingBuildCloudAccelerationMapCS (compiled    1 times, average 7.55 sec, max 7.55 sec, min 7.55 sec)
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display:                        FLumenReflectionHardwareRayTracingRGS - 27.88% of total time (compiled   80 times, average 4.61 sec, max 10.62 sec, min 2.74 sec)
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display:                   TMaterialCHSFNoLightMapPolicyFAnyHitShader - 12.29% of total time (compiled   10 times, average 16.26 sec, max 42.89 sec, min 4.98 sec)
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS - 11.51% of total time (compiled   10 times, average 15.23 sec, max 53.10 sec, min 2.43 sec)
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display:                        FRayTracingDynamicGeometryConverterCS - 9.64% of total time (compiled   35 times, average 3.64 sec, max 26.72 sec, min 0.41 sec)
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display:                                TMaterialCHSFNoLightMapPolicy - 8.44% of total time (compiled   38 times, average 2.94 sec, max 8.33 sec, min 1.25 sec)
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display: === Material stats ===
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display: Materials Translated:    158
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display: Material Total Translate Time: 0.19 s
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display: Material Translation Only: 0.09 s (48%)
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (0%)
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display: Material Cache Hits: 0 (0%)
+[2025.09.02-21.32.40:260][200]LogShaderCompilers: Display: ================================================
+[2025.09.02-21.34.03:366][176]LogSlate: Window 'Project Settings' being destroyed
+[2025.09.02-21.34.03:373][176]LogSlate: Window 'Project Settings' being destroyed
+[2025.09.02-21.34.13:795][106]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_15
+[2025.09.02-21.34.15:828][233]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/EOL_Content/Characters/Bot/BP_Bot.BP_Bot
+[2025.09.02-21.34.15:828][233]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_16
+[2025.09.02-21.34.16:739][236]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_17
+[2025.09.02-21.35.17:255][550]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.09.02-21.35.17:287][550]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/EOL_Content/Characters/Bot/BP_Bot] ([2] browsable assets)...
+[2025.09.02-21.35.17:330][550]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/EOL_Content/Characters/Bot/BP_Bot.BP_Bot]
+[2025.09.02-21.35.17:330][550]OBJ SavePackage: Finished generating thumbnails for package [/Game/EOL_Content/Characters/Bot/BP_Bot]
+[2025.09.02-21.35.17:369][550]LogSavePackage: Moving output files for package: /Game/EOL_Content/Characters/Bot/BP_Bot
+[2025.09.02-21.35.17:370][550]LogSavePackage: Moving 'C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Saved/BP_Bot31A9C9C649E7FE49B6568F822413510F.tmp' to 'C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Content/EOL_Content/Characters/Bot/BP_Bot.uasset'
+[2025.09.02-21.35.17:382][550]LogFileHelpers: InternalPromptForCheckoutAndSave took 126.235 ms (total: 478.231 ms)
+[2025.09.02-21.35.17:406][550]LogContentValidation: Display: Starting to validate 1 assets
+[2025.09.02-21.35.17:406][550]LogContentValidation: Enabled validators:
+[2025.09.02-21.35.17:406][550]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.09.02-21.35.17:406][550]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.09.02-21.35.17:406][550]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.09.02-21.35.17:406][550]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.09.02-21.35.17:406][550]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.09.02-21.35.17:406][550]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.09.02-21.35.17:406][550]AssetCheck: /Game/EOL_Content/Characters/Bot/BP_Bot Validating asset
+[2025.09.02-21.35.17:432][550]LogSourceControl: Display: Uncontrolled Changelist persistency file saved C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Saved/SourceControl/UncontrolledChangelists.json
+[2025.09.02-21.35.26:662][  3]LogUObjectHash: Compacting FUObjectHashTables data took   1.15ms
+[2025.09.02-21.35.31:896][331]LogSlate: Window 'BP_Bot' being destroyed
+[2025.09.02-21.35.31:907][331]LogSlate: Window 'BP_Bot' being destroyed
+[2025.09.02-21.35.31:911][331]LogWorld: UWorld::CleanupWorld for World_16, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-21.35.31:911][331]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-21.35.31:980][331]LogUObjectHash: Compacting FUObjectHashTables data took   1.52ms
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: ================================================
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Total job queries 18,505, among them cache hits 4,682 (25.30%), DDC hits 12,736 (68.82%), Duplicates 765 (4.13%)
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Tracking 13,058 distinct input hashes that result in 11,933 distinct outputs (91.38%)
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: RAM used: 159.17 MiB of 819.20 MiB budget. Usage: 19.43%
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Shaders Compiled: 322
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Jobs assigned 322, completed 322 (100%)
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Average time worker was idle: 43.04 s
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Time job spent in pending queue: average 6.46 s, longest 53.98 s
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Job execution time: average 18.65 s, max 67.51 s
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Job life time (pending + execution): average 25.11 s, max 68.07
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Shader code size: total 7.214 MiB, numShaders 324, average 22.799 KiB, min 2.777 KiB, max 55.505 KiB
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 190.74 s
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.09%
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Jobs were issued in 197 batches (only local compilation was used), average 1.63 jobs/batch
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Average processing rate: 1.69 jobs/sec
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Total thread time: 1,327.254 s
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Total thread preprocess time: 238.581 s
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Percentage time preprocessing: 17.98%
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Effective parallelization: 6.96 (times faster than compiling all shaders on one thread). Compare with number of workers: 8 - 0.869799
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display:                   TMaterialCHSFNoLightMapPolicyFAnyHitShader (compiled   10 times, average 16.26 sec, max 42.89 sec, min 4.98 sec)
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display:                                        FRayTracingLightingMS (compiled    1 times, average 15.67 sec, max 15.67 sec, min 15.67 sec)
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display:                          FPathTracingVolumetricCloudMaterial (compiled    1 times, average 15.60 sec, max 15.60 sec, min 15.60 sec)
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS (compiled   10 times, average 15.23 sec, max 53.10 sec, min 2.43 sec)
+[2025.09.02-21.35.40:269][978]LogShaderCompilers: Display:                      FPathTracingBuildCloudAccelerationMapCS (compiled    1 times, average 7.55 sec, max 7.55 sec, min 7.55 sec)
+[2025.09.02-21.35.40:270][978]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.09.02-21.35.40:270][978]LogShaderCompilers: Display:                        FLumenReflectionHardwareRayTracingRGS - 27.79% of total time (compiled   80 times, average 4.61 sec, max 10.62 sec, min 2.74 sec)
+[2025.09.02-21.35.40:270][978]LogShaderCompilers: Display:                   TMaterialCHSFNoLightMapPolicyFAnyHitShader - 12.25% of total time (compiled   10 times, average 16.26 sec, max 42.89 sec, min 4.98 sec)
+[2025.09.02-21.35.40:270][978]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS - 11.48% of total time (compiled   10 times, average 15.23 sec, max 53.10 sec, min 2.43 sec)
+[2025.09.02-21.35.40:270][978]LogShaderCompilers: Display:                        FRayTracingDynamicGeometryConverterCS - 9.61% of total time (compiled   35 times, average 3.64 sec, max 26.72 sec, min 0.41 sec)
+[2025.09.02-21.35.40:270][978]LogShaderCompilers: Display:                                TMaterialCHSFNoLightMapPolicy - 8.54% of total time (compiled   39 times, average 2.91 sec, max 8.33 sec, min 1.25 sec)
+[2025.09.02-21.35.40:270][978]LogShaderCompilers: Display: === Material stats ===
+[2025.09.02-21.35.40:270][978]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.09.02-21.35.40:270][978]LogShaderCompilers: Display: Materials Translated:    158
+[2025.09.02-21.35.40:270][978]LogShaderCompilers: Display: Material Total Translate Time: 0.19 s
+[2025.09.02-21.35.40:270][978]LogShaderCompilers: Display: Material Translation Only: 0.09 s (48%)
+[2025.09.02-21.35.40:270][978]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (0%)
+[2025.09.02-21.35.40:270][978]LogShaderCompilers: Display: Material Cache Hits: 0 (0%)
+[2025.09.02-21.35.40:270][978]LogShaderCompilers: Display: ================================================
+[2025.09.02-21.35.48:806][634]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2025.09.02-21.35.56:699][634]LogTurnkeySupport: Project requires temp target (GameplayStateTree plugin is enabled)
+[2025.09.02-21.35.56:699][634]LogLauncherProfile: Unable to use promoted target - C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Binaries/Win64/UnrealGame.target does not exist.
+[2025.09.02-21.35.56:705][634]LogMonitoredProcess: Running Serialized UAT: [ cmd.exe /c ""E:/Unreal_Engine/UE_5.6/Engine/Build/BatchFiles/RunUAT.bat"  -ScriptsForProject="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" Turnkey -command=VerifySdk -platform=Win64 -UpdateIfNeeded -EditorIO -EditorIOPort=56693  -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" BuildCookRun -nop4 -utf8output -nocompileeditor -skipbuildeditor -cook  -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject"  -unrealexe="E:\Unreal_Engine\UE_5.6\Engine\Binaries\Win64\UnrealEditor-Cmd.exe" -platform=Win64 -installed -stage -archive -package -build -pak -iostore -compressed -prereqs -archivedirectory="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/Packaging" -clientconfig=Development" -nocompile -nocompileuat ]
+[2025.09.02-21.35.56:755][634]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1848.654419
+[2025.09.02-21.35.56:777][636]UATHelper: Packaging (Windows): Running AutomationTool...
+[2025.09.02-21.35.56:866][642]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.02-21.35.56:866][642]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1848.748901, Update Interval: 353.461121
+[2025.09.02-21.35.56:976][650]UATHelper: Packaging (Windows): Using bundled DotNet SDK version: 8.0.300 win-x64
+[2025.09.02-21.35.57:144][661]UATHelper: Packaging (Windows): Starting AutomationTool...
+[2025.09.02-21.35.57:164][662]UATHelper: Packaging (Windows): Parsing command line: -ScriptsForProject="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" Turnkey -command=VerifySdk -platform=Win64 -UpdateIfNeeded -EditorIO -EditorIOPort=56693 -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" BuildCookRun -nop4 -utf8output -nocompileeditor -skipbuildeditor -cook -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" -unrealexe=E:\Unreal_Engine\UE_5.6\Engine\Binaries\Win64\UnrealEditor-Cmd.exe -platform=Win64 -installed -stage -archive -package -build -pak -iostore -compressed -prereqs -archivedirectory="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/Packaging" -clientconfig=Development -nocompile -nocompileuat
+[2025.09.02-21.35.57:281][671]UATHelper: Packaging (Windows): Initializing script modules...
+[2025.09.02-21.35.57:649][696]UATHelper: Packaging (Windows): Total script module initialization time: 0.37 s.
+[2025.09.02-21.35.57:723][702]UATHelper: Packaging (Windows): Using E:\Unreal_Engine\UE_5.6\Engine\Binaries\ThirdParty\DotNet\8.0.300\win-x64\dotnet.exe
+[2025.09.02-21.35.58:060][726]UATHelper: Packaging (Windows): Executing commands...
+[2025.09.02-21.35.58:147][732]UATHelper: Packaging (Windows): Installed Sdk validity:
+[2025.09.02-21.35.58:157][733]UATHelper: Packaging (Windows): Win64: (Status=Valid, MinAllowed_Sdk=10.0.19041.0, MaxAllowed_Sdk=10.9.99999.0, Current_Sdk=10.0.26100.0, Allowed_AutoSdk=10.0.22621.0, Current_AutoSdk=, Flags="InstalledSdk_ValidVersionExists")
+[2025.09.02-21.35.58:157][733]UATHelper: Packaging (Windows): Scanning for envvar changes...
+[2025.09.02-21.35.58:157][733]UATHelper: Packaging (Windows): ... done! 
+[2025.09.02-21.35.58:157][733]UATHelper: Packaging (Windows): Cleaning Temp Paths...
+[2025.09.02-21.35.58:157][733]UATHelper: Packaging (Windows): BUILD SUCCESSFUL
+[2025.09.02-21.35.58:157][733]UATHelper: Packaging (Windows): Setting up ProjectParams for C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour\MyFirstHour.uproject
+[2025.09.02-21.35.59:827][857]UATHelper: Packaging (Windows): ********** BUILD COMMAND STARTED **********
+[2025.09.02-21.35.59:848][859]UATHelper: Packaging (Windows): Running: E:\Unreal_Engine\UE_5.6\Engine\Binaries\ThirdParty\DotNet\8.0.300\win-x64\dotnet.exe "E:\Unreal_Engine\UE_5.6\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" MyFirstHour Win64 Development -Project="C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour\MyFirstHour.uproject" -Manifest="C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour\Intermediate\Build\Manifest.xml"  -remoteini="C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour"  -skipdeploy  -log="C:\Users\Yeyian PC\AppData\Roaming\Unreal Engine\AutomationTool\Logs\E+Unreal_Engine+UE_5.6\UBA-MyFirstHour-Win64-Development.txt"
+[2025.09.02-21.36.00:231][885]UATHelper: Packaging (Windows): Log file: C:\Users\Yeyian PC\AppData\Roaming\Unreal Engine\AutomationTool\Logs\E+Unreal_Engine+UE_5.6\UBA-MyFirstHour-Win64-Development.txt
+[2025.09.02-21.36.00:996][936]UATHelper: Packaging (Windows): Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE).
+[2025.09.02-21.36.01:007][937]UATHelper: Packaging (Windows): Creating makefile for MyFirstHour (no existing makefile)
+[2025.09.02-21.36.01:242][954]UATHelper: Packaging (Windows): No valid Visual C++ toolchain was found (minimum version 14.38.33130, preferred version 14.38.33130). Please download and install Visual Studio 2022 17.8 or later and verify that the "MSVC v143 - VS 2022 C++ x64/x86 build tools (v14.38-17.8)" component is selected in the Visual Studio 2022 installation options.
+[2025.09.02-21.36.01:263][955]UATHelper: Packaging (Windows): Visual Studio 2022 x64 must be installed in order to build this target.
+[2025.09.02-21.36.01:273][956]UATHelper: Packaging (Windows): Result: Failed (OtherCompilationError)
+[2025.09.02-21.36.01:273][956]UATHelper: Packaging (Windows): Total execution time: 1.33 seconds
+[2025.09.02-21.36.01:305][959]UATHelper: Packaging (Windows): Took 1.47s to run dotnet.exe, ExitCode=6
+[2025.09.02-21.36.01:305][959]UATHelper: Packaging (Windows): UnrealBuildTool failed. See log for more details. (C:\Users\Yeyian PC\AppData\Roaming\Unreal Engine\AutomationTool\Logs\E+Unreal_Engine+UE_5.6\UBA-MyFirstHour-Win64-Development.txt)
+[2025.09.02-21.36.01:316][959]UATHelper: Packaging (Windows): AutomationTool executed for 0h 0m 4s
+[2025.09.02-21.36.01:316][959]UATHelper: Packaging (Windows): AutomationTool exiting with ExitCode=6 (6)
+[2025.09.02-21.36.01:379][964]UATHelper: Packaging (Windows): BUILD FAILED
+[2025.09.02-21.36.01:384][964]PackagingResults: Error: Unknown Error
+[2025.09.02-21.36.06:332][277]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2025.09.02-21.36.20:761][277]LogTurnkeySupport: Project requires temp target (GameplayStateTree plugin is enabled)
+[2025.09.02-21.36.20:762][277]LogLauncherProfile: Unable to use promoted target - C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/Binaries/Win64/UnrealGame.target does not exist.
+[2025.09.02-21.36.20:765][277]LogMonitoredProcess: Running Serialized UAT: [ cmd.exe /c ""E:/Unreal_Engine/UE_5.6/Engine/Build/BatchFiles/RunUAT.bat"  -ScriptsForProject="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" Turnkey -command=VerifySdk -platform=Win64 -UpdateIfNeeded -EditorIO -EditorIOPort=56693  -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" BuildCookRun -nop4 -utf8output -nocompileeditor -skipbuildeditor -cook  -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject"  -unrealexe="E:\Unreal_Engine\UE_5.6\Engine\Binaries\Win64\UnrealEditor-Cmd.exe" -platform=Win64 -installed -stage -archive -package -build -pak -iostore -compressed -prereqs -archivedirectory="C:/Users/Yeyian PC/Documents/UE_Package" -clientconfig=Development" -nocompile -nocompileuat ]
+[2025.09.02-21.36.20:839][278]UATHelper: Packaging (Windows): Running AutomationTool...
+[2025.09.02-21.36.20:986][290]UATHelper: Packaging (Windows): Using bundled DotNet SDK version: 8.0.300 win-x64
+[2025.09.02-21.36.21:146][301]UATHelper: Packaging (Windows): Starting AutomationTool...
+[2025.09.02-21.36.21:167][303]UATHelper: Packaging (Windows): Parsing command line: -ScriptsForProject="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" Turnkey -command=VerifySdk -platform=Win64 -UpdateIfNeeded -EditorIO -EditorIOPort=56693 -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" BuildCookRun -nop4 -utf8output -nocompileeditor -skipbuildeditor -cook -project="C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/MyFirstHour/MyFirstHour.uproject" -unrealexe=E:\Unreal_Engine\UE_5.6\Engine\Binaries\Win64\UnrealEditor-Cmd.exe -platform=Win64 -installed -stage -archive -package -build -pak -iostore -compressed -prereqs -archivedirectory="C:/Users/Yeyian PC/Documents/UE_Package" -clientconfig=Development -nocompile -nocompileuat
+[2025.09.02-21.36.21:263][310]UATHelper: Packaging (Windows): Initializing script modules...
+[2025.09.02-21.36.21:664][337]UATHelper: Packaging (Windows): Total script module initialization time: 0.41 s.
+[2025.09.02-21.36.21:739][343]UATHelper: Packaging (Windows): Using E:\Unreal_Engine\UE_5.6\Engine\Binaries\ThirdParty\DotNet\8.0.300\win-x64\dotnet.exe
+[2025.09.02-21.36.22:065][366]UATHelper: Packaging (Windows): Executing commands...
+[2025.09.02-21.36.22:161][373]UATHelper: Packaging (Windows): Installed Sdk validity:
+[2025.09.02-21.36.22:161][373]UATHelper: Packaging (Windows): Win64: (Status=Valid, MinAllowed_Sdk=10.0.19041.0, MaxAllowed_Sdk=10.9.99999.0, Current_Sdk=10.0.26100.0, Allowed_AutoSdk=10.0.22621.0, Current_AutoSdk=, Flags="InstalledSdk_ValidVersionExists")
+[2025.09.02-21.36.22:161][373]UATHelper: Packaging (Windows): Scanning for envvar changes...
+[2025.09.02-21.36.22:161][373]UATHelper: Packaging (Windows): ... done! 
+[2025.09.02-21.36.22:161][373]UATHelper: Packaging (Windows): Cleaning Temp Paths...
+[2025.09.02-21.36.22:172][374]UATHelper: Packaging (Windows): BUILD SUCCESSFUL
+[2025.09.02-21.36.22:172][374]UATHelper: Packaging (Windows): Setting up ProjectParams for C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour\MyFirstHour.uproject
+[2025.09.02-21.36.23:854][497]UATHelper: Packaging (Windows): ********** BUILD COMMAND STARTED **********
+[2025.09.02-21.36.23:875][499]UATHelper: Packaging (Windows): Running: E:\Unreal_Engine\UE_5.6\Engine\Binaries\ThirdParty\DotNet\8.0.300\win-x64\dotnet.exe "E:\Unreal_Engine\UE_5.6\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" MyFirstHour Win64 Development -Project="C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour\MyFirstHour.uproject" -Manifest="C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour\Intermediate\Build\Manifest.xml"  -remoteini="C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE\MyFirstHour"  -skipdeploy  -log="C:\Users\Yeyian PC\AppData\Roaming\Unreal Engine\AutomationTool\Logs\E+Unreal_Engine+UE_5.6\UBA-MyFirstHour-Win64-Development.txt"
+[2025.09.02-21.36.24:202][522]UATHelper: Packaging (Windows): Log file: C:\Users\Yeyian PC\AppData\Roaming\Unreal Engine\AutomationTool\Logs\E+Unreal_Engine+UE_5.6\UBA-MyFirstHour-Win64-Development.txt
+[2025.09.02-21.36.25:020][577]UATHelper: Packaging (Windows): Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Yeyian PC\Documents\GameDev\Getting_Started_In_UE).
+[2025.09.02-21.36.25:032][577]UATHelper: Packaging (Windows): Creating makefile for MyFirstHour (no existing makefile)
+[2025.09.02-21.36.25:276][594]UATHelper: Packaging (Windows): No valid Visual C++ toolchain was found (minimum version 14.38.33130, preferred version 14.38.33130). Please download and install Visual Studio 2022 17.8 or later and verify that the "MSVC v143 - VS 2022 C++ x64/x86 build tools (v14.38-17.8)" component is selected in the Visual Studio 2022 installation options.
+[2025.09.02-21.36.25:298][596]UATHelper: Packaging (Windows): Visual Studio 2022 x64 must be installed in order to build this target.
+[2025.09.02-21.36.25:308][596]UATHelper: Packaging (Windows): Result: Failed (OtherCompilationError)
+[2025.09.02-21.36.25:308][596]UATHelper: Packaging (Windows): Total execution time: 1.33 seconds
+[2025.09.02-21.36.25:339][599]UATHelper: Packaging (Windows): Took 1.48s to run dotnet.exe, ExitCode=6
+[2025.09.02-21.36.25:339][599]UATHelper: Packaging (Windows): UnrealBuildTool failed. See log for more details. (C:\Users\Yeyian PC\AppData\Roaming\Unreal Engine\AutomationTool\Logs\E+Unreal_Engine+UE_5.6\UBA-MyFirstHour-Win64-Development.txt)
+[2025.09.02-21.36.25:350][600]UATHelper: Packaging (Windows): AutomationTool executed for 0h 0m 4s
+[2025.09.02-21.36.25:350][600]UATHelper: Packaging (Windows): AutomationTool exiting with ExitCode=6 (6)
+[2025.09.02-21.36.25:413][604]UATHelper: Packaging (Windows): BUILD FAILED
+[2025.09.02-21.36.25:419][604]PackagingResults: Error: Unknown Error
+[2025.09.02-21.36.55:522][389]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.09.02-21.36.55:530][389]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.09.02-21.36.55:552][389]LogPlayLevel: Display: Creating online subsystem for client :Context_21
+[2025.09.02-21.36.55:555][389]LogOnline: OSS: Created online subsystem instance for: :Context_21
+[2025.09.02-21.36.55:587][390]LogPlayLevel: Creating play world package: /Game/EOL_Content/Maps/UEDPIE_0_Map_Playground
+[2025.09.02-21.36.55:604][390]LogPlayLevel: PIE: StaticDuplicateObject took: (0.016703s)
+[2025.09.02-21.36.55:604][390]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/EOL_Content/Maps/Map_Playground.Map_Playground to /Game/EOL_Content/Maps/UEDPIE_0_Map_Playground.Map_Playground (0.016804s)
+[2025.09.02-21.36.55:639][390]LogUObjectHash: Compacting FUObjectHashTables data took   2.06ms
+[2025.09.02-21.36.55:643][390]LogChaosDD: Creating Chaos Debug Draw Scene for world Map_Playground
+[2025.09.02-21.36.55:647][390]LogPlayLevel: PIE: World Init took: (0.003396s)
+[2025.09.02-21.36.55:648][390]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2025.09.02-21.36.55:648][390]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.09.02-21.36.55:648][390]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.09.02-21.36.55:648][390]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.09.02-21.36.55:648][390]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.09.02-21.36.55:648][390]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.09.02-21.36.55:648][390]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.09.02-21.36.55:648][390]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.09.02-21.36.55:648][390]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.09.02-21.36.55:648][390]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.09.02-21.36.55:648][390]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.09.02-21.36.55:648][390]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.09.02-21.36.55:651][390]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.09.02-21.36.55:690][390]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.09.02-21.36.55:690][390]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.09.02-21.36.55:690][390]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.09.02-21.36.55:690][390]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.09.02-21.36.55:691][390]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2025.09.02-21.36.55:691][390]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2025.09.02-21.36.55:696][390]LogInit: FAudioDevice initialized with ID 4.
+[2025.09.02-21.36.55:696][390]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2025.09.02-21.36.55:696][390]LogAudio: Display: Audio Device (ID: 4) registered with world 'Map_Playground'.
+[2025.09.02-21.36.55:696][390]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2025.09.02-21.36.55:696][390]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2025.09.02-21.36.55:700][390]LogLoad: Game class is 'GM_EOL_Content_C'
+[2025.09.02-21.36.55:704][390]LogWorld: Bringing World /Game/EOL_Content/Maps/UEDPIE_0_Map_Playground.Map_Playground up for play (max tick rate 0) at 2025.09.02-17.36.55
+[2025.09.02-21.36.55:704][390]LogWorld: Bringing up level for play took: 0.003073
+[2025.09.02-21.36.55:712][390]PIE: Server logged in
+[2025.09.02-21.36.55:714][390]PIE: Play in editor total start time 0.184 seconds.
+[2025.09.02-21.36.55:768][391]LogRenderer: Recreating Persistent SBTs due to initializer changes: 
+		NumShaderSlotsPerGeometrySegment changed: current: 1 - new: 2
+		NumGeometrySegments changed: current: 0 - new: 512
+[2025.09.02-21.36.55:935][392]LogPSOHitching: Encountered 600 PSO creation hitches so far (220 graphics, 380 compute). 0 of them were precached.
+[2025.09.02-21.37.00:616][821]Cmd: quit
+[2025.09.02-21.37.00:618][821]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.09.02-21.37.00:618][821]LogWorld: BeginTearingDown for /Game/EOL_Content/Maps/UEDPIE_0_Map_Playground
+[2025.09.02-21.37.00:642][821]LogWorld: UWorld::CleanupWorld for Map_Playground, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-21.37.00:642][821]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-21.37.00:644][821]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.09.02-21.37.00:649][821]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-21.37.00:676][821]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.09.02-21.37.00:676][821]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2025.09.02-21.37.00:676][821]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4, StreamState=4
+[2025.09.02-21.37.00:678][821]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4, StreamState=2
+[2025.09.02-21.37.00:689][821]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
+[2025.09.02-21.37.00:815][822]LogPlayLevel: Display: Destroying online subsystem :Context_21
+[2025.09.02-21.37.18:455][305]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2025.09.02-21.37.18:496][305]LogStall: Shutdown...
+[2025.09.02-21.37.18:496][305]LogStall: Shutdown complete.
+[2025.09.02-21.37.18:539][305]LogSlate: Window 'MyFirstHour - Unreal Editor' being destroyed
+[2025.09.02-21.37.18:869][305]Cmd: QUIT_EDITOR
+[2025.09.02-21.37.18:870][305]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2025.09.02-21.37.18:878][306]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2025.09.02-21.37.18:881][306]LogStaticMesh: Abandoning remaining async distance field tasks for shutdown
+[2025.09.02-21.37.18:882][306]LogStaticMesh: Abandoning remaining async card representation tasks for shutdown
+[2025.09.02-21.37.18:887][306]LogWorld: UWorld::CleanupWorld for Map_Playground, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-21.37.18:887][306]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-21.37.19:170][306]LogStylusInput: Shutting down StylusInput subsystem.
+[2025.09.02-21.37.19:172][306]LogTedsSettings: UTedsSettingsEditorSubsystem::Deinitialize
+[2025.09.02-21.37.19:185][306]LogLevelSequenceEditor: LevelSequenceEditor subsystem deinitialized.
+[2025.09.02-21.37.19:220][306]LogWorld: UWorld::CleanupWorld for World_9, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-21.37.19:220][306]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-21.37.19:223][306]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-21.37.19:223][306]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-21.37.19:228][306]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-21.37.19:228][306]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-21.37.19:231][306]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-21.37.19:231][306]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-21.37.19:235][306]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-21.37.19:235][306]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-21.37.19:240][306]LogWorld: UWorld::CleanupWorld for World_15, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-21.37.19:240][306]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-21.37.19:244][306]LogWorld: UWorld::CleanupWorld for World_17, bSessionEnded=true, bCleanupResources=true
+[2025.09.02-21.37.19:244][306]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.02-21.37.19:262][306]LogRuntimeTelemetry: Recording EnginePreExit events
+[2025.09.02-21.37.19:263][306]LogStudioTelemetry: Ended StudioTelemetry Session
+[2025.09.02-21.37.19:279][306]LogAnalytics: Display: [UEEditor.Rocket.Release] AnalyticsET::EndSession
+[2025.09.02-21.37.20:291][306]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2025.09.02-21.37.20:291][306]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2025.09.02-21.37.20:291][306]LogAudio: Display: Audio Device unregistered from world 'Map_Playground'.
+[2025.09.02-21.37.20:291][306]LogAudio: Display: Shutting down audio device while 1 references to it are still alive. For more information, compile with INSTRUMENT_AUDIODEVICE_HANDLES.
+[2025.09.02-21.37.20:292][306]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1, StreamState=4
+[2025.09.02-21.37.20:296][306]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1, StreamState=2
+[2025.09.02-21.37.20:324][306]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID -1
+[2025.09.02-21.37.20:324][306]LogAudio: Display: Audio Device Manager Shutdown
+[2025.09.02-21.37.20:326][306]LogWindowsTextInputMethodSystem: Activated input method: English (United States) - (Keyboard).
+[2025.09.02-21.37.20:334][306]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2025.09.02-21.37.20:337][306]LogExit: Preparing to exit.
+[2025.09.02-21.37.20:442][306]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2025.09.02-21.37.20:458][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.add_controls_for_selected_options' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:459][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.add_controls_for_selected' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:463][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_null_above_selected_PY.add_null_above_selected' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:463][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_rotation' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_all' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_x' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_y' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_z' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_rotation' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_scale' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.search_replace_name_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.search_replace_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_prefix_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_prefix_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_suffix_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_suffix_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.do_rename_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.do_rename_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/set_bone_reference_pose_PY.set_bone_reference_pose' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/ControlRigWorkflows/workflow_fbik_import_ik_rig_PY.import_ik_rig_options' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.20:464][306]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.ControlOutputFormat' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.02-21.37.21:534][306]LogEditorDataStorage: Deinitializing
+[2025.09.02-21.37.21:881][306]LogDemo: Cleaned up 0 splitscreen connections, owner deletion: enabled
+[2025.09.02-21.37.22:084][306]LogExit: Editor shut down
+[2025.09.02-21.37.22:110][306]LogExit: Transaction tracking system shut down
+[2025.09.02-21.37.22:944][306]LogExit: Object subsystem successfully closed.
+[2025.09.02-21.37.23:023][306]LogShaderCompilers: Display: Shaders left to compile 0
+[2025.09.02-21.37.23:616][306]LogMemoryProfiler: Shutdown
+[2025.09.02-21.37.23:619][306]LogNetworkingProfiler: Shutdown
+[2025.09.02-21.37.23:619][306]LoadingProfiler: Shutdown
+[2025.09.02-21.37.23:619][306]LogTimingProfiler: Shutdown
+[2025.09.02-21.37.23:632][306]LogChaosVDEditor: [FChaosVDExtensionsManager::UnRegisterExtension] UnRegistering CVD Extension [FChaosVDGenericDebugDrawExtension] ...
+[2025.09.02-21.37.23:633][306]LogChaosVDEditor: [FChaosVDExtensionsManager::UnRegisterExtension] UnRegistering CVD Extension [FChaosVDAccelerationStructuresExtension] ...
+[2025.09.02-21.37.25:267][306]LogChaosDD: Chaos Debug Draw Shutdown
+[2025.09.02-21.37.25:322][306]LogHttp: Warning: [FHttpManager::Shutdown] Unbinding delegates for 1 outstanding Http Requests:
+[2025.09.02-21.37.25:322][306]LogHttp: Warning: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B54A25BD6-4DEE-62D4-0811-41838ADCDF78%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.6.1-44394996%2B%2B%2BUE5%2BRelease-5.6&UserID=aef17f70467c66e4d8ba6fa3eba79d97%7C2b197401c47d4dbf830ec3be8c3aa216%7Cab1451ca-5ea8-46f6-ba75-778386287ada&AppEnvironment=datacollector-binary&UploadType=eteventstream] refs=[2] status=Processing
+[2025.09.02-21.37.25:912][306]LogEOSShared: FEOSSDKManager::Shutdown EOS_Shutdown Result=[EOS_Success]
+[2025.09.02-21.37.25:936][306]LogNFORDenoise: NFORDenoise function shutting down
+[2025.09.02-21.37.25:939][306]RenderDocPlugin: plugin has been unloaded.
+[2025.09.02-21.37.25:975][306]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetActorFactory id: 0
+[2025.09.02-21.37.25:975][306]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetSubObjectFactory id: 1
+[2025.09.02-21.37.25:977][306]LogPakFile: Destroying PakPlatformFile
+[2025.09.02-21.37.26:427][306]LogD3D12RHI: ~FD3D12DynamicRHI
+[2025.09.02-21.37.26:487][306]LogExit: Exiting.
+[2025.09.02-21.37.26:541][306]Log file closed, 09/02/25 17:37:26
