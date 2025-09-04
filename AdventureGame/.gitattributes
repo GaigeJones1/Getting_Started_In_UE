@@ -1,0 +1,8 @@
+    *.txt text eol=lf
+    *.bat text eol=crlf    
+    *.jpg binary
+    *.pdf -text -diff -merge
+    *.psd filter=lfs diff=lfs merge=lfs -text
+    *.json diff=json
+    *.c ident
+    *.xml working-tree-encoding=ISO-8859-1
