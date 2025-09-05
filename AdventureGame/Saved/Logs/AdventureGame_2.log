@@ -1359,3 +1359,177 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2025.09.05-12.05.35:099][231]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
 [2025.09.05-12.05.35:100][231]AssetCheck: /Game/FirstPerson/Lvl_FirstPerson Validating asset
 [2025.09.05-12.05.35:117][231]LogSourceControl: Display: Uncontrolled Changelist persistency file saved ../../../../../../Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Saved/SourceControl/UncontrolledChangelists.json
+[2025.09.05-12.06.14:659][363]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1010.911926
+[2025.09.05-12.06.15:659][366]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.05-12.06.15:659][366]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1011.578979, Update Interval: 302.834564
+[2025.09.05-12.11.28:889][387]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1325.139771
+[2025.09.05-12.11.29:889][390]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.05-12.11.29:889][390]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1325.806641, Update Interval: 317.437653
+[2025.09.05-12.12.08:178][572]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.09.05-12.12.08:183][572]LogContentBundle: [Lvl_FirstPerson(Editor)] Generating Streaming for 0 Content Bundles.
+[2025.09.05-12.12.08:183][572]LogWorldPartition: Display: GenerateStreaming for 'Lvl_FirstPerson' started...
+[2025.09.05-12.12.08:184][572]LogWorldPartition: Display: GenerateStreaming for 'Lvl_FirstPerson' took 1.045 ms (total: 1.633 ms)
+[2025.09.05-12.12.08:184][572]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.09.05-12.12.08:184][572]LogPlayLevel: Display: Creating online subsystem for client :Context_5
+[2025.09.05-12.12.08:188][572]LogOnline: OSS: Created online subsystem instance for: :Context_5
+[2025.09.05-12.12.08:243][573]LogPlayLevel: Creating play world package: /Game/FirstPerson/UEDPIE_0_Lvl_FirstPerson
+[2025.09.05-12.12.08:249][573]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE started...
+[2025.09.05-12.12.08:251][573]LogWorldPartition: Display: UWorldPartition::PostDuplicatePIE took 1.299 ms (total: 2.299 ms)
+[2025.09.05-12.12.08:251][573]LogPlayLevel: PIE: StaticDuplicateObject took: (0.007013s)
+[2025.09.05-12.12.08:251][573]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Lvl_FirstPerson.Lvl_FirstPerson to /Game/FirstPerson/UEDPIE_0_Lvl_FirstPerson.Lvl_FirstPerson (0.007079s)
+[2025.09.05-12.12.08:283][573]LogUObjectHash: Compacting FUObjectHashTables data took   1.51ms
+[2025.09.05-12.12.08:287][573]LogChaosDD: Creating Chaos Debug Draw Scene for world Lvl_FirstPerson
+[2025.09.05-12.12.08:289][573]LogWorldPartition: ULevel::OnLevelLoaded(Lvl_FirstPerson)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2025.09.05-12.12.08:289][573]LogWorldPartition: Display: WorldPartition initialize started...
+[2025.09.05-12.12.08:289][573]LogWorldPartition: UWorldPartition::Initialize : World = /Game/FirstPerson/UEDPIE_0_Lvl_FirstPerson.Lvl_FirstPerson, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2025.09.05-12.12.08:289][573]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2025.09.05-12.12.08:290][573]LogWorldPartition: Display: WorldPartition initialize took 1.518 ms (total: 607.838 ms)
+[2025.09.05-12.12.08:290][573]LogPlayLevel: PIE: World Init took: (0.003606s)
+[2025.09.05-12.12.08:291][573]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2025.09.05-12.12.08:291][573]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.09.05-12.12.08:291][573]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.09.05-12.12.08:291][573]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.09.05-12.12.08:291][573]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.09.05-12.12.08:291][573]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.09.05-12.12.08:291][573]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.09.05-12.12.08:291][573]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.09.05-12.12.08:291][573]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.09.05-12.12.08:291][573]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.09.05-12.12.08:291][573]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.09.05-12.12.08:291][573]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.09.05-12.12.08:294][573]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.09.05-12.12.08:318][573]LogAudioMixer: Display: Using Audio Hardware Device Speakers (USB Audio Device)
+[2025.09.05-12.12.08:318][573]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.09.05-12.12.08:318][573]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.09.05-12.12.08:318][573]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.09.05-12.12.08:320][573]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2025.09.05-12.12.08:320][573]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2025.09.05-12.12.08:323][573]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2025.09.05-12.12.08:323][573]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2025.09.05-12.12.08:323][573]LogInit: FAudioDevice initialized with ID 3.
+[2025.09.05-12.12.08:323][573]LogAudio: Display: Audio Device (ID: 3) registered with world 'Lvl_FirstPerson'.
+[2025.09.05-12.12.08:323][573]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2025.09.05-12.12.08:368][573]LogLoad: Game class is 'BP_AdventureGameMode_C'
+[2025.09.05-12.12.08:372][573]LogWorld: Bringing World /Game/FirstPerson/UEDPIE_0_Lvl_FirstPerson.Lvl_FirstPerson up for play (max tick rate 0) at 2025.09.05-08.12.08
+[2025.09.05-12.12.08:372][573]LogWorld: Bringing up level for play took: 0.003038
+[2025.09.05-12.12.08:376][573]PIE: Server logged in
+[2025.09.05-12.12.08:378][573]PIE: Play in editor total start time 0.194 seconds.
+[2025.09.05-12.12.24:447][679]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.09.05-12.12.24:447][679]LogWorld: BeginTearingDown for /Game/FirstPerson/UEDPIE_0_Lvl_FirstPerson
+[2025.09.05-12.12.24:448][679]LogWorld: UWorld::CleanupWorld for Lvl_FirstPerson, bSessionEnded=true, bCleanupResources=true
+[2025.09.05-12.12.24:448][679]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.05-12.12.24:448][679]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/FirstPerson/UEDPIE_0_Lvl_FirstPerson.Lvl_FirstPerson
+[2025.09.05-12.12.24:821][679]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.09.05-12.12.24:826][679]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.05-12.12.24:846][679]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.09.05-12.12.24:846][679]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 3
+[2025.09.05-12.12.24:846][679]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3, StreamState=4
+[2025.09.05-12.12.24:848][679]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3, StreamState=2
+[2025.09.05-12.12.24:855][679]LogUObjectHash: Compacting FUObjectHashTables data took   1.23ms
+[2025.09.05-12.12.25:325][680]LogPlayLevel: Display: Destroying online subsystem :Context_5
+[2025.09.05-12.17.08:716][532]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1664.966675
+[2025.09.05-12.17.09:715][535]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.05-12.17.09:715][535]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1665.632446, Update Interval: 308.946808
+[2025.09.05-12.23.09:121][614]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2025.372925
+[2025.09.05-12.23.10:120][617]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.05-12.23.10:120][617]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2026.038208, Update Interval: 334.655609
+[2025.09.05-12.29.40:539][788]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2416.790527
+[2025.09.05-12.29.41:536][790]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.05-12.29.41:536][790]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2417.455078, Update Interval: 343.166595
+[2025.09.05-12.34.26:932][648]LogUObjectHash: Compacting FUObjectHashTables data took   1.93ms
+[2025.09.05-12.34.31:346][648]LogSlate: Window 'Save Content' being destroyed
+[2025.09.05-12.34.31:355][648]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.09.05-12.34.31:400][648]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/FirstPerson/Blueprints/BP_AdventureGameMode] ([2] browsable assets)...
+[2025.09.05-12.34.31:400][648]OBJ SavePackage: Finished generating thumbnails for package [/Game/FirstPerson/Blueprints/BP_AdventureGameMode]
+[2025.09.05-12.34.31:414][648]LogSavePackage: Moving output files for package: /Game/FirstPerson/Blueprints/BP_AdventureGameMode
+[2025.09.05-12.34.31:414][648]LogSavePackage: Moving '../../../../../../Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Saved/BP_AdventureGameMode5FE40103445938B8429D05B12C14B6B9.tmp' to '../../../../../../Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Content/FirstPerson/Blueprints/BP_AdventureGameMode.uasset'
+[2025.09.05-12.34.31:496][648]LogFileHelpers: InternalPromptForCheckoutAndSave took 140.604 ms (total: 462.843 ms)
+[2025.09.05-12.34.31:535][648]LogStall: Shutdown...
+[2025.09.05-12.34.31:535][648]LogStall: Shutdown complete.
+[2025.09.05-12.34.31:570][648]LogSlate: Window 'AdventureGame - Unreal Editor' being destroyed
+[2025.09.05-12.34.31:734][648]LogContentValidation: Display: Starting to validate 1 assets
+[2025.09.05-12.34.31:734][648]LogContentValidation: Enabled validators:
+[2025.09.05-12.34.31:734][648]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.09.05-12.34.31:734][648]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.09.05-12.34.31:734][648]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.09.05-12.34.31:734][648]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.09.05-12.34.31:734][648]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.09.05-12.34.31:734][648]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.09.05-12.34.31:734][648]AssetCheck: /Game/FirstPerson/Blueprints/BP_AdventureGameMode Validating asset
+[2025.09.05-12.34.31:736][648]Cmd: QUIT_EDITOR
+[2025.09.05-12.34.31:736][648]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2025.09.05-12.34.31:737][648]LogSourceControl: Display: Uncontrolled Changelist persistency file saved ../../../../../../Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Saved/SourceControl/UncontrolledChangelists.json
+[2025.09.05-12.34.31:741][649]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2025.09.05-12.34.31:742][649]LogStaticMesh: Abandoning remaining async distance field tasks for shutdown
+[2025.09.05-12.34.31:742][649]LogStaticMesh: Abandoning remaining async card representation tasks for shutdown
+[2025.09.05-12.34.31:744][649]LogWorld: UWorld::CleanupWorld for Lvl_FirstPerson, bSessionEnded=true, bCleanupResources=true
+[2025.09.05-12.34.31:744][649]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.05-12.34.31:744][649]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/FirstPerson/Lvl_FirstPerson.Lvl_FirstPerson
+[2025.09.05-12.34.31:753][649]LogTedsSettings: UTedsSettingsEditorSubsystem::Deinitialize
+[2025.09.05-12.34.31:753][649]LogStylusInput: Shutting down StylusInput subsystem.
+[2025.09.05-12.34.31:754][649]LogLevelSequenceEditor: LevelSequenceEditor subsystem deinitialized.
+[2025.09.05-12.34.31:757][649]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2025.09.05-12.34.31:757][649]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.05-12.34.31:760][649]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2025.09.05-12.34.31:760][649]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.05-12.34.31:763][649]LogRuntimeTelemetry: Recording EnginePreExit events
+[2025.09.05-12.34.31:763][649]LogStudioTelemetry: Ended StudioTelemetry Session
+[2025.09.05-12.34.31:771][649]LogAnalytics: Display: [UEEditor.Rocket.Release] AnalyticsET::EndSession
+[2025.09.05-12.34.32:304][649]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2025.09.05-12.34.32:304][649]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2025.09.05-12.34.32:304][649]LogAudio: Display: Audio Device unregistered from world 'Lvl_FirstPerson'.
+[2025.09.05-12.34.32:304][649]LogAudio: Display: Shutting down audio device while 1 references to it are still alive. For more information, compile with INSTRUMENT_AUDIODEVICE_HANDLES.
+[2025.09.05-12.34.32:304][649]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1, StreamState=4
+[2025.09.05-12.34.32:311][649]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1, StreamState=2
+[2025.09.05-12.34.32:322][649]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID -1
+[2025.09.05-12.34.32:322][649]LogAudio: Display: Audio Device Manager Shutdown
+[2025.09.05-12.34.32:323][649]LogWindowsTextInputMethodSystem: Activated input method: English (United States) - (Keyboard).
+[2025.09.05-12.34.32:325][649]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2025.09.05-12.34.32:325][649]LogExit: Preparing to exit.
+[2025.09.05-12.34.32:375][649]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
+[2025.09.05-12.34.32:380][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.add_controls_for_selected_options' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.add_controls_for_selected' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_null_above_selected_PY.add_null_above_selected' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_rotation' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_all' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_x' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_y' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_z' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_rotation' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_scale' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.search_replace_name_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.search_replace_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_prefix_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_prefix_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_suffix_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_suffix_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.do_rename_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.do_rename_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/set_bone_reference_pose_PY.set_bone_reference_pose' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/ControlRigWorkflows/workflow_fbik_import_ik_rig_PY.import_ik_rig_options' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:381][649]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.ControlOutputFormat' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.09.05-12.34.32:945][649]LogEditorDataStorage: Deinitializing
+[2025.09.05-12.34.33:053][649]LogDemo: Cleaned up 0 splitscreen connections, owner deletion: enabled
+[2025.09.05-12.34.33:092][649]LogExit: Editor shut down
+[2025.09.05-12.34.33:100][649]LogExit: Transaction tracking system shut down
+[2025.09.05-12.34.33:359][649]LogExit: Object subsystem successfully closed.
+[2025.09.05-12.34.33:480][649]LogShaderCompilers: Display: Shaders left to compile 0
+[2025.09.05-12.34.33:623][649]LogMemoryProfiler: Shutdown
+[2025.09.05-12.34.33:623][649]LogNetworkingProfiler: Shutdown
+[2025.09.05-12.34.33:623][649]LoadingProfiler: Shutdown
+[2025.09.05-12.34.33:623][649]LogTimingProfiler: Shutdown
+[2025.09.05-12.34.33:624][649]LogChaosVDEditor: [FChaosVDExtensionsManager::UnRegisterExtension] UnRegistering CVD Extension [FChaosVDGenericDebugDrawExtension] ...
+[2025.09.05-12.34.33:624][649]LogChaosVDEditor: [FChaosVDExtensionsManager::UnRegisterExtension] UnRegistering CVD Extension [FChaosVDAccelerationStructuresExtension] ...
+[2025.09.05-12.34.34:103][649]LogChaosDD: Chaos Debug Draw Shutdown
+[2025.09.05-12.34.34:104][649]RenderDocPlugin: plugin has been unloaded.
+[2025.09.05-12.34.34:119][649]LogHttp: Warning: [FHttpManager::Shutdown] Unbinding delegates for 1 outstanding Http Requests:
+[2025.09.05-12.34.34:119][649]LogHttp: Warning: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BA625B6CD-4938-809A-7E0B-6287AD3367A9%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.6.1-44394996%2B%2B%2BUE5%2BRelease-5.6&UserID=370cf9224b2a2fd3075103b2dfe71dde%7C2b197401c47d4dbf830ec3be8c3aa216%7Ca526d726-1711-4ec9-ad8b-d3deb25fa3f8&AppEnvironment=datacollector-binary&UploadType=eteventstream] refs=[2] status=Processing
+[2025.09.05-12.34.34:660][649]LogEOSShared: FEOSSDKManager::Shutdown EOS_Shutdown Result=[EOS_Success]
+[2025.09.05-12.34.34:665][649]LogNFORDenoise: NFORDenoise function shutting down
+[2025.09.05-12.34.34:666][649]LogXGEController: Cleaning working directory: C:/Users/02GAIGE.JONES/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2025.09.05-12.34.34:669][649]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetActorFactory id: 0
+[2025.09.05-12.34.34:669][649]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetSubObjectFactory id: 1
+[2025.09.05-12.34.34:669][649]LogPakFile: Destroying PakPlatformFile
+[2025.09.05-12.34.35:058][649]LogD3D12RHI: ~FD3D12DynamicRHI
+[2025.09.05-12.34.35:081][649]LogExit: Exiting.
+[2025.09.05-12.34.35:106][649]Log file closed, 09/05/25 08:34:35
