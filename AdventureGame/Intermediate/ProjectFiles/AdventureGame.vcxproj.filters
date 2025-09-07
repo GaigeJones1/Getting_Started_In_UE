@@ -11,6 +11,7 @@
     <None Include="..\..\Source\AdventureGameEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -32,6 +33,12 @@
     <Filter Include="Source\AdventureGame">
       <UniqueIdentifier>{BA2214B4-467B-3711-8609-CC819A88B550}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\AdventureGame\AdventureCharacter.cpp">
+      <Filter>Source\AdventureGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AdventureGame\AdventureCharacter.h">
+      <Filter>Source\AdventureGame</Filter>
+    </ClInclude>
     <None Include="..\..\Source\AdventureGame\AdventureGame.Build.cs">
       <Filter>Source\AdventureGame</Filter>
     </None>

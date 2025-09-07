@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\02gaige.jones\\gaige jones\\repositories\\getting_started_in_ue\\adventuregame\\source\\adventuregame\\adventuregame.cpp",
+        "Source": "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\source\\adventuregame\\adventuregame.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\02gaige.jones\\gaige jones\\repositories\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\x64\\adventuregameeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.inclorderunreal5_3.h.pch",
+        "PCH": "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\x64\\adventuregameeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.inclorderunreal5_3.h.pch",
         "Includes": [
-            "c:\\users\\02gaige.jones\\gaige jones\\repositories\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\adventuregame\\definitions.adventuregame.h",
-            "c:\\users\\02gaige.jones\\gaige jones\\repositories\\getting_started_in_ue\\adventuregame\\source\\adventuregame\\adventuregame.h"
+            "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\adventuregame\\definitions.adventuregame.h",
+            "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\source\\adventuregame\\adventuregame.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

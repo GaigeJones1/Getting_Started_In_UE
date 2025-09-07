@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-AdventureGame-4598.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/AdventureGameEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h.obj"
+"C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/Module.AdventureGame.gen.cpp.obj"
+"C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/AdventureCharacter.cpp.obj"
+"C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/AdventureGame.cpp.obj"
+"C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/AdventureGameMode.cpp.obj"
+"C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/PerModuleInline.gen.cpp.obj"
+"C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/Default.rc2.res"
+/OUT:"C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/UnrealEditor-AdventureGame-4598.lib"
