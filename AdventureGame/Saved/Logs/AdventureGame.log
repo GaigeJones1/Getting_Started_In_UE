@@ -2230,3 +2230,63 @@ Would you like to open the Output Log to see more details?
 [2025.09.07-20.49.02:555][ 95]LogSourceControl: Display: Uncontrolled Changelist persistency file saved C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Saved/SourceControl/UncontrolledChangelists.json
 [2025.09.07-20.49.03:918][202]LogSlate: Window 'DT_PickupData' being destroyed
 [2025.09.07-20.49.03:922][202]LogSlate: Window 'DT_PickupData' being destroyed
+[2025.09.07-20.54.34:317][369]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2154.803711
+[2025.09.07-20.54.34:436][379]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.07-20.54.34:436][379]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2154.912598, Update Interval: 324.884796
+[2025.09.07-21.00.59:736][383]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2540.221436
+[2025.09.07-21.01.00:726][385]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.07-21.01.00:727][385]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2540.886719, Update Interval: 324.648590
+[2025.09.07-21.07.05:047][463]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2905.540039
+[2025.09.07-21.07.06:045][465]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.07-21.07.06:045][465]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2906.207031, Update Interval: 346.634735
+[2025.09.07-21.13.32:084][623]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3292.584229
+[2025.09.07-21.13.33:084][626]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.07-21.13.33:085][627]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3293.250244, Update Interval: 307.148651
+[2025.09.07-21.16.22:857][453]LogUObjectHash: Compacting FUObjectHashTables data took  14.80ms
+[2025.09.07-21.16.22:986][453]LogStall: Shutdown...
+[2025.09.07-21.16.22:987][453]LogStall: Shutdown complete.
+[2025.09.07-21.16.23:073][453]LogSlate: Window 'AdventureGame - Unreal Editor' being destroyed
+[2025.09.07-21.16.23:654][453]Cmd: QUIT_EDITOR
+[2025.09.07-21.16.23:655][453]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2025.09.07-21.16.23:675][454]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2025.09.07-21.16.23:685][454]LogStaticMesh: Abandoning remaining async distance field tasks for shutdown
+[2025.09.07-21.16.23:686][454]LogStaticMesh: Abandoning remaining async card representation tasks for shutdown
+[2025.09.07-21.16.23:733][454]LogWorld: UWorld::CleanupWorld for Lvl_FirstPerson, bSessionEnded=true, bCleanupResources=true
+[2025.09.07-21.16.23:746][454]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.07-21.16.23:747][454]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/FirstPerson/Lvl_FirstPerson.Lvl_FirstPerson
+[2025.09.07-21.16.23:847][454]LogStylusInput: Shutting down StylusInput subsystem.
+[2025.09.07-21.16.23:852][454]LogTedsSettings: UTedsSettingsEditorSubsystem::Deinitialize
+[2025.09.07-21.16.23:867][454]LogLevelSequenceEditor: LevelSequenceEditor subsystem deinitialized.
+[2025.09.07-21.16.23:923][454]LogWorld: UWorld::CleanupWorld for World_0, bSessionEnded=true, bCleanupResources=true
+[2025.09.07-21.16.23:934][454]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.07-21.16.23:938][454]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2025.09.07-21.16.23:938][454]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.07-21.16.23:938][454]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2025.09.07-21.16.23:938][454]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.07-21.16.23:957][454]LogRuntimeTelemetry: Recording EnginePreExit events
+[2025.09.07-21.16.23:958][454]LogStudioTelemetry: Ended StudioTelemetry Session
+[2025.09.07-21.16.23:969][454]LogAnalytics: Display: [UEEditor.Rocket.Release] AnalyticsET::EndSession
+[2025.09.07-21.16.23:995][454]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2025.09.07-21.16.23:995][454]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2025.09.07-21.16.23:995][454]LogAudio: Display: Audio Device unregistered from world 'Lvl_FirstPerson'.
+[2025.09.07-21.16.23:997][454]LogAudio: Display: Shutting down audio device while 1 references to it are still alive. For more information, compile with INSTRUMENT_AUDIODEVICE_HANDLES.
+[2025.09.07-21.16.24:006][454]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1, StreamState=4
+[2025.09.07-21.16.24:042][454]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1, StreamState=2
+[2025.09.07-21.16.24:189][454]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID -1
+[2025.09.07-21.16.24:189][454]LogAudio: Display: Audio Device Manager Shutdown
+[2025.09.07-21.16.24:217][454]LogWindowsTextInputMethodSystem: Activated input method: English (United States) - (Keyboard).
+[2025.09.07-21.16.24:245][454]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2025.09.07-21.16.24:248][454]LogExit: Preparing to exit.
+[2025.09.07-21.16.24:471][454]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2025.09.07-21.16.25:011][454]LogEditorDataStorage: Deinitializing
+[2025.09.07-21.16.25:736][454]LogDemo: Cleaned up 0 splitscreen connections, owner deletion: enabled
+[2025.09.07-21.16.25:968][454]LogExit: Editor shut down
+[2025.09.07-21.16.26:009][454]LogExit: Transaction tracking system shut down
+[2025.09.07-21.16.26:950][454]LogExit: Object subsystem successfully closed.
+[2025.09.07-21.16.27:015][454]LogShaderCompilers: Display: Shaders left to compile 0
+[2025.09.07-21.16.27:588][454]LogMemoryProfiler: Shutdown
+[2025.09.07-21.16.27:590][454]LogNetworkingProfiler: Shutdown
+[2025.09.07-21.16.27:591][454]LoadingProfiler: Shutdown
+[2025.09.07-21.16.27:591][454]LogTimingProfiler: Shutdown
+[2025.09.07-21.16.27:602][454]LogChaosVDEditor: [FChaosVDExtensionsManager::UnRegisterExtension] UnRegistering CVD Extension [FChaosVDGenericDebugDrawExtension] ...
+[2025.09.07-21.16.27:603][454]LogChaosVDEditor: [FChaosVDExtensionsManager::UnRegisterExtension] UnRegistering CVD Extension [FChaosVDAccelerationStructuresExtension] ...
