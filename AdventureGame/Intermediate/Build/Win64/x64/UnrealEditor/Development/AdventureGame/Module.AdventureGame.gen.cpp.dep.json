@@ -53,7 +53,13 @@
             "e:\\unreal_engine\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
             "e:\\unreal_engine\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
             "e:\\unreal_engine\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
-            "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\unrealeditor\\inc\\adventuregame\\uht\\adventuregamemode.generated.h"
+            "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\unrealeditor\\inc\\adventuregame\\uht\\adventuregamemode.generated.h",
+            "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\unrealeditor\\inc\\adventuregame\\uht\\itemdata.gen.cpp",
+            "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\source\\adventuregame\\itemdata.h",
+            "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\unrealeditor\\inc\\adventuregame\\uht\\itemdata.generated.h",
+            "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\unrealeditor\\inc\\adventuregame\\uht\\itemdefinition.gen.cpp",
+            "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\source\\adventuregame\\itemdefinition.h",
+            "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\unrealeditor\\inc\\adventuregame\\uht\\itemdefinition.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

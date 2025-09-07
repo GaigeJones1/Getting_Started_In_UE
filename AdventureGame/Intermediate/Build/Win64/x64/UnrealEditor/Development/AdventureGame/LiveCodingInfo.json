@@ -4,7 +4,9 @@
 		"Module.AdventureGame.gen.cpp.obj": [
 			"AdventureCharacter.gen.cpp.obj",
 			"AdventureGame.init.gen.cpp.obj",
-			"AdventureGameMode.gen.cpp.obj"
+			"AdventureGameMode.gen.cpp.obj",
+			"ItemData.gen.cpp.obj",
+			"ItemDefinition.gen.cpp.obj"
 		]
 	}
 }

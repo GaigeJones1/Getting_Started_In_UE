@@ -2,3 +2,5 @@
 #include "C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/AdventureCharacter.gen.cpp"
 #include "C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/AdventureGame.init.gen.cpp"
 #include "C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/AdventureGameMode.gen.cpp"
+#include "C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/ItemData.gen.cpp"
+#include "C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/ItemDefinition.gen.cpp"
