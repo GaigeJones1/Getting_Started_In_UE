@@ -66,5 +66,11 @@
     <ClInclude Include="..\..\Source\AdventureGame\ItemDefinition.h">
       <Filter>Source\AdventureGame</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\AdventureGame\PickupBase.cpp">
+      <Filter>Source\AdventureGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AdventureGame\PickupBase.h">
+      <Filter>Source\AdventureGame</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

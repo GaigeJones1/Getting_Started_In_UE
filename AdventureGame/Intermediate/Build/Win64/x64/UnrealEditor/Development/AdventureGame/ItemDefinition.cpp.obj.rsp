@@ -1,12 +1,12 @@
-"C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Source/AdventureGame/ItemDefinition.cpp"
-@"C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/AdventureGame.Shared.rsp"
-/FI"C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/AdventureGameEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h"
-/FI"C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/Definitions.AdventureGame.h"
-/Yu"C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/AdventureGameEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h"
-/Fp"C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/AdventureGameEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h.pch"
-/Fo"C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/ItemDefinition.cpp.obj"
-/experimental:log "C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/ItemDefinition.cpp.sarif"
-/sourceDependencies "C:/Users/Yeyian PC/Documents/GameDev/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/ItemDefinition.cpp.dep.json"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Source/AdventureGame/ItemDefinition.cpp"
+@"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/AdventureGame.Shared.rsp"
+/FI"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/AdventureGameEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h"
+/FI"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/Definitions.AdventureGame.h"
+/Yu"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/AdventureGameEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h"
+/Fp"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/AdventureGameEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h.pch"
+/Fo"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/ItemDefinition.cpp.obj"
+/experimental:log "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/ItemDefinition.cpp.sarif"
+/sourceDependencies "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/ItemDefinition.cpp.dep.json"
 /d2ssa-cfg-question-
 /Zc:inline
 /nologo

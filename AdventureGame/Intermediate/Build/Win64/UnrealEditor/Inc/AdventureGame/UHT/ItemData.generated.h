@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FItemText *********************************************************
-#define FID_AdventureGame_Source_AdventureGame_ItemData_h_25_GENERATED_BODY \
+#define FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_ItemData_h_25_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FItemText_Statics; \
 	ADVENTUREGAME_API static class UScriptStruct* StaticStruct();
 
@@ -26,7 +26,7 @@ struct FItemText;
 // ********** End ScriptStruct FItemText ***********************************************************
 
 // ********** Begin ScriptStruct FItemData *********************************************************
-#define FID_AdventureGame_Source_AdventureGame_ItemData_h_42_GENERATED_BODY \
+#define FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_ItemData_h_42_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FItemData_Statics; \
 	ADVENTUREGAME_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -36,7 +36,7 @@ struct FItemData;
 // ********** End ScriptStruct FItemData ***********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_AdventureGame_Source_AdventureGame_ItemData_h
+#define CURRENT_FILE_ID FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_ItemData_h
 
 // ********** Begin Enum EItemType *****************************************************************
 #define FOREACH_ENUM_EITEMTYPE(op) \

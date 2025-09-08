@@ -1,17 +1,17 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\source\\adventuregame\\adventuregamemode.cpp",
+        "Source": "c:\\users\\02gaige.jones\\gaige jones\\repositories\\getting_started_in_ue\\adventuregame\\source\\adventuregame\\adventuregamemode.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\x64\\adventuregameeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.inclorderunreal5_3.h.pch",
+        "PCH": "c:\\users\\02gaige.jones\\gaige jones\\repositories\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\x64\\adventuregameeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.inclorderunreal5_3.h.pch",
         "Includes": [
-            "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\adventuregame\\definitions.adventuregame.h",
-            "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\source\\adventuregame\\adventuregamemode.h",
-            "e:\\unreal_engine\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
-            "e:\\unreal_engine\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
-            "e:\\unreal_engine\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
-            "e:\\unreal_engine\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
-            "c:\\users\\yeyian pc\\documents\\gamedev\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\unrealeditor\\inc\\adventuregame\\uht\\adventuregamemode.generated.h"
+            "c:\\users\\02gaige.jones\\gaige jones\\repositories\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\adventuregame\\definitions.adventuregame.h",
+            "c:\\users\\02gaige.jones\\gaige jones\\repositories\\getting_started_in_ue\\adventuregame\\source\\adventuregame\\adventuregamemode.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\users\\02gaige.jones\\gaige jones\\repositories\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\unrealeditor\\inc\\adventuregame\\uht\\adventuregamemode.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

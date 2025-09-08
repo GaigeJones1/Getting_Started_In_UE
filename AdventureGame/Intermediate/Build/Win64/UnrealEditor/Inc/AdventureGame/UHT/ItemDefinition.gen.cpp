@@ -170,14 +170,14 @@ UItemDefinition::~UItemDefinition() {}
 // ********** End Class UItemDefinition ************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_AdventureGame_Source_AdventureGame_ItemDefinition_h__Script_AdventureGame_Statics
+struct Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_ItemDefinition_h__Script_AdventureGame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UItemDefinition, UItemDefinition::StaticClass, TEXT("UItemDefinition"), &Z_Registration_Info_UClass_UItemDefinition, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UItemDefinition), 2803779238U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_AdventureGame_Source_AdventureGame_ItemDefinition_h__Script_AdventureGame_2547790886(TEXT("/Script/AdventureGame"),
-	Z_CompiledInDeferFile_FID_AdventureGame_Source_AdventureGame_ItemDefinition_h__Script_AdventureGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_AdventureGame_Source_AdventureGame_ItemDefinition_h__Script_AdventureGame_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_ItemDefinition_h__Script_AdventureGame_2547790886(TEXT("/Script/AdventureGame"),
+	Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_ItemDefinition_h__Script_AdventureGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_ItemDefinition_h__Script_AdventureGame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

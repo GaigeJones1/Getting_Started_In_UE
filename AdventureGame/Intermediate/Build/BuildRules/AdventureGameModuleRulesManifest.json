@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\Yeyian PC\\Documents\\GameDev\\Getting_Started_In_UE\\AdventureGame\\Source\\AdventureGame\\AdventureGame.Build.cs",
-		"C:\\Users\\Yeyian PC\\Documents\\GameDev\\Getting_Started_In_UE\\AdventureGame\\Source\\AdventureGame.Target.cs",
-		"C:\\Users\\Yeyian PC\\Documents\\GameDev\\Getting_Started_In_UE\\AdventureGame\\Source\\AdventureGameEditor.Target.cs"
+		"C:\\Users\\02GAIGE.JONES\\Gaige Jones\\Repositories\\Getting_Started_In_UE\\AdventureGame\\Source\\AdventureGame\\AdventureGame.Build.cs",
+		"C:\\Users\\02GAIGE.JONES\\Gaige Jones\\Repositories\\Getting_Started_In_UE\\AdventureGame\\Source\\AdventureGame.Target.cs",
+		"C:\\Users\\02GAIGE.JONES\\Gaige Jones\\Repositories\\Getting_Started_In_UE\\AdventureGame\\Source\\AdventureGameEditor.Target.cs"
 	],
 	"EngineVersion": "5.6.1"
 }

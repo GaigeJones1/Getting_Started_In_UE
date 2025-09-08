@@ -274,7 +274,7 @@ UScriptStruct* Z_Construct_UScriptStruct_FItemData()
 // ********** End ScriptStruct FItemData ***********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_AdventureGame_Source_AdventureGame_ItemData_h__Script_AdventureGame_Statics
+struct Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_ItemData_h__Script_AdventureGame_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EItemType_StaticEnum, TEXT("EItemType"), &Z_Registration_Info_UEnum_EItemType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2181869469U) },
@@ -284,10 +284,10 @@ struct Z_CompiledInDeferFile_FID_AdventureGame_Source_AdventureGame_ItemData_h__
 		{ FItemData::StaticStruct, Z_Construct_UScriptStruct_FItemData_Statics::NewStructOps, TEXT("ItemData"), &Z_Registration_Info_UScriptStruct_FItemData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemData), 164993268U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_AdventureGame_Source_AdventureGame_ItemData_h__Script_AdventureGame_1816020643(TEXT("/Script/AdventureGame"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_ItemData_h__Script_AdventureGame_1816020643(TEXT("/Script/AdventureGame"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_AdventureGame_Source_AdventureGame_ItemData_h__Script_AdventureGame_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_AdventureGame_Source_AdventureGame_ItemData_h__Script_AdventureGame_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_AdventureGame_Source_AdventureGame_ItemData_h__Script_AdventureGame_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_AdventureGame_Source_AdventureGame_ItemData_h__Script_AdventureGame_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_ItemData_h__Script_AdventureGame_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_ItemData_h__Script_AdventureGame_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_ItemData_h__Script_AdventureGame_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_ItemData_h__Script_AdventureGame_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
