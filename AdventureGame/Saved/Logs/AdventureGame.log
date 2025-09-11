@@ -2526,3 +2526,149 @@ Script Stack (0 frames) :
 [2025.09.11-12.29.43:818][725]LogSavePackage: Moving '../../../../../../Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Saved/3HLIDPUD3BN3GQT9CILKRR_Auto12F3571BC4921915BBA037E9CE0EC81F6.tmp' to '../../../../../../Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Saved/Autosaves/Game/__ExternalActors__/FirstPerson/Lvl_FirstPerson/C/83/3HLIDPUD3BN3GQT9CILKRR_Auto1.uasset'
 [2025.09.11-12.29.43:818][725]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/FirstPerson/Lvl_FirstPerson' took 0.028
 [2025.09.11-12.29.43:818][725]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.028
+[2025.09.11-12.32.36:163][460]LogSlate: Window 'Pick Class For Data Asset Instance' being destroyed
+[2025.09.11-12.32.40:316][531]LogSlate: Took 0.006939 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2025.09.11-12.33.21:518][219]Running C:/Program Files/Epic Games/UE_5.6/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject" -game -rocket -progress
+[2025.09.11-12.33.21:650][219]Using bundled DotNet SDK version: 8.0.300 win-x64
+[2025.09.11-12.33.21:650][219]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject" -game -rocket -progress
+[2025.09.11-12.33.22:453][219]Log file: C:\Users\02GAIGE.JONES\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2025.09.11-12.33.23:458][219]
+[2025.09.11-12.33.23:458][219]Generating VisualStudio project files:
+[2025.09.11-12.33.23:458][219]Discovering modules, targets and source code for project...
+[2025.09.11-12.33.23:558][219]Adding projects for all targets...
+[2025.09.11-12.33.32:695][219]Adding projects for all targets took 9.10s
+[2025.09.11-12.33.32:695][219]Adding projects for all game projects took 0.00s
+[2025.09.11-12.33.33:298][219]Adding projects for all modules took 0.61s
+[2025.09.11-12.33.34:002][219]Compiling Rules Assemblies
+[2025.09.11-12.33.34:040][219]Compiling Rules Assemblies 100%
+[2025.09.11-12.33.34:040][219]Creating Build Targets
+[2025.09.11-12.33.35:574][219]Creating Build Targets 100%
+[2025.09.11-12.33.35:574][219]Creating Build Targets took 1.63s
+[2025.09.11-12.33.35:574][219]Binding IntelliSense data...
+[2025.09.11-12.33.55:398][219]Binding IntelliSense data... 1%
+[2025.09.11-12.34.05:692][219]Binding IntelliSense data... 41%
+[2025.09.11-12.34.12:350][219]Binding IntelliSense data... 100%
+[2025.09.11-12.34.12:350][219]Binding IntelliSense data took 36.74s
+[2025.09.11-12.34.12:350][219]Writing project files...
+[2025.09.11-12.34.14:869][219]Writing project files... 100%
+[2025.09.11-12.34.14:869][219]Writing project files took 2.47s
+[2025.09.11-12.34.14:869][219]
+[2025.09.11-12.34.14:869][219]Generating QueryTargets data for editor...
+[2025.09.11-12.34.14:869][219]Compiling Rules Assemblies
+[2025.09.11-12.34.14:869][219]Compiling Rules Assemblies 100%
+[2025.09.11-12.34.14:869][219]Writing Query Target Info
+[2025.09.11-12.34.14:869][219]Writing Query Target Info 100%
+[2025.09.11-12.34.14:869][219]Generating QueryTargets data for editor took 0.02s
+[2025.09.11-12.34.14:869][219]
+[2025.09.11-12.34.14:869][219]Result: Succeeded
+[2025.09.11-12.34.14:869][219]Total execution time: 53.00 seconds
+[2025.09.11-12.34.15:214][219]LogStreaming: Display: FlushAsyncLoading(397): 1 QueuedPackages, 0 AsyncPackages
+[2025.09.11-12.34.15:251][219]Candidate modules for hot reload:
+[2025.09.11-12.34.15:251][219]  AdventureGame
+[2025.09.11-12.34.15:256][219]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.6/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=AdventureGame,5279 AdventureGameEditor Win64 Development -Project="C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject" "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject"  -IgnoreJunk]
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300 win-x64
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=AdventureGame,5279 AdventureGameEditor Win64 Development -Project="C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject" "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject"  -IgnoreJunk
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Log file: C:\Users\02GAIGE.JONES\AppData\Local\UnrealBuildTool\Log.txt
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\02GAIGE.JONES\Gaige Jones\Repositories\Getting_Started_In_UE).
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Invalidating makefile for AdventureGameEditor (source file added)
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Parsing headers for AdventureGameEditor
+[2025.09.11-12.34.40:233][219]CompilerResultsLog:   Running Internal UnrealHeaderTool "C:\Users\02GAIGE.JONES\Gaige Jones\Repositories\Getting_Started_In_UE\AdventureGame\AdventureGame.uproject" "C:\Users\02GAIGE.JONES\Gaige Jones\Repositories\Getting_Started_In_UE\AdventureGame\Intermediate\Build\Win64\AdventureGameEditor\Development\AdventureGameEditor.uhtmanifest" -WarningsAsErrors -installed
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Total of 3 written
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Reflection code generated for AdventureGameEditor in 8.2093369 seconds
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Building AdventureGameEditor...
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Using Visual Studio 2022 14.38.33145 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: [Upgrade]
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_6;' in AdventureGameEditor.Target.cs.
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: [Upgrade]
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Determining max actions to execute in parallel (6 physical cores, 12 logical cores)
+[2025.09.11-12.34.40:233][219]CompilerResultsLog:   Executing up to 6 processes, one per physical core
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 5 action(s)
+[2025.09.11-12.34.40:233][219]CompilerResultsLog:   Storage capacity 40Gb
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: ---- Starting trace: 250911_083426 ----
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: ------ Building 5 action(s) started ------
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: [1/5] Compile [x64] EquippableToolDefinition.cpp
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: [2/5] Compile [x64] Module.AdventureGame.gen.cpp
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: [3/5] Link [x64] UnrealEditor-AdventureGame-5279.lib
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: [4/5] Link [x64] UnrealEditor-AdventureGame-5279.dll
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: [5/5] WriteMetadata AdventureGameEditor.target (UBA disabled)
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Trace written to file C:/Users/02GAIGE.JONES/AppData/Local/UnrealBuildTool/Log.uba with size 4.5kb
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 13.29 seconds
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: 
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Result: Succeeded
+[2025.09.11-12.34.40:233][219]CompilerResultsLog: Total execution time: 24.62 seconds
+[2025.09.11-12.34.40:233][219]LogMainFrame: MainFrame: Module compiling took 25.020 seconds
+[2025.09.11-12.34.40:262][219]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2025.09.11-12.34.40:300][219]LogClass: UPackage /Script/AdventureGame Reload.
+[2025.09.11-12.34.40:302][219]LogClass: Could not find existing class EquippableToolDefinition in package /Script/AdventureGame for reload, assuming new or modified class
+[2025.09.11-12.34.40:372][219]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2025.09.11-12.34.40:388][219]Display: HotReload took 25.2s.
+[2025.09.11-12.34.40:389][219]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 4 classes unchanged, 1 enum unchanged, 2 scriptstructs unchanged, 3 functions remapped, 2 scriptstructs remapped
+[2025.09.11-12.34.40:414][219]Warning: HotReload operation took 25.2s.
+[2025.09.11-12.34.40:432][219]LogSlate: Window 'Add C++ Class' being destroyed
+[2025.09.11-12.34.40:618][219]LogHotReload: New module detected: UnrealEditor-AdventureGame-5279.dll
+[2025.09.11-12.34.40:810][219]LogHotReload: Starting Hot-Reload from IDE
+[2025.09.11-12.34.40:986][219]LogUObjectHash: Compacting FUObjectHashTables data took   0.26ms
+[2025.09.11-12.34.41:008][219]LogUObjectHash: Compacting FUObjectHashTables data took   0.25ms
+[2025.09.11-12.34.41:031][219]Display: HotReload took  0.2s.
+[2025.09.11-12.34.41:031][219]Display: Reload/Re-instancing Complete: 2 scriptstructs remapped
+[2025.09.11-12.34.41:123][219]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1697.665527
+[2025.09.11-12.34.41:933][229]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.11-12.34.41:934][229]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1698.467041, Update Interval: 314.313782
+[2025.09.11-12.36.17:607][564]Candidate modules for hot reload:
+[2025.09.11-12.36.17:607][564]  AdventureGame
+[2025.09.11-12.36.17:614][564]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.6/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=AdventureGame,7610 AdventureGameEditor Win64 Development -Project="C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject" "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject"  -IgnoreJunk]
+[2025.09.11-12.36.17:621][564]Warning: Starting HotReload took  0.1s.
+[2025.09.11-12.36.19:406][590]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300 win-x64
+[2025.09.11-12.36.19:407][590]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=AdventureGame,7610 AdventureGameEditor Win64 Development -Project="C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject" "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject"  -IgnoreJunk
+[2025.09.11-12.36.19:407][590]CompilerResultsLog: Log file: C:\Users\02GAIGE.JONES\AppData\Local\UnrealBuildTool\Log.txt
+[2025.09.11-12.36.19:407][590]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\02GAIGE.JONES\Gaige Jones\Repositories\Getting_Started_In_UE).
+[2025.09.11-12.36.19:407][590]CompilerResultsLog: Parsing headers for AdventureGameEditor
+[2025.09.11-12.36.19:407][590]CompilerResultsLog:   Running Internal UnrealHeaderTool "C:\Users\02GAIGE.JONES\Gaige Jones\Repositories\Getting_Started_In_UE\AdventureGame\AdventureGame.uproject" "C:\Users\02GAIGE.JONES\Gaige Jones\Repositories\Getting_Started_In_UE\AdventureGame\Intermediate\Build\Win64\AdventureGameEditor\Development\AdventureGameEditor.uhtmanifest" -WarningsAsErrors -installed
+[2025.09.11-12.36.19:407][590]CompilerResultsLog: Error: C:\Users\02GAIGE.JONES\Gaige Jones\Repositories\Getting_Started_In_UE\AdventureGame\Source\AdventureGame\EquippableToolDefinition.h(21) : Error: Unable to find 'class' with name 'AEquippableToolBase'
+[2025.09.11-12.36.19:407][590]CompilerResultsLog: Total of 0 written
+[2025.09.11-12.36.19:407][590]CompilerResultsLog: 
+[2025.09.11-12.36.19:407][590]CompilerResultsLog: Result: Failed (OtherCompilationError)
+[2025.09.11-12.36.19:407][590]CompilerResultsLog: Total execution time: 1.54 seconds
+[2025.09.11-12.36.19:407][590]LogMainFrame: MainFrame: Module compiling took 1.816 seconds
+[2025.09.11-12.36.19:407][590]LogStreaming: Display: FlushAsyncLoading(399): 1 QueuedPackages, 0 AsyncPackages
+[2025.09.11-12.36.19:424][590]Warning: HotReload failed, recompile failed
+[2025.09.11-12.37.14:951][904]Candidate modules for hot reload:
+[2025.09.11-12.37.14:951][904]  AdventureGame
+[2025.09.11-12.37.14:956][904]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.6/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=AdventureGame,9648 AdventureGameEditor Win64 Development -Project="C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject" "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject"  -IgnoreJunk]
+[2025.09.11-12.37.14:961][904]Warning: Starting HotReload took  0.0s.
+[2025.09.11-12.37.16:516][932]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300 win-x64
+[2025.09.11-12.37.16:516][932]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=AdventureGame,9648 AdventureGameEditor Win64 Development -Project="C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject" "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject"  -IgnoreJunk
+[2025.09.11-12.37.16:516][932]CompilerResultsLog: Log file: C:\Users\02GAIGE.JONES\AppData\Local\UnrealBuildTool\Log.txt
+[2025.09.11-12.37.16:516][932]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\02GAIGE.JONES\Gaige Jones\Repositories\Getting_Started_In_UE).
+[2025.09.11-12.37.16:516][932]CompilerResultsLog: Parsing headers for AdventureGameEditor
+[2025.09.11-12.37.16:516][932]CompilerResultsLog:   Running Internal UnrealHeaderTool "C:\Users\02GAIGE.JONES\Gaige Jones\Repositories\Getting_Started_In_UE\AdventureGame\AdventureGame.uproject" "C:\Users\02GAIGE.JONES\Gaige Jones\Repositories\Getting_Started_In_UE\AdventureGame\Intermediate\Build\Win64\AdventureGameEditor\Development\AdventureGameEditor.uhtmanifest" -WarningsAsErrors -installed
+[2025.09.11-12.37.16:516][932]CompilerResultsLog: Error: C:\Users\02GAIGE.JONES\Gaige Jones\Repositories\Getting_Started_In_UE\AdventureGame\Source\AdventureGame\EquippableToolDefinition.h(21) : Error: Unable to find 'class' with name 'AEquippableToolBase'
+[2025.09.11-12.37.16:516][932]CompilerResultsLog: Total of 0 written
+[2025.09.11-12.37.16:516][932]CompilerResultsLog: 
+[2025.09.11-12.37.16:516][932]CompilerResultsLog: Result: Failed (OtherCompilationError)
+[2025.09.11-12.37.16:516][932]CompilerResultsLog: Total execution time: 1.36 seconds
+[2025.09.11-12.37.16:516][932]LogMainFrame: MainFrame: Module compiling took 1.570 seconds
+[2025.09.11-12.37.16:516][932]Warning: HotReload failed, recompile failed
+[2025.09.11-12.37.17:501][950]Candidate modules for hot reload:
+[2025.09.11-12.37.17:501][950]  AdventureGame
+[2025.09.11-12.37.17:506][950]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.6/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=AdventureGame,5042 AdventureGameEditor Win64 Development -Project="C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject" "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject"  -IgnoreJunk]
+[2025.09.11-12.37.17:512][950]Warning: Starting HotReload took  0.0s.
+[2025.09.11-12.37.19:071][978]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300 win-x64
+[2025.09.11-12.37.19:071][978]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=AdventureGame,5042 AdventureGameEditor Win64 Development -Project="C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject" "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/AdventureGame.uproject"  -IgnoreJunk
+[2025.09.11-12.37.19:071][978]CompilerResultsLog: Log file: C:\Users\02GAIGE.JONES\AppData\Local\UnrealBuildTool\Log.txt
+[2025.09.11-12.37.19:071][978]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\02GAIGE.JONES\Gaige Jones\Repositories\Getting_Started_In_UE).
+[2025.09.11-12.37.19:071][978]CompilerResultsLog: Parsing headers for AdventureGameEditor
+[2025.09.11-12.37.19:071][978]CompilerResultsLog:   Running Internal UnrealHeaderTool "C:\Users\02GAIGE.JONES\Gaige Jones\Repositories\Getting_Started_In_UE\AdventureGame\AdventureGame.uproject" "C:\Users\02GAIGE.JONES\Gaige Jones\Repositories\Getting_Started_In_UE\AdventureGame\Intermediate\Build\Win64\AdventureGameEditor\Development\AdventureGameEditor.uhtmanifest" -WarningsAsErrors -installed
+[2025.09.11-12.37.19:071][978]CompilerResultsLog: Error: C:\Users\02GAIGE.JONES\Gaige Jones\Repositories\Getting_Started_In_UE\AdventureGame\Source\AdventureGame\EquippableToolDefinition.h(21) : Error: Unable to find 'class' with name 'AEquippableToolBase'
+[2025.09.11-12.37.19:071][978]CompilerResultsLog: Total of 0 written
+[2025.09.11-12.37.19:071][978]CompilerResultsLog: 
+[2025.09.11-12.37.19:071][978]CompilerResultsLog: Result: Failed (OtherCompilationError)
+[2025.09.11-12.37.19:071][978]CompilerResultsLog: Total execution time: 1.36 seconds
+[2025.09.11-12.37.19:071][978]LogMainFrame: MainFrame: Module compiling took 1.580 seconds
+[2025.09.11-12.37.19:071][978]Warning: HotReload failed, recompile failed
+[2025.09.11-12.37.55:827][651]LogSlate: Window 'Message Log' being destroyed
+[2025.09.11-12.37.55:983][651]LogSlate: Window 'Message Log' being destroyed

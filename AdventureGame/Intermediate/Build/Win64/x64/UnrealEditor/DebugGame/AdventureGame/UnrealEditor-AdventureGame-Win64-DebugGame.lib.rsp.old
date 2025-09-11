@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-AdventureGame-Win64-DebugGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/AdventureGameEditor/DebugGame/UnrealEd/SharedPCH.UnrealEd.Project.NonOptimized.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AdventureGame/Module.AdventureGame.gen.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AdventureGame/AdventureGame.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AdventureGame/AdventureGameMode.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AdventureGame/PerModuleInline.gen.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AdventureGame/Default.rc2.res"
+/OUT:"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/AdventureGame/UnrealEditor-AdventureGame-Win64-DebugGame.lib"
