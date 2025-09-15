@@ -60,6 +60,12 @@
     <ClInclude Include="..\..\Source\AdventureGame\EquippableToolDefinition.h">
       <Filter>Source\AdventureGame</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\AdventureGame\InventoryComponent.cpp">
+      <Filter>Source\AdventureGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AdventureGame\InventoryComponent.h">
+      <Filter>Source\AdventureGame</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\AdventureGame\ItemData.cpp">
       <Filter>Source\AdventureGame</Filter>
     </ClCompile>

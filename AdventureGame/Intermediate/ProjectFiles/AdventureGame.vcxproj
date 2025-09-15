@@ -275,6 +275,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\AdventureGame\EquippableToolDefinition.h"/>
+    <ClCompile Include="..\..\Source\AdventureGame\InventoryComponent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AdventureGame\InventoryComponent.h"/>
     <ClCompile Include="..\..\Source\AdventureGame\ItemData.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

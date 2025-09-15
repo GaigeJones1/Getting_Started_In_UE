@@ -1,4 +1,9 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
 #include "AdventureCharacter.h"
+#include "EquippableToolDefinition.h"
+#include "ItemDefinition.h"
+#include "InventoryComponent.h"
 
 // Sets default values
 AAdventureCharacter::AAdventureCharacter()
@@ -6,69 +11,25 @@ AAdventureCharacter::AAdventureCharacter()
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it
 	PrimaryActorTick.bCanEverTick = true;
 
-	// Create a first-person camera component
+	// Create a first person camera component
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	check(FirstPersonCameraComponent != nullptr);
 
-	// Create a first-person mesh component for the owning player
+	// Create a first person mesh component for the owning player
 	FirstPersonMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FirstPersonMesh"));
 	check(FirstPersonMeshComponent != nullptr);
 
-	// Attach the first-person mesh to the skeletal mesh
+	// Create an inventory component for the owning player
+	InventoryComponent = CreateDefaultSubobject<UInventoryComponent>(TEXT("InventoryComponent"));
+
+	// Attach the FirstPerson mesh to the Skeletal Mesh
 	FirstPersonMeshComponent->SetupAttachment(GetMesh());
 
-	// The first-person mesh is included in First Person rendering (use FirstPersonFieldofView and FirstPersonScale on this mesh) 
-	FirstPersonMeshComponent->FirstPersonPrimitiveType = EFirstPersonPrimitiveType::FirstPerson;
+	// Attach the camera component to the first-person Skeletal Mesh
+	FirstPersonCameraComponent->SetupAttachment(FirstPersonMeshComponent, FName("Head"));
 
-	// Only the owning player sees the first-person mesh
-	FirstPersonMeshComponent->SetOnlyOwnerSee(true);
-
-	// The owning player doesn't see the regular (third-person) body mesh, but it casts a shadow
-	GetMesh()->FirstPersonPrimitiveType = EFirstPersonPrimitiveType::WorldSpaceRepresentation;
-
-	// Set the first-person mesh to not collide with other objects
-	FirstPersonMeshComponent->SetCollisionProfileName(FName("NoCollision"));
-
-	FirstPersonCameraComponent->SetupAttachment(FirstPersonMeshComponent, FName("head"));
-
-	// Position the camera slightly above the eyes and rotate it to behind the player's head
-	FirstPersonCameraComponent->SetRelativeLocationAndRotation(FirstPersonCameraOffset, FRotator(0.0f, -90.0f, 90.0f));
+	// Enable the pawn to control camera rotation
 	FirstPersonCameraComponent->bUsePawnControlRotation = true;
-
-	// Enable first-person rendering on the camera and set default FOV and scale values
-	FirstPersonCameraComponent->bEnableFirstPersonFieldOfView = true;
-	FirstPersonCameraComponent->bEnableFirstPersonScale = true;
-	FirstPersonCameraComponent->FirstPersonFieldOfView = FirstPersonFieldOfView;
-	FirstPersonCameraComponent->FirstPersonScale = FirstPersonScale;
-}
-
-void AAdventureCharacter::Move(const FInputActionValue& Value)
-{
-	// 2D Vector of movement values returned from the input action
-	const FVector2D MovementValue = Value.Get<FVector2D>();
-
-	// Check if the controller possessing this Actor is valid
-	if (Controller)
-	{
-		// Add left and right movement
-		const FVector Right = GetActorRightVector();
-		AddMovementInput(Right, MovementValue.X);
-
-		// Add forward and back movement
-		const FVector Forward = GetActorForwardVector();
-		AddMovementInput(Forward, MovementValue.Y);
-	}
-}
-
-void AAdventureCharacter::Look(const FInputActionValue& Value)
-{
-	const FVector2D LookAxisValue = Value.Get<FVector2D>();
-
-	if (Controller)
-	{
-		AddControllerYawInput(LookAxisValue.X);
-		AddControllerPitchInput(LookAxisValue.Y);
-	}
 }
 
 // Called when the game starts or when spawned
@@ -78,7 +39,7 @@ void AAdventureCharacter::BeginPlay()
 
 	check(GEngine != nullptr);
 
-	// Only the owning player sees the first person mesh
+	// Only the owning player sees the first person mesh.
 	FirstPersonMeshComponent->SetOnlyOwnerSee(true);
 
 	// Set the animations on the first person mesh.
@@ -86,6 +47,7 @@ void AAdventureCharacter::BeginPlay()
 
 	// The owning player doesn't see the regular (third-person) body mesh
 	GetMesh()->SetOwnerNoSee(true);
+
 
 	// Position the camera slightly above the eyes.
 	FirstPersonCameraComponent->SetRelativeLocation(FVector(2.8f, 5.9f, 0.0f));
@@ -96,7 +58,7 @@ void AAdventureCharacter::BeginPlay()
 		// Get the enhanced input local player subsystem and add a new input mapping context to it
 		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
 		{
-			Subsystem->AddMappingContext(FirstPersonContext, 0);
+			Subsystem->AddMappingContext(LookContext, 0);
 		}
 	}
 
@@ -129,4 +91,132 @@ void AAdventureCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 	}
 
+}
+
+
+void AAdventureCharacter::Move(const FInputActionValue& Value)
+{
+
+	// 2D Vector of movement values returned from the input action
+	const FVector2d MovementValue = Value.Get<FVector2D>();
+
+	// Check if the controller possessing this Actor is valid
+	if (Controller)
+	{
+		// Add Forward and Right movement values to the Actor
+		const FVector Right = GetActorRightVector();
+		AddMovementInput(Right, MovementValue.X);
+
+		const FVector Forward = GetActorForwardVector();
+		AddMovementInput(Forward, MovementValue.Y);
+	}
+}
+
+void AAdventureCharacter::Look(const FInputActionValue& Value)
+{
+	// 2D Vector of look values 
+	const FVector2D LookAxisValue = Value.Get<FVector2D>();
+
+	// Check if the controller possessing this Actor is valid
+	if (Controller)
+	{
+		// Add Pitch and Yaw movement values to the Actor
+		AddControllerYawInput(LookAxisValue.X);
+		AddControllerPitchInput(LookAxisValue.Y);
+	}
+}
+
+void AAdventureCharacter::GiveItem(UItemDefinition* ItemDefinition)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("Character: Attempting to gain item"));
+	EItemType ItemTypeText = ItemDefinition->ItemType;
+	FText ItemName = ItemDefinition->ItemText.Name;
+
+	// Case based on the type of the item
+	switch (ItemDefinition->ItemType)
+	{
+	case EItemType::Tool:
+	{
+		// If the item is a tool, attempt to cast and attach it to the character
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("Item to give is a tool"));
+		UEquippableToolDefinition* ToolDefinition = Cast<UEquippableToolDefinition>(ItemDefinition);
+		if (ToolDefinition != nullptr)
+		{
+			AttachTool(ToolDefinition);
+		}
+		else {
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Cast to tool failed!"));
+		}
+		break;
+	}
+	case EItemType::Consumable:
+	{
+		// Not yet implemented
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("Item to give is a consumable"));
+		break;
+	}
+	default:
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Item is neither"));
+		break;
+	}
+}
+
+bool AAdventureCharacter::IsToolAlreadyOwned(UEquippableToolDefinition* ToolDefinition)
+{
+	// Check that the character does not yet have this particular tool
+	for (UEquippableToolDefinition* InventoryItem : InventoryComponent->ToolInventory)
+	{
+		if (ToolDefinition->ID == InventoryItem->ID)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Tool already in inventory!"));
+			return true;
+		}
+	}
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("This is a new tool"));
+
+	return false;
+}
+
+
+
+void AAdventureCharacter::AttachTool(UEquippableToolDefinition* ToolDefinition)
+{
+
+	// Only equip this tool if it isn't already owned
+	if (not IsToolAlreadyOwned(ToolDefinition))
+	{
+
+
+		// Attach the tool to the First Person Character
+		FAttachmentTransformRules AttachmentRules(EAttachmentRule::SnapToTarget, true);
+
+
+		// Attach the tool to this character, and then the right hand of their first person mesh
+		ToolToEquip->AttachToActor(this, AttachmentRules);
+		ToolToEquip->AttachToComponent(FirstPersonMeshComponent, AttachmentRules, FName(TEXT("HandGrip_R")));
+
+		ToolToEquip->OwningCharacter = this;
+
+		// Add the tool to this character's inventory
+		InventoryComponent->ToolInventory.Add(ToolDefinition);
+
+		// Set the animations on the first person mesh.
+		FirstPersonMeshComponent->SetAnimInstanceClass(ToolToEquip->FirstPersonToolAnim->GeneratedClass);
+		GetMesh()->SetAnimInstanceClass(ToolToEquip->ThirdPersonToolAnim->GeneratedClass);
+
+		EquippedTool = ToolToEquip;
+
+		// Get the player controller for this character
+		if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
+		{
+			if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
+			{
+				Subsystem->AddMappingContext(ToolToEquip->ToolMappingContext, 1);
+			}
+
+			ToolToEquip->BindInputAction(UseAction);
+		}
+
+	}
 }
