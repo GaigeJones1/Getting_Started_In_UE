@@ -6,6 +6,7 @@
 			"AdventureGame.init.gen.cpp.obj",
 			"AdventureGameMode.gen.cpp.obj",
 			"EquippableToolDefinition.gen.cpp.obj",
+			"InventoryComponent.gen.cpp.obj",
 			"ItemData.gen.cpp.obj",
 			"ItemDefinition.gen.cpp.obj",
 			"PickupBase.gen.cpp.obj"
