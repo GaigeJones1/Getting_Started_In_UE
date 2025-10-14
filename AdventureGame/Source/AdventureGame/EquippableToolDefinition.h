@@ -6,6 +6,7 @@
 #include "ItemDefinition.h"
 #include "EquippableToolDefinition.generated.h"
 
+class AEquippableToolBase;
 class UInputMappingContext;
 
 UCLASS(BlueprintType, Blueprintable)
@@ -15,9 +16,12 @@ class ADVENTUREGAME_API UEquippableToolDefinition : public UItemDefinition
 
 public:
 
-
+	// The tool asset associated with this item
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<AEquippableToolBase> ToolAsset;
 
 	// Create and return a copy of this item
 	UFUNCTION()
+
 	virtual UEquippableToolDefinition* CreateItemCopy() const override;
 };

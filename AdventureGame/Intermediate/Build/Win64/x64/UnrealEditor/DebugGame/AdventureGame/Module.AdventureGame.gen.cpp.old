@@ -3,6 +3,7 @@
 #include "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/AdventureGame.init.gen.cpp"
 #include "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/AdventureGameMode.gen.cpp"
 #include "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/EquippableToolDefinition.gen.cpp"
+#include "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/InventoryComponent.gen.cpp"
 #include "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/ItemData.gen.cpp"
 #include "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/ItemDefinition.gen.cpp"
 #include "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/PickupBase.gen.cpp"

@@ -12,9 +12,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeEquippableToolDefinition() {}
 
 // ********** Begin Cross Module References ********************************************************
+ADVENTUREGAME_API UClass* Z_Construct_UClass_AEquippableToolBase_NoRegister();
 ADVENTUREGAME_API UClass* Z_Construct_UClass_UEquippableToolDefinition();
 ADVENTUREGAME_API UClass* Z_Construct_UClass_UEquippableToolDefinition_NoRegister();
 ADVENTUREGAME_API UClass* Z_Construct_UClass_UItemDefinition();
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 UPackage* Z_Construct_UPackage__Script_AdventureGame();
 // ********** End Cross Module References **********************************************************
 
@@ -112,7 +114,19 @@ struct Z_Construct_UClass_UEquippableToolDefinition_Statics
 		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "EquippableToolDefinition.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ToolAsset_MetaData[] = {
+		{ "Category", "EquippableToolDefinition" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// The tool asset associated with this item\n" },
+#endif
+		{ "ModuleRelativePath", "EquippableToolDefinition.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The tool asset associated with this item" },
+#endif
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FClassPropertyParams NewProp_ToolAsset;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UEquippableToolDefinition_CreateItemCopy, "CreateItemCopy" }, // 2838542282
@@ -123,6 +137,11 @@ struct Z_Construct_UClass_UEquippableToolDefinition_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UEquippableToolDefinition_Statics::NewProp_ToolAsset = { "ToolAsset", nullptr, (EPropertyFlags)0x0014000000010001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UEquippableToolDefinition, ToolAsset), Z_Construct_UClass_UClass, Z_Construct_UClass_AEquippableToolBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ToolAsset_MetaData), NewProp_ToolAsset_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UEquippableToolDefinition_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UEquippableToolDefinition_Statics::NewProp_ToolAsset,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UEquippableToolDefinition_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UEquippableToolDefinition_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UItemDefinition,
 	(UObject* (*)())Z_Construct_UPackage__Script_AdventureGame,
@@ -134,11 +153,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UEquippableToolDefiniti
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	FuncInfo,
-	nullptr,
+	Z_Construct_UClass_UEquippableToolDefinition_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	UE_ARRAY_COUNT(FuncInfo),
-	0,
+	UE_ARRAY_COUNT(Z_Construct_UClass_UEquippableToolDefinition_Statics::PropPointers),
 	0,
 	0x001000A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UEquippableToolDefinition_Statics::Class_MetaDataParams), Z_Construct_UClass_UEquippableToolDefinition_Statics::Class_MetaDataParams)
@@ -160,10 +179,10 @@ UEquippableToolDefinition::~UEquippableToolDefinition() {}
 struct Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolDefinition_h__Script_AdventureGame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UEquippableToolDefinition, UEquippableToolDefinition::StaticClass, TEXT("UEquippableToolDefinition"), &Z_Registration_Info_UClass_UEquippableToolDefinition, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEquippableToolDefinition), 3738275007U) },
+		{ Z_Construct_UClass_UEquippableToolDefinition, UEquippableToolDefinition::StaticClass, TEXT("UEquippableToolDefinition"), &Z_Registration_Info_UClass_UEquippableToolDefinition, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEquippableToolDefinition), 4294603198U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolDefinition_h__Script_AdventureGame_518878053(TEXT("/Script/AdventureGame"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolDefinition_h__Script_AdventureGame_370747161(TEXT("/Script/AdventureGame"),
 	Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolDefinition_h__Script_AdventureGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolDefinition_h__Script_AdventureGame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
