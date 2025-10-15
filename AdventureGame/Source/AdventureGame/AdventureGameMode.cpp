@@ -3,8 +3,6 @@
 
 #include "AdventureGameMode.h"
 
-#include "AdventureGameMode.h"
-
 void AAdventureGameMode::StartPlay()
 {
 	Super::StartPlay();

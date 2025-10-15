@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeAdventureGame_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x412F4BB9,
+				0x02EDD102,
 				0xBF2DC639,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -25,5 +25,5 @@ void EmptyLinkFunctionForGeneratedCodeAdventureGame_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_AdventureGame.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_AdventureGame(Z_Construct_UPackage__Script_AdventureGame, TEXT("/Script/AdventureGame"), Z_Registration_Info_UPackage__Script_AdventureGame, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x412F4BB9, 0xBF2DC639));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_AdventureGame(Z_Construct_UPackage__Script_AdventureGame, TEXT("/Script/AdventureGame"), Z_Registration_Info_UPackage__Script_AdventureGame, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x02EDD102, 0xBF2DC639));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
