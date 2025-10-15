@@ -271,6 +271,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\AdventureGame\AdventureGameMode.h"/>
+    <ClCompile Include="..\..\Source\AdventureGame\DartLauncher.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AdventureGame\DartLauncher.h"/>
     <ClCompile Include="..\..\Source\AdventureGame\EquippableToolBase.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

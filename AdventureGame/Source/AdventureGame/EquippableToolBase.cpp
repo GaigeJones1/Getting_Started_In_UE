@@ -20,7 +20,6 @@ void AEquippableToolBase::BeginPlay()
 {
 	Super::BeginPlay();
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("Tool BeginPlay"));
 }
 
 void AEquippableToolBase::Use()
@@ -30,7 +29,6 @@ void AEquippableToolBase::Use()
 void AEquippableToolBase::BindInputAction(const UInputAction* ActionToBind)
 {
 }
-
 
 // Called every frame
 void AEquippableToolBase::Tick(float DeltaTime)

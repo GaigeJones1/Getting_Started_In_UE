@@ -1,9 +1,12 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+﻿// Copyright Epic Games, Inc. All Rights Reserved.
 
 #pragma once
 
 #include "CoreMinimal.h"
-#include "EquippableToolBase.generated.h"
+#include "InputMappingContext.h"
+#include "InputAction.h"
+#include "EquippableToolBase.generated.h" // ✅ Always last include
+
 
 class AAdventureCharacter;
 class UInputAction;

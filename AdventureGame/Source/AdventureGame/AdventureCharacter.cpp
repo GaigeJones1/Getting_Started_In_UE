@@ -1,6 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "AdventureCharacter.h"
+#include "EquippableToolBase.h"
 #include "EquippableToolDefinition.h"
 #include "ItemDefinition.h"
 #include "InventoryComponent.h"
@@ -186,6 +187,8 @@ void AAdventureCharacter::AttachTool(UEquippableToolDefinition* ToolDefinition)
 	// Only equip this tool if it isn't already owned
 	if (not IsToolAlreadyOwned(ToolDefinition))
 	{
+		// Spawn a new instance of the tool to equip
+		AEquippableToolBase* ToolToEquip = GetWorld()->SpawnActor<AEquippableToolBase>(ToolDefinition->ToolAsset, this->GetActorTransform());
 
 
 		// Attach the tool to the First Person Character

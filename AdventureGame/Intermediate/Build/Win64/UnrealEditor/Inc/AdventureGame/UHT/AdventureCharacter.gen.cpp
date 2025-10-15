@@ -15,6 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeAdventureCharacter() {}
 // ********** Begin Cross Module References ********************************************************
 ADVENTUREGAME_API UClass* Z_Construct_UClass_AAdventureCharacter();
 ADVENTUREGAME_API UClass* Z_Construct_UClass_AAdventureCharacter_NoRegister();
+ADVENTUREGAME_API UClass* Z_Construct_UClass_AEquippableToolBase_NoRegister();
 ADVENTUREGAME_API UClass* Z_Construct_UClass_UEquippableToolDefinition_NoRegister();
 ADVENTUREGAME_API UClass* Z_Construct_UClass_UInventoryComponent_NoRegister();
 ADVENTUREGAME_API UClass* Z_Construct_UClass_UItemDefinition_NoRegister();
@@ -403,6 +404,16 @@ struct Z_Construct_UClass_AAdventureCharacter_Statics
 		{ "ToolTip", "First Person animations" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EquippedTool_MetaData[] = {
+		{ "Category", "Tools" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// The currently equipped tool\n" },
+#endif
+		{ "ModuleRelativePath", "AdventureCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The currently equipped tool" },
+#endif
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_FirstPersonCameraComponent_MetaData[] = {
 		{ "Category", "AdventureCharacter" },
 #if !UE_BUILD_SHIPPING
@@ -444,6 +455,7 @@ struct Z_Construct_UClass_AAdventureCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SwitchToolAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_UseAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FirstPersonDefaultAnim;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_EquippedTool;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FirstPersonCameraComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FirstPersonMeshComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InventoryComponent;
@@ -469,6 +481,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAdventureChar
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAdventureCharacter_Statics::NewProp_SwitchToolAction = { "SwitchToolAction", nullptr, (EPropertyFlags)0x0124080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAdventureCharacter, SwitchToolAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SwitchToolAction_MetaData), NewProp_SwitchToolAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAdventureCharacter_Statics::NewProp_UseAction = { "UseAction", nullptr, (EPropertyFlags)0x0124080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAdventureCharacter, UseAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UseAction_MetaData), NewProp_UseAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAdventureCharacter_Statics::NewProp_FirstPersonDefaultAnim = { "FirstPersonDefaultAnim", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAdventureCharacter, FirstPersonDefaultAnim), Z_Construct_UClass_UAnimBlueprint_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FirstPersonDefaultAnim_MetaData), NewProp_FirstPersonDefaultAnim_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAdventureCharacter_Statics::NewProp_EquippedTool = { "EquippedTool", nullptr, (EPropertyFlags)0x0124080000020015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAdventureCharacter, EquippedTool), Z_Construct_UClass_AEquippableToolBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EquippedTool_MetaData), NewProp_EquippedTool_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAdventureCharacter_Statics::NewProp_FirstPersonCameraComponent = { "FirstPersonCameraComponent", nullptr, (EPropertyFlags)0x01140000000a0009, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAdventureCharacter, FirstPersonCameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FirstPersonCameraComponent_MetaData), NewProp_FirstPersonCameraComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAdventureCharacter_Statics::NewProp_FirstPersonMeshComponent = { "FirstPersonMeshComponent", nullptr, (EPropertyFlags)0x01140000000a0009, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAdventureCharacter, FirstPersonMeshComponent), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FirstPersonMeshComponent_MetaData), NewProp_FirstPersonMeshComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAdventureCharacter_Statics::NewProp_InventoryComponent = { "InventoryComponent", nullptr, (EPropertyFlags)0x01140000000a0009, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAdventureCharacter, InventoryComponent), Z_Construct_UClass_UInventoryComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InventoryComponent_MetaData), NewProp_InventoryComponent_MetaData) };
@@ -480,6 +493,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAdventur
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAdventureCharacter_Statics::NewProp_SwitchToolAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAdventureCharacter_Statics::NewProp_UseAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAdventureCharacter_Statics::NewProp_FirstPersonDefaultAnim,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAdventureCharacter_Statics::NewProp_EquippedTool,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAdventureCharacter_Statics::NewProp_FirstPersonCameraComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAdventureCharacter_Statics::NewProp_FirstPersonMeshComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAdventureCharacter_Statics::NewProp_InventoryComponent,
@@ -521,10 +535,10 @@ AAdventureCharacter::~AAdventureCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_AdventureCharacter_h__Script_AdventureGame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AAdventureCharacter, AAdventureCharacter::StaticClass, TEXT("AAdventureCharacter"), &Z_Registration_Info_UClass_AAdventureCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAdventureCharacter), 1073528414U) },
+		{ Z_Construct_UClass_AAdventureCharacter, AAdventureCharacter::StaticClass, TEXT("AAdventureCharacter"), &Z_Registration_Info_UClass_AAdventureCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAdventureCharacter), 65966030U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_AdventureCharacter_h__Script_AdventureGame_1009581199(TEXT("/Script/AdventureGame"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_AdventureCharacter_h__Script_AdventureGame_27631173(TEXT("/Script/AdventureGame"),
 	Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_AdventureCharacter_h__Script_AdventureGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_AdventureCharacter_h__Script_AdventureGame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

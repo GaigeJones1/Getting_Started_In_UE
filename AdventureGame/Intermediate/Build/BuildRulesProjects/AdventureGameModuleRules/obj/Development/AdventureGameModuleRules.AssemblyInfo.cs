@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AdventureGameModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5e719703e4aa609a4533064ccc1ed6e7ca6ffc4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bef285ce80d367614bd9db454a08b0fa55576e0")]
 [assembly: System.Reflection.AssemblyProductAttribute("AdventureGameModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdventureGameModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

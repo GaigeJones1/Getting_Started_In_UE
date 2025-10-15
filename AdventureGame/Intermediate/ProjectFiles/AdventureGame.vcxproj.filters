@@ -54,6 +54,12 @@
     <ClInclude Include="..\..\Source\AdventureGame\AdventureGameMode.h">
       <Filter>Source\AdventureGame</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\AdventureGame\DartLauncher.cpp">
+      <Filter>Source\AdventureGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AdventureGame\DartLauncher.h">
+      <Filter>Source\AdventureGame</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\AdventureGame\EquippableToolBase.cpp">
       <Filter>Source\AdventureGame</Filter>
     </ClCompile>

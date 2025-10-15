@@ -10,6 +10,7 @@
 #include "InputActionValue.h"
 #include "AdventureCharacter.generated.h"
 
+class AEquippableToolBase;
 class UAnimBlueprint;
 class UEquippableToolDefinition;
 class UInputMappingContext;
@@ -59,7 +60,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animation)
 	UAnimBlueprint* FirstPersonDefaultAnim;
 
-
+	// The currently equipped tool
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Tools)
+	TObjectPtr<AEquippableToolBase> EquippedTool;
 
 public:
 	// Called every frame

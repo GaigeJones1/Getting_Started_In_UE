@@ -22,6 +22,5 @@ public:
 
 	// Create and return a copy of this item
 	UFUNCTION()
-
 	virtual UEquippableToolDefinition* CreateItemCopy() const override;
 };
