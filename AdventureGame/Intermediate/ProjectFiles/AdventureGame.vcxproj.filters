@@ -72,6 +72,18 @@
     <ClInclude Include="..\..\Source\AdventureGame\EquippableToolDefinition.h">
       <Filter>Source\AdventureGame</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\AdventureGame\FirstPersonProjectile.cpp">
+      <Filter>Source\AdventureGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AdventureGame\FirstPersonProjectile.h">
+      <Filter>Source\AdventureGame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AdventureGame\FoamDart.cpp">
+      <Filter>Source\AdventureGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AdventureGame\FoamDart.h">
+      <Filter>Source\AdventureGame</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\AdventureGame\InventoryComponent.cpp">
       <Filter>Source\AdventureGame</Filter>
     </ClCompile>

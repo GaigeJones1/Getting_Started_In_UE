@@ -4,8 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "AdventureGame/EquippableToolBase.h"
+#include "AdventureGame/FirstPersonProjectile.h"
 #include "DartLauncher.generated.h"
 
+class AFirstPersonProjectile;
+
+/**
+ *
+ */
 UCLASS(BlueprintType, Blueprintable)
 class ADVENTUREGAME_API ADartLauncher : public AEquippableToolBase
 {
@@ -19,5 +25,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	virtual void BindInputAction(const UInputAction* InputToBind) override;
+
+	// Projectile class to spawn
+	UPROPERTY(EditAnywhere, Category = Projectile)
+	TSubclassOf<AFirstPersonProjectile> ProjectileClass;
 
 };

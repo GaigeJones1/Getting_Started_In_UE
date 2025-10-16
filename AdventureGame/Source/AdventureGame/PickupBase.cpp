@@ -2,26 +2,32 @@
 
 #include "PickupBase.h"
 #include "ItemDefinition.h"
+#include "Engine/Engine.h"
+#include "TimerManager.h"
+#include "Components/StaticMeshComponent.h"
+#include "Components/SphereComponent.h"
+#include "AdventureCharacter.h"
 
 // Sets default values
 APickupBase::APickupBase()
 {
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	// Create this pickup's mesh component
-	PickupMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PickupMesh"));
-	check(PickupMeshComponent != nullptr);
-
-	// Create this pickup's sphere component
+	// ---- Sphere Component Setup ----
 	SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComponent"));
-	check(SphereComponent != nullptr);
+	SetRootComponent(SphereComponent);
+	SphereComponent->InitSphereRadius(32.f);
 
-	// Attach the sphere component to the mesh component
-	SphereComponent->SetupAttachment(PickupMeshComponent);
+	// Enable overlap-only collision for pawn detection
+	SphereComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	SphereComponent->SetCollisionResponseToAllChannels(ECR_Ignore);
+	SphereComponent->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
 
-	// Set the sphere's collision radius
-	SphereComponent->SetSphereRadius(32.f);
+	// ---- Mesh Component Setup ----
+	PickupMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PickupMesh"));
+	PickupMeshComponent->SetupAttachment(SphereComponent);
+	PickupMeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	PickupMeshComponent->SetVisibility(true);
 }
 
 // Called when the game starts or when spawned
@@ -29,7 +35,10 @@ void APickupBase::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// Initialize this pickup with default values
+	// Bind overlap event once here so it always works
+	SphereComponent->OnComponentBeginOverlap.AddDynamic(this, &APickupBase::OnSphereBeginOverlap);
+
+	// Initialize item visuals and data
 	InitializePickup();
 }
 
@@ -37,21 +46,25 @@ void APickupBase::BeginPlay()
 void APickupBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 /**
-*	Initializes the pickup with default values by retrieving them from the associated data table.
-*/
+ * Initializes the pickup with default values by retrieving them from the associated data table.
+ */
 void APickupBase::InitializePickup()
 {
+	// Make sure we have valid data before doing anything
 	if (PickupDataTable && !PickupItemID.IsNone())
 	{
-		// Retrieve the item data associated with this pickup from the Data Table
 		const FItemData* ItemDataRow = PickupDataTable->FindRow<FItemData>(PickupItemID, PickupItemID.ToString());
+		if (!ItemDataRow)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Invalid ItemDataRow for Pickup ID: %s"), *PickupItemID.ToString());
+			return;
+		}
 
+		// Create a reference item definition
 		ReferenceItem = NewObject<UItemDefinition>(this, UItemDefinition::StaticClass());
-
 		ReferenceItem->ID = ItemDataRow->ID;
 		ReferenceItem->ItemType = ItemDataRow->ItemType;
 		ReferenceItem->ItemText = ItemDataRow->ItemText;
@@ -59,86 +72,84 @@ void APickupBase::InitializePickup()
 
 		UItemDefinition* TempItemDefinition = ItemDataRow->ItemBase.Get();
 
-		// Check if the mesh is currently loaded by calling IsValid().
-		if (TempItemDefinition->WorldMesh.IsValid()) {
-			// Set the pickup's mesh to the associated item's mesh
+		// Ensure the mesh is valid or load it
+		if (TempItemDefinition && TempItemDefinition->WorldMesh.IsValid())
+		{
 			PickupMeshComponent->SetStaticMesh(TempItemDefinition->WorldMesh.Get());
 		}
-		else {
-			// If the mesh isn't loaded, load it by calling LoadSynchronous().
+		else if (TempItemDefinition)
+		{
 			UStaticMesh* WorldMesh = TempItemDefinition->WorldMesh.LoadSynchronous();
 			PickupMeshComponent->SetStaticMesh(WorldMesh);
 		}
 
-		// Set the mesh to visible and collidable.
+		// Reset visibility and collision when respawning
 		PickupMeshComponent->SetVisibility(true);
 		SphereComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
-
-		// Register the Overlap Event
-		SphereComponent->OnComponentBeginOverlap.AddDynamic(this, &APickupBase::OnSphereBeginOverlap);
 	}
-
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Pickup not initialized properly: Missing DataTable or ItemID."));
+	}
 }
 
 /**
-*	Broadcasts an event when a character overlaps this pickup's SphereComponent. Sets the pickup to invisible and uninteractable, and respawns it after a set time.
-*	@param OverlappedComponent - the component that was overlapped.
-*	@param OtherActor - the Actor overlapping this component.
-*	@param OtherComp - the Actor's component that overlapped this component.
-*	@param OtherBodyIndex - the index of the overlapped component.
-*	@param bFromSweep - whether the overlap was generated from a sweep.
-*	@param SweepResult - contains info about the overlap such as surface normals and faces.
-*/
-void APickupBase::OnSphereBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+ * Called when something overlaps this pickup's SphereComponent.
+ */
+void APickupBase::OnSphereBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("Attempting a pickup collision"));
-
-	// Checking if it's an AdventureCharacter overlapping
-	AAdventureCharacter* Character = Cast<AAdventureCharacter>(OtherActor);
-
-	if (Character != nullptr)
+	// Debug message to confirm overlap
+	if (GEngine)
 	{
-		// Unregister from the Overlap Event so it is no longer triggered
-		SphereComponent->OnComponentBeginOverlap.RemoveAll(this);
+		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Attempting a pickup collision"));
+	}
 
-		// Set this pickup to be invisible and disable collision
+	// Check if overlapping actor is the player
+	AAdventureCharacter* Character = Cast<AAdventureCharacter>(OtherActor);
+	if (Character)
+	{
+		// TODO: Add your logic here (e.g., give item to inventory)
+		// Character->AddItemToInventory(ReferenceItem);
+
+		// Disable visibility and collision after pickup
 		PickupMeshComponent->SetVisibility(false);
 		PickupMeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		SphereComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	}
 
-	// If the pickup should respawn, wait an fRespawnTime amount of seconds before calling InitializePickup() to respawn it
-	if (bShouldRespawn)
-	{
-		GetWorldTimerManager().SetTimer(RespawnTimerHandle, this, &APickupBase::InitializePickup, RespawnTime, false, 0);
+		// Optional debug message
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Green, TEXT("Item picked up!"));
+		}
+
+		// Respawn after delay if enabled
+		if (bShouldRespawn)
+		{
+			GetWorldTimerManager().SetTimer(RespawnTimerHandle, this, &APickupBase::InitializePickup, RespawnTime, false);
+		}
 	}
 }
 
 /**
-*	Updates this pickup whenever a property is changed.
-*	@param PropertyChangedEvent - contains info about the property that was changed.
-*/
+ * Called when a property is changed in the editor.
+ */
 void APickupBase::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
 {
-	// Handle parent class property changes
 	Super::PostEditChangeProperty(PropertyChangedEvent);
 
-	// If a property was changed, get the name of the changed property. Otherwise use none.
 	const FName ChangedPropertyName = PropertyChangedEvent.Property ? PropertyChangedEvent.Property->GetFName() : NAME_None;
 
-	// Verify that the changed property exists in this class and that the PickupDataTable is valid.
 	if (ChangedPropertyName == GET_MEMBER_NAME_CHECKED(APickupBase, PickupItemID) && PickupDataTable)
 	{
-		// Retrieve the associated ItemData for this pickup.
 		if (const FItemData* ItemDataRow = PickupDataTable->FindRow<FItemData>(PickupItemID, PickupItemID.ToString()))
 		{
-			UItemDefinition* TempItemDefinition = ItemDataRow->ItemBase;
-
-			// Set the pickup's mesh to the associated item's mesh
-			PickupMeshComponent->SetStaticMesh(TempItemDefinition->WorldMesh.Get());
-
-			// Set the sphere's collision radius
-			SphereComponent->SetSphereRadius(32.f);
+			if (ItemDataRow->ItemBase)
+			{
+				UItemDefinition* TempItemDefinition = ItemDataRow->ItemBase;
+				PickupMeshComponent->SetStaticMesh(TempItemDefinition->WorldMesh.Get());
+				SphereComponent->SetSphereRadius(32.f);
+			}
 		}
 	}
 }

@@ -5,6 +5,7 @@
 			"AdventureCharacter.gen.cpp.obj",
 			"AdventureGame.init.gen.cpp.obj",
 			"AdventureGameMode.gen.cpp.obj",
+			"DartLauncher.gen.cpp.obj",
 			"EquippableToolBase.gen.cpp.obj",
 			"EquippableToolDefinition.gen.cpp.obj",
 			"InventoryComponent.gen.cpp.obj",

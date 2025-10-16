@@ -5,6 +5,8 @@
 #include "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/DartLauncher.gen.cpp"
 #include "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/EquippableToolBase.gen.cpp"
 #include "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/EquippableToolDefinition.gen.cpp"
+#include "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/FirstPersonProjectile.gen.cpp"
+#include "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/FoamDart.gen.cpp"
 #include "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/InventoryComponent.gen.cpp"
 #include "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/ItemData.gen.cpp"
 #include "C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/UnrealEditor/Inc/AdventureGame/UHT/ItemDefinition.gen.cpp"

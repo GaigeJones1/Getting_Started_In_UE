@@ -190,6 +190,11 @@ void AAdventureCharacter::AttachTool(UEquippableToolDefinition* ToolDefinition)
 		// Spawn a new instance of the tool to equip
 		AEquippableToolBase* ToolToEquip = GetWorld()->SpawnActor<AEquippableToolBase>(ToolDefinition->ToolAsset, this->GetActorTransform());
 
+		// Unnattach the active tool
+		if (EquippedTool != nullptr)
+		{
+			UnequipCurrentTool();
+		}
 
 		// Attach the tool to the First Person Character
 		FAttachmentTransformRules AttachmentRules(EAttachmentRule::SnapToTarget, true);
@@ -198,6 +203,7 @@ void AAdventureCharacter::AttachTool(UEquippableToolDefinition* ToolDefinition)
 		// Attach the tool to this character, and then the right hand of their first person mesh
 		ToolToEquip->AttachToActor(this, AttachmentRules);
 		ToolToEquip->AttachToComponent(FirstPersonMeshComponent, AttachmentRules, FName(TEXT("HandGrip_R")));
+		//ToolToEquip->AttachToComponent(GetMesh(), AttachmentRules, FName(TEXT("HandGrip_R")));
 
 		ToolToEquip->OwningCharacter = this;
 
@@ -222,4 +228,45 @@ void AAdventureCharacter::AttachTool(UEquippableToolDefinition* ToolDefinition)
 		}
 
 	}
+}
+
+void AAdventureCharacter::UnequipCurrentTool()
+{
+
+	// Get the player controller for this character
+	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
+	{
+		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
+		{
+			// Remove the tool's mapping context
+			Subsystem->RemoveMappingContext(EquippedTool->ToolMappingContext);
+		}
+	}
+
+	EquippedTool->Destroy();
+
+}
+
+FVector AAdventureCharacter::GetCameraTargetLocation()
+{
+	// The target position to return
+	FVector TargetPosition;
+
+	UWorld* const World = GetWorld();
+	if (World != nullptr)
+	{
+		// The result of the line trace
+		FHitResult Hit;
+
+		// Simulate a line trace from the character along the vector they're looking down
+		const FVector TraceStart = FirstPersonCameraComponent->GetComponentLocation();
+		// Set the line trace to be far enough to collide with any object in the world the character may be looking at
+		const FVector TraceEnd = TraceStart + FirstPersonCameraComponent->GetForwardVector() * 10000.0;
+		World->LineTraceSingleByChannel(Hit, TraceStart, TraceEnd, ECollisionChannel::ECC_Visibility);
+
+		// Set the target position to the impact point of the hit or the end of the trace depending on whether it hit an object
+		TargetPosition = Hit.bBlockingHit ? Hit.ImpactPoint : Hit.TraceEnd;
+
+	}
+	return TargetPosition;
 }

@@ -283,6 +283,14 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\AdventureGame\EquippableToolDefinition.h"/>
+    <ClCompile Include="..\..\Source\AdventureGame\FirstPersonProjectile.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AdventureGame\FirstPersonProjectile.h"/>
+    <ClCompile Include="..\..\Source\AdventureGame\FoamDart.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AdventureGame\FoamDart.h"/>
     <ClCompile Include="..\..\Source\AdventureGame\InventoryComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

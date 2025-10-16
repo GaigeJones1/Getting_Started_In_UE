@@ -8,6 +8,8 @@
 			"DartLauncher.gen.cpp.obj",
 			"EquippableToolBase.gen.cpp.obj",
 			"EquippableToolDefinition.gen.cpp.obj",
+			"FirstPersonProjectile.gen.cpp.obj",
+			"FoamDart.gen.cpp.obj",
 			"InventoryComponent.gen.cpp.obj",
 			"ItemData.gen.cpp.obj",
 			"ItemDefinition.gen.cpp.obj",

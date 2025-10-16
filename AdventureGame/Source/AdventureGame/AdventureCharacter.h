@@ -91,6 +91,14 @@ public:
 	UFUNCTION()
 	bool IsToolAlreadyOwned(UEquippableToolDefinition* ToolDefinition);
 
+	// Unequips and removes the equipped tool from the character
+	UFUNCTION()
+	void UnequipCurrentTool();
+
+	// Returns the location in the world the character is looking at
+	UFUNCTION()
+	FVector GetCameraTargetLocation();
+
 	// First Person camera
 	UPROPERTY(VisibleAnywhere)
 	TObjectPtr<UCameraComponent> FirstPersonCameraComponent;
