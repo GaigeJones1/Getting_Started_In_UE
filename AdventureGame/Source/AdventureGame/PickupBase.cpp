@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+﻿// Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "PickupBase.h"
 #include "ItemDefinition.h"
@@ -99,37 +99,37 @@ void APickupBase::InitializePickup()
 void APickupBase::OnSphereBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	// Debug message to confirm overlap
-	if (GEngine)
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Attempting a pickup collision"));
-	}
-
-	// Check if overlapping actor is the player
 	AAdventureCharacter* Character = Cast<AAdventureCharacter>(OtherActor);
 	if (Character)
 	{
-		// TODO: Add your logic here (e.g., give item to inventory)
-		// Character->AddItemToInventory(ReferenceItem);
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Pickup overlapped with character!"));
+		}
 
-		// Disable visibility and collision after pickup
+		// ✅ Give the item to the player (spawns + attaches the tool)
+		if (ReferenceItem)
+		{
+			Character->GiveItem(ReferenceItem);
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Pickup has no ReferenceItem set!"));
+		}
+
+		// Hide the pickup from the world
 		PickupMeshComponent->SetVisibility(false);
 		PickupMeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		SphereComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
-		// Optional debug message
-		if (GEngine)
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Green, TEXT("Item picked up!"));
-		}
-
-		// Respawn after delay if enabled
+		// Respawn if enabled
 		if (bShouldRespawn)
 		{
 			GetWorldTimerManager().SetTimer(RespawnTimerHandle, this, &APickupBase::InitializePickup, RespawnTime, false);
 		}
 	}
 }
+
 
 /**
  * Called when a property is changed in the editor.

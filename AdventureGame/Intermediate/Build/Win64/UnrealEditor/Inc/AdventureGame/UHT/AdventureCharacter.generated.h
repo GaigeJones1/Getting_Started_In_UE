@@ -22,8 +22,6 @@ struct FInputActionValue;
 
 // ********** Begin Class AAdventureCharacter ******************************************************
 #define FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_AdventureCharacter_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execGetCameraTargetLocation); \
-	DECLARE_FUNCTION(execUnequipCurrentTool); \
 	DECLARE_FUNCTION(execIsToolAlreadyOwned); \
 	DECLARE_FUNCTION(execGiveItem); \
 	DECLARE_FUNCTION(execAttachTool); \

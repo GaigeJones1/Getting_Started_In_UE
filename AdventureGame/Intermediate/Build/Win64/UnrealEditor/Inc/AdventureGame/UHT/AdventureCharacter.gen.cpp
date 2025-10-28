@@ -19,7 +19,6 @@ ADVENTUREGAME_API UClass* Z_Construct_UClass_AEquippableToolBase_NoRegister();
 ADVENTUREGAME_API UClass* Z_Construct_UClass_UEquippableToolDefinition_NoRegister();
 ADVENTUREGAME_API UClass* Z_Construct_UClass_UInventoryComponent_NoRegister();
 ADVENTUREGAME_API UClass* Z_Construct_UClass_UItemDefinition_NoRegister();
-COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_UAnimBlueprint_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
@@ -77,53 +76,6 @@ DEFINE_FUNCTION(AAdventureCharacter::execAttachTool)
 	P_NATIVE_END;
 }
 // ********** End Class AAdventureCharacter Function AttachTool ************************************
-
-// ********** Begin Class AAdventureCharacter Function GetCameraTargetLocation *********************
-struct Z_Construct_UFunction_AAdventureCharacter_GetCameraTargetLocation_Statics
-{
-	struct AdventureCharacter_eventGetCameraTargetLocation_Parms
-	{
-		FVector ReturnValue;
-	};
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Returns the location in the world the character is looking at\n" },
-#endif
-		{ "ModuleRelativePath", "AdventureCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Returns the location in the world the character is looking at" },
-#endif
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AAdventureCharacter_GetCameraTargetLocation_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AdventureCharacter_eventGetCameraTargetLocation_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAdventureCharacter_GetCameraTargetLocation_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAdventureCharacter_GetCameraTargetLocation_Statics::NewProp_ReturnValue,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AAdventureCharacter_GetCameraTargetLocation_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AAdventureCharacter_GetCameraTargetLocation_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AAdventureCharacter, nullptr, "GetCameraTargetLocation", Z_Construct_UFunction_AAdventureCharacter_GetCameraTargetLocation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AAdventureCharacter_GetCameraTargetLocation_Statics::PropPointers), sizeof(Z_Construct_UFunction_AAdventureCharacter_GetCameraTargetLocation_Statics::AdventureCharacter_eventGetCameraTargetLocation_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AAdventureCharacter_GetCameraTargetLocation_Statics::Function_MetaDataParams), Z_Construct_UFunction_AAdventureCharacter_GetCameraTargetLocation_Statics::Function_MetaDataParams)},  };
-static_assert(sizeof(Z_Construct_UFunction_AAdventureCharacter_GetCameraTargetLocation_Statics::AdventureCharacter_eventGetCameraTargetLocation_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_AAdventureCharacter_GetCameraTargetLocation()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AAdventureCharacter_GetCameraTargetLocation_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(AAdventureCharacter::execGetCameraTargetLocation)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	*(FVector*)Z_Param__Result=P_THIS->GetCameraTargetLocation();
-	P_NATIVE_END;
-}
-// ********** End Class AAdventureCharacter Function GetCameraTargetLocation ***********************
 
 // ********** Begin Class AAdventureCharacter Function GiveItem ************************************
 struct Z_Construct_UFunction_AAdventureCharacter_GiveItem_Statics
@@ -332,53 +284,16 @@ DEFINE_FUNCTION(AAdventureCharacter::execMove)
 }
 // ********** End Class AAdventureCharacter Function Move ******************************************
 
-// ********** Begin Class AAdventureCharacter Function UnequipCurrentTool **************************
-struct Z_Construct_UFunction_AAdventureCharacter_UnequipCurrentTool_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Unequips and removes the equipped tool from the character\n" },
-#endif
-		{ "ModuleRelativePath", "AdventureCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Unequips and removes the equipped tool from the character" },
-#endif
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AAdventureCharacter_UnequipCurrentTool_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AAdventureCharacter, nullptr, "UnequipCurrentTool", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AAdventureCharacter_UnequipCurrentTool_Statics::Function_MetaDataParams), Z_Construct_UFunction_AAdventureCharacter_UnequipCurrentTool_Statics::Function_MetaDataParams)},  };
-UFunction* Z_Construct_UFunction_AAdventureCharacter_UnequipCurrentTool()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AAdventureCharacter_UnequipCurrentTool_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(AAdventureCharacter::execUnequipCurrentTool)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->UnequipCurrentTool();
-	P_NATIVE_END;
-}
-// ********** End Class AAdventureCharacter Function UnequipCurrentTool ****************************
-
 // ********** Begin Class AAdventureCharacter ******************************************************
 void AAdventureCharacter::StaticRegisterNativesAAdventureCharacter()
 {
 	UClass* Class = AAdventureCharacter::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "AttachTool", &AAdventureCharacter::execAttachTool },
-		{ "GetCameraTargetLocation", &AAdventureCharacter::execGetCameraTargetLocation },
 		{ "GiveItem", &AAdventureCharacter::execGiveItem },
 		{ "IsToolAlreadyOwned", &AAdventureCharacter::execIsToolAlreadyOwned },
 		{ "Look", &AAdventureCharacter::execLook },
 		{ "Move", &AAdventureCharacter::execMove },
-		{ "UnequipCurrentTool", &AAdventureCharacter::execUnequipCurrentTool },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -548,12 +463,10 @@ struct Z_Construct_UClass_AAdventureCharacter_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_AAdventureCharacter_AttachTool, "AttachTool" }, // 1182563787
-		{ &Z_Construct_UFunction_AAdventureCharacter_GetCameraTargetLocation, "GetCameraTargetLocation" }, // 898860695
 		{ &Z_Construct_UFunction_AAdventureCharacter_GiveItem, "GiveItem" }, // 779006054
 		{ &Z_Construct_UFunction_AAdventureCharacter_IsToolAlreadyOwned, "IsToolAlreadyOwned" }, // 3291359756
 		{ &Z_Construct_UFunction_AAdventureCharacter_Look, "Look" }, // 2266741242
 		{ &Z_Construct_UFunction_AAdventureCharacter_Move, "Move" }, // 2035616715
-		{ &Z_Construct_UFunction_AAdventureCharacter_UnequipCurrentTool, "UnequipCurrentTool" }, // 1489677651
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -622,10 +535,10 @@ AAdventureCharacter::~AAdventureCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_AdventureCharacter_h__Script_AdventureGame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AAdventureCharacter, AAdventureCharacter::StaticClass, TEXT("AAdventureCharacter"), &Z_Registration_Info_UClass_AAdventureCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAdventureCharacter), 2684941980U) },
+		{ Z_Construct_UClass_AAdventureCharacter, AAdventureCharacter::StaticClass, TEXT("AAdventureCharacter"), &Z_Registration_Info_UClass_AAdventureCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAdventureCharacter), 65966030U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_AdventureCharacter_h__Script_AdventureGame_1320075595(TEXT("/Script/AdventureGame"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_AdventureCharacter_h__Script_AdventureGame_27631173(TEXT("/Script/AdventureGame"),
 	Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_AdventureCharacter_h__Script_AdventureGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_AdventureCharacter_h__Script_AdventureGame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

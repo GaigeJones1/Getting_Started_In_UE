@@ -7,8 +7,6 @@
         "Includes": [
             "c:\\users\\02gaige.jones\\gaige jones\\repositories\\getting_started_in_ue\\adventuregame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\adventuregame\\definitions.adventuregame.h",
             "c:\\users\\02gaige.jones\\gaige jones\\repositories\\getting_started_in_ue\\adventuregame\\source\\adventuregame\\equippabletoolbase.h",
-            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputmappingcontext.h",
-            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedactionkeymapping.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputaction.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputmodifiers.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputactionvalue.h",
@@ -17,6 +15,8 @@
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputtriggers.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputtriggers.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputaction.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputmappingcontext.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedactionkeymapping.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedactionkeymapping.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagcontainer.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\core\\public\\misc\\comparisonutility.h",

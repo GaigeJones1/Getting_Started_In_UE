@@ -105,6 +105,8 @@
     <ClCompile Include="..\..\Source\AdventureGame\PickupBase.cpp">
       <Filter>Source\AdventureGame</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="..\..\Source\AdventureGame\PickupBase.h">
       <Filter>Source\AdventureGame</Filter>
     </ClInclude>

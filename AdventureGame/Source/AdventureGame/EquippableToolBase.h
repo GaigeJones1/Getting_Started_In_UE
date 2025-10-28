@@ -3,12 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "InputMappingContext.h"
 #include "InputAction.h"
-#include "EquippableToolBase.generated.h" // ✅ Always last include
-
+#include "InputMappingContext.h"
+#include "EquippableToolBase.generated.h"
 
 class AAdventureCharacter;
+
 class UInputAction;
 
 

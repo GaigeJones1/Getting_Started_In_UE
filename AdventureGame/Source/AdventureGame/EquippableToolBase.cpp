@@ -1,8 +1,15 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 
+// Copyright Epic Games, Inc. All Rights Reserved.
+
 #include "EquippableToolBase.h"
 #include "AdventureCharacter.h"
+#include "InputAction.h"
+#include "InputMappingContext.h"
+#include "EnhancedInputComponent.h"
+#include "EnhancedInputSubsystems.h"
+
 
 AEquippableToolBase::AEquippableToolBase()
 {
