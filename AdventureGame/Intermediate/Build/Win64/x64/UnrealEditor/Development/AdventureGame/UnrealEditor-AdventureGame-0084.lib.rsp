@@ -1,0 +1,25 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-AdventureGame-0084.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/AdventureGameEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/Module.AdventureGame.gen.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/AdventureCharacter.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/AdventureGame.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/AdventureGameMode.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/DartLauncher.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/EquippableToolBase.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/EquippableToolDefinition.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/FirstPersonProjectile.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/FoamDart.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/InventoryComponent.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/ItemData.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/ItemDefinition.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/PickupBase.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/PerModuleInline.gen.cpp.obj"
+"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/Default.rc2.res"
+/OUT:"C:/Users/02GAIGE.JONES/Gaige Jones/Repositories/Getting_Started_In_UE/AdventureGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/AdventureGame/UnrealEditor-AdventureGame-0084.lib"

@@ -183,43 +183,49 @@ bool AAdventureCharacter::IsToolAlreadyOwned(UEquippableToolDefinition* ToolDefi
 
 void AAdventureCharacter::AttachTool(UEquippableToolDefinition* ToolDefinition)
 {
-
 	// Only equip this tool if it isn't already owned
-	if (not IsToolAlreadyOwned(ToolDefinition))
+	if (!IsToolAlreadyOwned(ToolDefinition))
 	{
 		// Spawn a new instance of the tool to equip
-		AEquippableToolBase* ToolToEquip = GetWorld()->SpawnActor<AEquippableToolBase>(ToolDefinition->ToolAsset, this->GetActorTransform());
+		AEquippableToolBase* ToolToEquip = GetWorld()->SpawnActor<AEquippableToolBase>(ToolDefinition->ToolAsset, FTransform::Identity);
 
-
-		// Attach the tool to the First Person Character
-		FAttachmentTransformRules AttachmentRules(EAttachmentRule::SnapToTarget, true);
-
-
-		// Attach the tool to this character, and then the right hand of their first person mesh
-		ToolToEquip->AttachToActor(this, AttachmentRules);
-		ToolToEquip->AttachToComponent(FirstPersonMeshComponent, AttachmentRules, FName(TEXT("HandGrip_R")));
-
-		ToolToEquip->OwningCharacter = this;
-
-		// Add the tool to this character's inventory
-		InventoryComponent->ToolInventory.Add(ToolDefinition);
-
-		// Set the animations on the first person mesh.
-		FirstPersonMeshComponent->SetAnimInstanceClass(ToolToEquip->FirstPersonToolAnim->GeneratedClass);
-		GetMesh()->SetAnimInstanceClass(ToolToEquip->ThirdPersonToolAnim->GeneratedClass);
-
-		EquippedTool = ToolToEquip;
-
-		// Get the player controller for this character
-		if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
+		if (ToolToEquip)
 		{
-			if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
+			// Attach the tool to the right hand of the first person mesh
+			FAttachmentTransformRules AttachmentRules(EAttachmentRule::SnapToTarget, true);
+
+			// Attach directly to the component and socket - remove the AttachToActor call
+			ToolToEquip->AttachToComponent(FirstPersonMeshComponent, AttachmentRules, FName(TEXT("HandGrip_R")));
+
+			ToolToEquip->OwningCharacter = this;
+
+			// Add the tool to this character's inventory
+			InventoryComponent->ToolInventory.Add(ToolDefinition);
+
+			// Set the animations on the first person mesh.
+			FirstPersonMeshComponent->SetAnimInstanceClass(ToolToEquip->FirstPersonToolAnim->GeneratedClass);
+			GetMesh()->SetAnimInstanceClass(ToolToEquip->ThirdPersonToolAnim->GeneratedClass);
+
+			EquippedTool = ToolToEquip;
+
+			// Get the player controller for this character
+			if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
 			{
-				Subsystem->AddMappingContext(ToolToEquip->ToolMappingContext, 1);
+				if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
+				{
+					Subsystem->AddMappingContext(ToolToEquip->ToolMappingContext, 1);
+				}
+
+				ToolToEquip->BindInputAction(UseAction);
 			}
 
-			ToolToEquip->BindInputAction(UseAction);
+			// Debug: Check what socket it attached to
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green,
+				FString::Printf(TEXT("Tool attached to socket: %s"), *ToolToEquip->GetAttachParentSocketName().ToString()));
 		}
-
+		else
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Failed to spawn tool!"));
+		}
 	}
 }
