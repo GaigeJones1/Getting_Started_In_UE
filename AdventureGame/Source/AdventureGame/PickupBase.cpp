@@ -91,6 +91,16 @@ void APickupBase::InitializePickup()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Pickup not initialized properly: Missing DataTable or ItemID."));
 	}
+
+	if (ItemDataRow->ItemBase->IsA(UEquippableToolDefinition::StaticClass()))
+	{
+		ReferenceItem = NewObject<UEquippableToolDefinition>(this, ItemDataRow->ItemBase->GetClass());
+	}
+	else
+	{
+		ReferenceItem = NewObject<UItemDefinition>(this, ItemDataRow->ItemBase->GetClass());
+	}
+
 }
 
 /**

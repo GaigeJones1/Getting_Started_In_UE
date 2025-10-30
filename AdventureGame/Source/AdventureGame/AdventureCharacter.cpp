@@ -187,15 +187,35 @@ void AAdventureCharacter::AttachTool(UEquippableToolDefinition* ToolDefinition)
 	if (!IsToolAlreadyOwned(ToolDefinition))
 	{
 		// Spawn a new instance of the tool to equip
-		AEquippableToolBase* ToolToEquip = GetWorld()->SpawnActor<AEquippableToolBase>(ToolDefinition->ToolAsset, FTransform::Identity);
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.Instigator = GetInstigator();
 
-		if (ToolToEquip)
+		AEquippableToolBase* ToolToEquip = GetWorld()->SpawnActor<AEquippableToolBase>(ToolDefinition->ToolAsset, FTransform::Identity, SpawnParams);
+
+		if (ToolToEquip && ToolToEquip->ToolMeshComponent)
 		{
-			// Attach the tool to the right hand of the first person mesh
-			FAttachmentTransformRules AttachmentRules(EAttachmentRule::SnapToTarget, true);
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Tool spawned successfully!"));
 
-			// Attach directly to the component and socket - remove the AttachToActor call
-			ToolToEquip->AttachToComponent(FirstPersonMeshComponent, AttachmentRules, FName(TEXT("HandGrip_R")));
+			// Set up attachment rules - KeepRelative to maintain the tool's configured offset
+			FAttachmentTransformRules AttachmentRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, true);
+
+			// Attach the tool's mesh component to the hand socket
+			bool bAttached = ToolToEquip->ToolMeshComponent->AttachToComponent(
+				FirstPersonMeshComponent,
+				AttachmentRules,
+				FName(TEXT("HandGrip_R"))
+			);
+
+			if (bAttached)
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green,
+					FString::Printf(TEXT("Tool mesh attached to socket: %s"), *FirstPersonMeshComponent->GetSocketBoneName(FName(TEXT("HandGrip_R"))).ToString()));
+			}
+			else
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Failed to attach tool mesh to socket!"));
+			}
 
 			ToolToEquip->OwningCharacter = this;
 
@@ -203,8 +223,15 @@ void AAdventureCharacter::AttachTool(UEquippableToolDefinition* ToolDefinition)
 			InventoryComponent->ToolInventory.Add(ToolDefinition);
 
 			// Set the animations on the first person mesh.
-			FirstPersonMeshComponent->SetAnimInstanceClass(ToolToEquip->FirstPersonToolAnim->GeneratedClass);
-			GetMesh()->SetAnimInstanceClass(ToolToEquip->ThirdPersonToolAnim->GeneratedClass);
+			if (ToolToEquip->FirstPersonToolAnim)
+			{
+				FirstPersonMeshComponent->SetAnimInstanceClass(ToolToEquip->FirstPersonToolAnim->GeneratedClass);
+			}
+
+			if (ToolToEquip->ThirdPersonToolAnim)
+			{
+				GetMesh()->SetAnimInstanceClass(ToolToEquip->ThirdPersonToolAnim->GeneratedClass);
+			}
 
 			EquippedTool = ToolToEquip;
 
@@ -213,19 +240,48 @@ void AAdventureCharacter::AttachTool(UEquippableToolDefinition* ToolDefinition)
 			{
 				if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
 				{
-					Subsystem->AddMappingContext(ToolToEquip->ToolMappingContext, 1);
+					if (ToolToEquip->ToolMappingContext)
+					{
+						Subsystem->AddMappingContext(ToolToEquip->ToolMappingContext, 1);
+					}
 				}
 
 				ToolToEquip->BindInputAction(UseAction);
 			}
 
-			// Debug: Check what socket it attached to
-			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green,
-				FString::Printf(TEXT("Tool attached to socket: %s"), *ToolToEquip->GetAttachParentSocketName().ToString()));
+			if (!ToolToEquip)
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Failed to spawn tool actor - ToolAsset may be null or invalid!"));
+				return;
+			}
+
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, FString::Printf(TEXT("Spawned Tool Actor: %s"), *ToolToEquip->GetName()));
+
+			if (!ToolToEquip->ToolMeshComponent)
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Tool spawned but ToolMeshComponent is null!"));
+			}
+			else
+			{
+				// Print the currently assigned Skeletal Mesh (if any)
+				USkeletalMesh* AssignedMesh = ToolToEquip->ToolMeshComponent->SkeletalMesh;
+				if (AssignedMesh)
+				{
+					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, FString::Printf(TEXT("ToolMesh assigned: %s"), *AssignedMesh->GetName()));
+				}
+				else
+				{
+					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("ToolMeshComponent has NO skeletal mesh assigned!"));
+				}
+			}
+
+			// Fallback: set tool location near player if attach fails so you can see it
+			FVector DebugLoc = GetActorLocation() + GetActorForwardVector() * 100.f + FVector(0, 0, 50.f);
+			ToolToEquip->SetActorLocation(DebugLoc);
 		}
 		else
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Failed to spawn tool!"));
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Failed to spawn tool or ToolMeshComponent is null!"));
 		}
 	}
 }
