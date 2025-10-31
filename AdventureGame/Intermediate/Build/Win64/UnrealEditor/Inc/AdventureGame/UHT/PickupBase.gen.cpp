@@ -41,11 +41,11 @@ struct Z_Construct_UFunction_APickupBase_OnSphereBeginOverlap_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// Code for when something overlaps the SphereComponent. \n" },
+		{ "Comment", "// Called when something overlaps this pickup's sphere\n" },
 #endif
 		{ "ModuleRelativePath", "PickupBase.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Code for when something overlaps the SphereComponent." },
+		{ "ToolTip", "Called when something overlaps this pickup's sphere" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OverlappedComponent_MetaData[] = {
@@ -113,12 +113,48 @@ DEFINE_FUNCTION(APickupBase::execOnSphereBeginOverlap)
 }
 // ********** End Class APickupBase Function OnSphereBeginOverlap **********************************
 
+// ********** Begin Class APickupBase Function ResetPickupCooldown *********************************
+struct Z_Construct_UFunction_APickupBase_ResetPickupCooldown_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Function to reset the pickup\xe2\x80\x99s cooldown state */" },
+#endif
+		{ "ModuleRelativePath", "PickupBase.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Function to reset the pickup\xe2\x80\x99s cooldown state" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APickupBase_ResetPickupCooldown_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_APickupBase, nullptr, "ResetPickupCooldown", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APickupBase_ResetPickupCooldown_Statics::Function_MetaDataParams), Z_Construct_UFunction_APickupBase_ResetPickupCooldown_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_APickupBase_ResetPickupCooldown()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APickupBase_ResetPickupCooldown_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(APickupBase::execResetPickupCooldown)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ResetPickupCooldown();
+	P_NATIVE_END;
+}
+// ********** End Class APickupBase Function ResetPickupCooldown ***********************************
+
 // ********** Begin Class APickupBase **************************************************************
 void APickupBase::StaticRegisterNativesAPickupBase()
 {
 	UClass* Class = APickupBase::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "OnSphereBeginOverlap", &APickupBase::execOnSphereBeginOverlap },
+		{ "ResetPickupCooldown", &APickupBase::execResetPickupCooldown },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -155,96 +191,119 @@ struct Z_Construct_UClass_APickupBase_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-		{ "BlueprintType", "true" },
 		{ "IncludePath", "PickupBase.h" },
-		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "PickupBase.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PickupItemID_MetaData[] = {
-		{ "Category", "Pickup | Item Table" },
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SphereComponent_MetaData[] = {
+		{ "Category", "Pickup Components" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// The ID of this pickup in the associated data table.\n" },
+		{ "Comment", "/** Collision sphere for detecting player overlap */" },
 #endif
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "PickupBase.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "The ID of this pickup in the associated data table." },
-#endif
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PickupDataTable_MetaData[] = {
-		{ "Category", "Pickup | Item Table" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Data table that contains this pickup.\n" },
-#endif
-		{ "ModuleRelativePath", "PickupBase.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Data table that contains this pickup." },
-#endif
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ReferenceItem_MetaData[] = {
-		{ "Category", "Pickup | Reference Item" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Data asset associated with this item.\n" },
-#endif
-		{ "ModuleRelativePath", "PickupBase.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Data asset associated with this item." },
+		{ "ToolTip", "Collision sphere for detecting player overlap" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PickupMeshComponent_MetaData[] = {
-		{ "Category", "Pickup | Mesh" },
+		{ "Category", "Pickup Components" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// The mesh component to represent this pickup in the world.\n" },
+		{ "Comment", "/** The visible mesh of the pickup */" },
 #endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "PickupBase.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "The mesh component to represent this pickup in the world." },
+		{ "ToolTip", "The visible mesh of the pickup" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SphereComponent_MetaData[] = {
-		{ "Category", "Pickup | Components" },
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PickupDataTable_MetaData[] = {
+		{ "Category", "Pickup Data" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// Sphere Component that defines the collision radius of this pickup for interaction purposes.\n" },
+		{ "Comment", "/** DataTable that defines the pickup\xe2\x80\x99s item info */" },
 #endif
-		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "PickupBase.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Sphere Component that defines the collision radius of this pickup for interaction purposes." },
+		{ "ToolTip", "DataTable that defines the pickup\xe2\x80\x99s item info" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PickupItemID_MetaData[] = {
+		{ "Category", "Pickup Data" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** The row name from the DataTable to use */" },
+#endif
+		{ "ModuleRelativePath", "PickupBase.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The row name from the DataTable to use" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ReferenceItem_MetaData[] = {
+		{ "Category", "Pickup Data" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** The actual item this pickup represents */" },
+#endif
+		{ "ModuleRelativePath", "PickupBase.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The actual item this pickup represents" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bShouldRespawn_MetaData[] = {
-		{ "Category", "Pickup | Respawn" },
+		{ "Category", "Pickup Respawn" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// Whether this pickup should respawn after being picked up.\n" },
+		{ "Comment", "/** Should the pickup respawn after being collected? */" },
 #endif
 		{ "ModuleRelativePath", "PickupBase.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Whether this pickup should respawn after being picked up." },
+		{ "ToolTip", "Should the pickup respawn after being collected?" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RespawnTime_MetaData[] = {
-		{ "Category", "Pickup | Respawn" },
+		{ "Category", "Pickup Respawn" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// The time in seconds to wait before respawning this pickup.\n" },
+		{ "Comment", "/** Time (in seconds) before the pickup respawns */" },
+#endif
+		{ "EditCondition", "bShouldRespawn" },
+		{ "ModuleRelativePath", "PickupBase.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Time (in seconds) before the pickup respawns" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bCanBePickedUp_MetaData[] = {
+		{ "Category", "Pickup Cooldown" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Whether the pickup can currently be collected */" },
 #endif
 		{ "ModuleRelativePath", "PickupBase.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "The time in seconds to wait before respawning this pickup." },
+		{ "ToolTip", "Whether the pickup can currently be collected" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PickupCooldown_MetaData[] = {
+		{ "Category", "Pickup Cooldown" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Cooldown duration (seconds) before pickup can trigger again */" },
+#endif
+		{ "ModuleRelativePath", "PickupBase.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Cooldown duration (seconds) before pickup can trigger again" },
 #endif
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FNamePropertyParams NewProp_PickupItemID;
-	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_PickupDataTable;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReferenceItem;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_PickupMeshComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SphereComponent;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_PickupMeshComponent;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_PickupDataTable;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_PickupItemID;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReferenceItem;
 	static void NewProp_bShouldRespawn_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bShouldRespawn;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_RespawnTime;
+	static void NewProp_bCanBePickedUp_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bCanBePickedUp;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_PickupCooldown;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_APickupBase_OnSphereBeginOverlap, "OnSphereBeginOverlap" }, // 1250218662
+		{ &Z_Construct_UFunction_APickupBase_OnSphereBeginOverlap, "OnSphereBeginOverlap" }, // 1271321654
+		{ &Z_Construct_UFunction_APickupBase_ResetPickupCooldown, "ResetPickupCooldown" }, // 3555066515
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -252,25 +311,33 @@ struct Z_Construct_UClass_APickupBase_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_APickupBase_Statics::NewProp_PickupItemID = { "PickupItemID", nullptr, (EPropertyFlags)0x0020080000000801, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupBase, PickupItemID), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PickupItemID_MetaData), NewProp_PickupItemID_MetaData) };
-const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_APickupBase_Statics::NewProp_PickupDataTable = { "PickupDataTable", nullptr, (EPropertyFlags)0x0024080000000801, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupBase, PickupDataTable), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PickupDataTable_MetaData), NewProp_PickupDataTable_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupBase_Statics::NewProp_ReferenceItem = { "ReferenceItem", nullptr, (EPropertyFlags)0x0124080000020001, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupBase, ReferenceItem), Z_Construct_UClass_UItemDefinition_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReferenceItem_MetaData), NewProp_ReferenceItem_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupBase_Statics::NewProp_PickupMeshComponent = { "PickupMeshComponent", nullptr, (EPropertyFlags)0x01240800000b0009, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupBase, PickupMeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PickupMeshComponent_MetaData), NewProp_PickupMeshComponent_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupBase_Statics::NewProp_SphereComponent = { "SphereComponent", nullptr, (EPropertyFlags)0x012408000008001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupBase, SphereComponent), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SphereComponent_MetaData), NewProp_SphereComponent_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupBase_Statics::NewProp_SphereComponent = { "SphereComponent", nullptr, (EPropertyFlags)0x01240800000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupBase, SphereComponent), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SphereComponent_MetaData), NewProp_SphereComponent_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupBase_Statics::NewProp_PickupMeshComponent = { "PickupMeshComponent", nullptr, (EPropertyFlags)0x01240800000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupBase, PickupMeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PickupMeshComponent_MetaData), NewProp_PickupMeshComponent_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupBase_Statics::NewProp_PickupDataTable = { "PickupDataTable", nullptr, (EPropertyFlags)0x0124080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupBase, PickupDataTable), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PickupDataTable_MetaData), NewProp_PickupDataTable_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_APickupBase_Statics::NewProp_PickupItemID = { "PickupItemID", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupBase, PickupItemID), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PickupItemID_MetaData), NewProp_PickupItemID_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APickupBase_Statics::NewProp_ReferenceItem = { "ReferenceItem", nullptr, (EPropertyFlags)0x0124080000020015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupBase, ReferenceItem), Z_Construct_UClass_UItemDefinition_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReferenceItem_MetaData), NewProp_ReferenceItem_MetaData) };
 void Z_Construct_UClass_APickupBase_Statics::NewProp_bShouldRespawn_SetBit(void* Obj)
 {
 	((APickupBase*)Obj)->bShouldRespawn = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APickupBase_Statics::NewProp_bShouldRespawn = { "bShouldRespawn", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(APickupBase), &Z_Construct_UClass_APickupBase_Statics::NewProp_bShouldRespawn_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bShouldRespawn_MetaData), NewProp_bShouldRespawn_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APickupBase_Statics::NewProp_RespawnTime = { "RespawnTime", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupBase, RespawnTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RespawnTime_MetaData), NewProp_RespawnTime_MetaData) };
+void Z_Construct_UClass_APickupBase_Statics::NewProp_bCanBePickedUp_SetBit(void* Obj)
+{
+	((APickupBase*)Obj)->bCanBePickedUp = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APickupBase_Statics::NewProp_bCanBePickedUp = { "bCanBePickedUp", nullptr, (EPropertyFlags)0x0020080000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(APickupBase), &Z_Construct_UClass_APickupBase_Statics::NewProp_bCanBePickedUp_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bCanBePickedUp_MetaData), NewProp_bCanBePickedUp_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APickupBase_Statics::NewProp_PickupCooldown = { "PickupCooldown", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APickupBase, PickupCooldown), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PickupCooldown_MetaData), NewProp_PickupCooldown_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APickupBase_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupBase_Statics::NewProp_PickupItemID,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupBase_Statics::NewProp_PickupDataTable,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupBase_Statics::NewProp_ReferenceItem,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupBase_Statics::NewProp_PickupMeshComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupBase_Statics::NewProp_SphereComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupBase_Statics::NewProp_PickupMeshComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupBase_Statics::NewProp_PickupDataTable,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupBase_Statics::NewProp_PickupItemID,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupBase_Statics::NewProp_ReferenceItem,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupBase_Statics::NewProp_bShouldRespawn,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupBase_Statics::NewProp_RespawnTime,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupBase_Statics::NewProp_bCanBePickedUp,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APickupBase_Statics::NewProp_PickupCooldown,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APickupBase_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_APickupBase_Statics::DependentSingletons[])() = {
@@ -309,10 +376,10 @@ APickupBase::~APickupBase() {}
 struct Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_PickupBase_h__Script_AdventureGame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APickupBase, APickupBase::StaticClass, TEXT("APickupBase"), &Z_Registration_Info_UClass_APickupBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupBase), 2592770297U) },
+		{ Z_Construct_UClass_APickupBase, APickupBase::StaticClass, TEXT("APickupBase"), &Z_Registration_Info_UClass_APickupBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APickupBase), 4283081811U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_PickupBase_h__Script_AdventureGame_3250847227(TEXT("/Script/AdventureGame"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_PickupBase_h__Script_AdventureGame_616650566(TEXT("/Script/AdventureGame"),
 	Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_PickupBase_h__Script_AdventureGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_PickupBase_h__Script_AdventureGame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

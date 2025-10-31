@@ -188,14 +188,14 @@ struct Z_Construct_UClass_AEquippableToolBase_Statics
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ToolMeshComponent_MetaData[] = {
-		{ "Category", "EquippableToolBase" },
+		{ "Category", "Components" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// Tool Skeletal Mesh\n" },
+		{ "Comment", "// Tool Skeletal Mesh - THIS IS THE KEY COMPONENT\n" },
 #endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "EquippableToolBase.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Tool Skeletal Mesh" },
+		{ "ToolTip", "Tool Skeletal Mesh - THIS IS THE KEY COMPONENT" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OwningCharacter_MetaData[] = {
@@ -240,7 +240,7 @@ struct Z_Construct_UClass_AEquippableToolBase_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEquippableToolBase_Statics::NewProp_FirstPersonToolAnim = { "FirstPersonToolAnim", nullptr, (EPropertyFlags)0x0114000000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEquippableToolBase, FirstPersonToolAnim), Z_Construct_UClass_UAnimBlueprint_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FirstPersonToolAnim_MetaData), NewProp_FirstPersonToolAnim_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEquippableToolBase_Statics::NewProp_ThirdPersonToolAnim = { "ThirdPersonToolAnim", nullptr, (EPropertyFlags)0x0114000000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEquippableToolBase, ThirdPersonToolAnim), Z_Construct_UClass_UAnimBlueprint_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ThirdPersonToolAnim_MetaData), NewProp_ThirdPersonToolAnim_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEquippableToolBase_Statics::NewProp_ToolMappingContext = { "ToolMappingContext", nullptr, (EPropertyFlags)0x0114000000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEquippableToolBase, ToolMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ToolMappingContext_MetaData), NewProp_ToolMappingContext_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEquippableToolBase_Statics::NewProp_ToolMeshComponent = { "ToolMeshComponent", nullptr, (EPropertyFlags)0x011400000008001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEquippableToolBase, ToolMeshComponent), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ToolMeshComponent_MetaData), NewProp_ToolMeshComponent_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEquippableToolBase_Statics::NewProp_ToolMeshComponent = { "ToolMeshComponent", nullptr, (EPropertyFlags)0x01140000000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEquippableToolBase, ToolMeshComponent), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ToolMeshComponent_MetaData), NewProp_ToolMeshComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEquippableToolBase_Statics::NewProp_OwningCharacter = { "OwningCharacter", nullptr, (EPropertyFlags)0x0114000000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEquippableToolBase, OwningCharacter), Z_Construct_UClass_AAdventureCharacter_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OwningCharacter_MetaData), NewProp_OwningCharacter_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AEquippableToolBase_Statics::NewProp_UseCooldown = { "UseCooldown", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEquippableToolBase, UseCooldown), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UseCooldown_MetaData), NewProp_UseCooldown_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEquippableToolBase_Statics::PropPointers[] = {
@@ -288,10 +288,10 @@ AEquippableToolBase::~AEquippableToolBase() {}
 struct Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h__Script_AdventureGame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AEquippableToolBase, AEquippableToolBase::StaticClass, TEXT("AEquippableToolBase"), &Z_Registration_Info_UClass_AEquippableToolBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEquippableToolBase), 1688244970U) },
+		{ Z_Construct_UClass_AEquippableToolBase, AEquippableToolBase::StaticClass, TEXT("AEquippableToolBase"), &Z_Registration_Info_UClass_AEquippableToolBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEquippableToolBase), 1948825859U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h__Script_AdventureGame_1985710953(TEXT("/Script/AdventureGame"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h__Script_AdventureGame_4144133133(TEXT("/Script/AdventureGame"),
 	Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h__Script_AdventureGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h__Script_AdventureGame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

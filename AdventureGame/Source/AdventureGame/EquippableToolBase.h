@@ -1,22 +1,16 @@
-﻿// Copyright Epic Games, Inc. All Rights Reserved.
-
-#pragma once
-
+﻿#pragma once
 #include "CoreMinimal.h"
 #include "InputAction.h"
 #include "InputMappingContext.h"
 #include "EquippableToolBase.generated.h"
 
 class AAdventureCharacter;
-
 class UInputAction;
-
 
 UCLASS(BlueprintType, Blueprintable)
 class ADVENTUREGAME_API AEquippableToolBase : public AActor
 {
 	GENERATED_BODY()
-
 public:
 	/** Sets default values for this component's properties */
 	AEquippableToolBase();
@@ -33,8 +27,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	TObjectPtr<UInputMappingContext> ToolMappingContext;
 
-	// Tool Skeletal Mesh
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	// Tool Skeletal Mesh - THIS IS THE KEY COMPONENT
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	TObjectPtr<USkeletalMeshComponent> ToolMeshComponent;
 
 	// The character holding this tool
@@ -54,11 +48,9 @@ public:
 	virtual void BindInputAction(const UInputAction* ActionToBind);
 
 protected:
-
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
 };

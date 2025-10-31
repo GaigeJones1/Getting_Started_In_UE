@@ -19,14 +19,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class UInputAction;
 
 // ********** Begin Class AEquippableToolBase ******************************************************
-#define FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execBindInputAction); \
 	DECLARE_FUNCTION(execUse);
 
 
 ADVENTUREGAME_API UClass* Z_Construct_UClass_AEquippableToolBase_NoRegister();
 
-#define FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_18_INCLASS_NO_PURE_DECLS \
+#define FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAEquippableToolBase(); \
 	friend struct Z_Construct_UClass_AEquippableToolBase_Statics; \
@@ -37,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(AEquippableToolBase)
 
 
-#define FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_18_ENHANCED_CONSTRUCTORS \
+#define FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_13_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AEquippableToolBase(AEquippableToolBase&&) = delete; \
 	AEquippableToolBase(const AEquippableToolBase&) = delete; \
@@ -47,13 +47,13 @@ public: \
 	NO_API virtual ~AEquippableToolBase();
 
 
-#define FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_15_PROLOG
-#define FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_18_GENERATED_BODY \
+#define FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_10_PROLOG
+#define FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_18_INCLASS_NO_PURE_DECLS \
-	FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_18_ENHANCED_CONSTRUCTORS \
+	FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_13_INCLASS_NO_PURE_DECLS \
+	FID_Users_02GAIGE_JONES_Gaige_Jones_Repositories_Getting_Started_In_UE_AdventureGame_Source_AdventureGame_EquippableToolBase_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -1,15 +1,16 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+﻿// Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "AdventureCharacter.h"
 #include "EquippableToolBase.h"
 #include "EquippableToolDefinition.h"
 #include "ItemDefinition.h"
 #include "InventoryComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 
 // Sets default values
 AAdventureCharacter::AAdventureCharacter()
 {
-	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it
+	// Set this character to call Tick() every frame.
 	PrimaryActorTick.bCanEverTick = true;
 
 	// Create a first person camera component
@@ -49,7 +50,6 @@ void AAdventureCharacter::BeginPlay()
 	// The owning player doesn't see the regular (third-person) body mesh
 	GetMesh()->SetOwnerNoSee(true);
 
-
 	// Position the camera slightly above the eyes.
 	FirstPersonCameraComponent->SetRelativeLocation(FVector(2.8f, 5.9f, 0.0f));
 
@@ -63,8 +63,7 @@ void AAdventureCharacter::BeginPlay()
 		}
 	}
 
-	// Display a debug message for five seconds. 
-	// The -1 "Key" value argument prevents the message from being updated or refreshed.
+	// Display a debug message for five seconds.
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("We are using AdventureCharacter."));
 }
 
@@ -72,7 +71,6 @@ void AAdventureCharacter::BeginPlay()
 void AAdventureCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 // Called to bind functionality to input
@@ -91,13 +89,10 @@ void AAdventureCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 	}
-
 }
-
 
 void AAdventureCharacter::Move(const FInputActionValue& Value)
 {
-
 	// 2D Vector of movement values returned from the input action
 	const FVector2d MovementValue = Value.Get<FVector2D>();
 
@@ -175,113 +170,114 @@ bool AAdventureCharacter::IsToolAlreadyOwned(UEquippableToolDefinition* ToolDefi
 	}
 
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("This is a new tool"));
-
 	return false;
 }
-
-
 
 void AAdventureCharacter::AttachTool(UEquippableToolDefinition* ToolDefinition)
 {
 	// Only equip this tool if it isn't already owned
 	if (!IsToolAlreadyOwned(ToolDefinition))
 	{
-		// Spawn a new instance of the tool to equip
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Cyan, TEXT("=== Starting AttachTool ==="));
+
+		// Check if socket exists
+		if (!FirstPersonMeshComponent->DoesSocketExist(FName(TEXT("HandGrip_R"))))
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, TEXT("ERROR: HandGrip_R socket does NOT exist!"));
+			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, TEXT("Please add HandGrip_R socket to your FirstPerson skeletal mesh!"));
+			return;
+		}
+
+		// Spawn the tool
 		FActorSpawnParameters SpawnParams;
 		SpawnParams.Owner = this;
 		SpawnParams.Instigator = GetInstigator();
 
-		AEquippableToolBase* ToolToEquip = GetWorld()->SpawnActor<AEquippableToolBase>(ToolDefinition->ToolAsset, FTransform::Identity, SpawnParams);
+		AEquippableToolBase* ToolToEquip = GetWorld()->SpawnActor<AEquippableToolBase>(
+			ToolDefinition->ToolAsset,
+			FVector::ZeroVector,
+			FRotator::ZeroRotator,
+			SpawnParams
+		);
 
-		if (ToolToEquip && ToolToEquip->ToolMeshComponent)
+		if (!ToolToEquip)
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Tool spawned successfully!"));
+			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, TEXT("ERROR: Failed to spawn tool actor!"));
+			return;
+		}
 
-			// Set up attachment rules - KeepRelative to maintain the tool's configured offset
-			FAttachmentTransformRules AttachmentRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, true);
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Tool actor spawned successfully"));
 
-			// Attach the tool's mesh component to the hand socket
-			bool bAttached = ToolToEquip->ToolMeshComponent->AttachToComponent(
-				FirstPersonMeshComponent,
-				AttachmentRules,
-				FName(TEXT("HandGrip_R"))
-			);
+		if (!ToolToEquip->ToolMeshComponent)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, TEXT("ERROR: ToolMeshComponent is NULL!"));
+			ToolToEquip->Destroy();
+			return;
+		}
 
-			if (bAttached)
-			{
-				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green,
-					FString::Printf(TEXT("Tool mesh attached to socket: %s"), *FirstPersonMeshComponent->GetSocketBoneName(FName(TEXT("HandGrip_R"))).ToString()));
-			}
-			else
-			{
-				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Failed to attach tool mesh to socket!"));
-			}
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("ToolMeshComponent exists"));
 
-			ToolToEquip->OwningCharacter = this;
+		// Set up attachment rules
+		FAttachmentTransformRules AttachmentRules(
+			EAttachmentRule::SnapToTarget,
+			EAttachmentRule::SnapToTarget,
+			EAttachmentRule::SnapToTarget,
+			true
+		);
 
-			// Add the tool to this character's inventory
-			InventoryComponent->ToolInventory.Add(ToolDefinition);
+		// Attach the entire actor to the socket
+		bool bAttached = ToolToEquip->AttachToComponent(
+			FirstPersonMeshComponent,
+			AttachmentRules,
+			FName(TEXT("HandGrip_R"))
+		);
 
-			// Set the animations on the first person mesh.
-			if (ToolToEquip->FirstPersonToolAnim)
-			{
-				FirstPersonMeshComponent->SetAnimInstanceClass(ToolToEquip->FirstPersonToolAnim->GeneratedClass);
-			}
+		if (bAttached)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("✓ Tool ATTACHED successfully!"));
 
-			if (ToolToEquip->ThirdPersonToolAnim)
-			{
-				GetMesh()->SetAnimInstanceClass(ToolToEquip->ThirdPersonToolAnim->GeneratedClass);
-			}
-
-			EquippedTool = ToolToEquip;
-
-			// Get the player controller for this character
-			if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
-			{
-				if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
-				{
-					if (ToolToEquip->ToolMappingContext)
-					{
-						Subsystem->AddMappingContext(ToolToEquip->ToolMappingContext, 1);
-					}
-				}
-
-				ToolToEquip->BindInputAction(UseAction);
-			}
-
-			if (!ToolToEquip)
-			{
-				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Failed to spawn tool actor - ToolAsset may be null or invalid!"));
-				return;
-			}
-
-			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, FString::Printf(TEXT("Spawned Tool Actor: %s"), *ToolToEquip->GetName()));
-
-			if (!ToolToEquip->ToolMeshComponent)
-			{
-				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Tool spawned but ToolMeshComponent is null!"));
-			}
-			else
-			{
-				// Print the currently assigned Skeletal Mesh (if any)
-				USkeletalMesh* AssignedMesh = ToolToEquip->ToolMeshComponent->SkeletalMesh;
-				if (AssignedMesh)
-				{
-					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, FString::Printf(TEXT("ToolMesh assigned: %s"), *AssignedMesh->GetName()));
-				}
-				else
-				{
-					GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("ToolMeshComponent has NO skeletal mesh assigned!"));
-				}
-			}
-
-			// Fallback: set tool location near player if attach fails so you can see it
-			FVector DebugLoc = GetActorLocation() + GetActorForwardVector() * 100.f + FVector(0, 0, 50.f);
-			ToolToEquip->SetActorLocation(DebugLoc);
+			// Verify attachment
+			FName AttachedSocket = ToolToEquip->GetAttachParentSocketName();
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Cyan,
+				FString::Printf(TEXT("Attached to socket: %s"), *AttachedSocket.ToString()));
 		}
 		else
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Failed to spawn tool or ToolMeshComponent is null!"));
+			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, TEXT("✗ FAILED to attach tool!"));
+			ToolToEquip->Destroy();
+			return;
 		}
+
+		ToolToEquip->OwningCharacter = this;
+		InventoryComponent->ToolInventory.Add(ToolDefinition);
+
+		// Set animations
+		if (ToolToEquip->FirstPersonToolAnim)
+		{
+			FirstPersonMeshComponent->SetAnimInstanceClass(ToolToEquip->FirstPersonToolAnim->GeneratedClass);
+		}
+
+		if (ToolToEquip->ThirdPersonToolAnim)
+		{
+			GetMesh()->SetAnimInstanceClass(ToolToEquip->ThirdPersonToolAnim->GeneratedClass);
+		}
+
+		EquippedTool = ToolToEquip;
+
+		// Set up input
+		if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
+		{
+			if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
+			{
+				if (ToolToEquip->ToolMappingContext)
+				{
+					Subsystem->AddMappingContext(ToolToEquip->ToolMappingContext, 1);
+				}
+			}
+
+			ToolToEquip->BindInputAction(UseAction);
+		}
+
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Cyan, TEXT("=== AttachTool Complete ==="));
 	}
 }
